@@ -37,8 +37,8 @@ The booking form is configured with:
 ## Contact Information
 
 - **Phone**: (803) 394-5120
-- **Email**: LevlarFlex@gmail.com
-- **Hours**: Mon-Fri 9AM-5PM
+- **Email**: SunshineStateHCS@gmail.com
+- **Hours**: Mon-Fri 8AM-5PM
 - **Emergency**: 24/7 availability
 
 ## Project Structure
