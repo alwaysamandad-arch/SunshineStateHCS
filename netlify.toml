@@ -20,7 +20,7 @@
   honeypot = "bot-field"
   
   # Send notifications to the business email
-  notification_email = "LevlarFlex@gmail.com"
+  notification_email = "SunshineStateHCS@gmail.com"
 
   # Custom success page
   success = "/success.html"
