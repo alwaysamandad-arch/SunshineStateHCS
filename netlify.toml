@@ -1,0 +1,30 @@
+[build]
+  publish = "."
+  command = ""
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Form submissions
+[functions]
+  directory = "functions"
+
+# Notify form submissions via email
+[[form]]
+  name = "booking"
+  honeypot = "bot-field"
+  
+  # Send notifications to the business email
+  notification_email = "LevlarFlex@gmail.com"
+
+  # Custom success page
+  success = "/success.html"
+
+# Additional context for forms
+[[context.production.env]]
+  SITE_NAME = "Sunshine State Home & Commercial Services"
