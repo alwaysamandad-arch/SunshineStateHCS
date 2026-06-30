@@ -31,83 +31,47 @@
     "url": "https://thesunshinestatehcs.com/",
     "telephone": "+18033945120",
     "email": "sunshinestatehcs@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Jacksonville",
-      "addressRegion": "FL",
-      "addressCountry": "US"
-    },
-    "openingHoursSpecification": [{
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-      "opens": "09:00",
-      "closes": "17:00"
-    }],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "3"
-    }
+    "address": {"@type":"PostalAddress","addressLocality":"Jacksonville","addressRegion":"FL","addressCountry":"US"},
+    "openingHoursSpecification": [{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"17:00"}],
+    "aggregateRating": {"@type":"AggregateRating","ratingValue":"5","reviewCount":"3"}
   }
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --navy: #11233b;
+      --navy: #10233d;
       --green: #176b35;
       --green-dark: #0f5128;
       --gold: #d89a28;
-      --gold-soft: #f1cf8d;
+      --gold-soft: #f4d08b;
       --cream: #fff8ed;
       --cream-2: #f7ead6;
       --ink: #17243a;
       --muted: #5b6572;
-      --line: rgba(17, 35, 59, 0.14);
       --white: #ffffff;
+      --line: rgba(17, 35, 59, 0.14);
       --shadow: 0 18px 55px rgba(17, 35, 59, 0.16);
       --soft-shadow: 0 10px 30px rgba(17, 35, 59, 0.09);
       --radius: 22px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--ink);
-      background: var(--cream);
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: "Inter", system-ui, sans-serif; color: var(--ink); background: var(--cream); line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
 
     .page-shell {
-      overflow: hidden;
-      background:
-        radial-gradient(circle at 52% 43%, rgba(255,255,255,0.96) 0 3%, rgba(255,255,255,0.16) 4%, transparent 12%),
-        radial-gradient(circle at 52% 45%, rgba(248,205,118,0.45), transparent 34%),
-        linear-gradient(180deg, #fffaf0 0%, #fff3dd 52%, #f8e2bb 100%);
-      min-height: 100vh;
       position: relative;
+      overflow: hidden;
+      min-height: 820px;
+      background:
+        radial-gradient(circle at 51% 47%, rgba(255,255,255,0.98) 0 3%, rgba(255,255,255,0.25) 4%, transparent 12%),
+        radial-gradient(circle at 51% 47%, rgba(246, 192, 86, 0.54), transparent 32%),
+        linear-gradient(180deg, #fffaf0 0%, #fff3dd 52%, #f8e0b7 100%);
     }
 
     .page-shell::before,
@@ -116,15 +80,14 @@
       position: absolute;
       pointer-events: none;
       z-index: 0;
-      opacity: 0.46;
-      filter: sepia(0.2);
+      opacity: 0.5;
       background-repeat: no-repeat;
       background-size: contain;
     }
 
     .page-shell::before {
-      left: -48px;
-      top: 175px;
+      left: -36px;
+      top: 220px;
       width: 360px;
       height: 560px;
       background-image:
@@ -134,10 +97,10 @@
     }
 
     .page-shell::after {
-      right: -28px;
-      top: 138px;
-      width: 300px;
-      height: 610px;
+      right: -34px;
+      top: 120px;
+      width: 340px;
+      height: 650px;
       background-image:
         radial-gradient(ellipse at 48% 8%, rgba(196, 126, 34, 0.38), transparent 62%),
         conic-gradient(from 250deg at 52% 12%, transparent 0 20deg, rgba(153, 91, 24, 0.47) 21deg 27deg, transparent 28deg 48deg, rgba(153, 91, 24, 0.44) 49deg 55deg, transparent 56deg 80deg, rgba(153, 91, 24, 0.4) 81deg 87deg, transparent 88deg 360deg),
@@ -149,55 +112,221 @@
       inset: 0;
       z-index: 0;
       pointer-events: none;
+      background: repeating-conic-gradient(from -10deg at 51% 47%, rgba(255,255,255,0.74) 0 4deg, transparent 4deg 13deg);
+      opacity: 0.34;
+      mask-image: radial-gradient(circle at 51% 47%, #000 0 36%, transparent 74%);
+    }
+
+    .house-art {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: min(37vw, 470px);
+      height: 470px;
+      z-index: 0;
+      opacity: 0.64;
       background:
-        repeating-conic-gradient(from -10deg at 52% 53%, rgba(255,255,255,0.72) 0 4deg, transparent 4deg 12deg);
-      opacity: 0.32;
-      mask-image: radial-gradient(circle at 52% 53%, #000 0 35%, transparent 72%);
+        linear-gradient(45deg, transparent 0 44%, rgba(86, 69, 50, 0.35) 45% 47%, transparent 48%),
+        linear-gradient(-45deg, transparent 0 44%, rgba(86, 69, 50, 0.35) 45% 47%, transparent 48%),
+        linear-gradient(180deg, transparent 0 47%, rgba(255,255,255,0.62) 48% 90%, transparent 91%);
+      clip-path: polygon(14% 100%, 14% 43%, 43% 18%, 68% 42%, 84% 42%, 84% 100%);
     }
 
     .site-header {
       position: relative;
       z-index: 5;
-      padding: 24px clamp(18px, 4vw, 56px) 0;
+      padding: 24px clamp(18px, 3vw, 52px) 0;
     }
 
     .nav {
       display: grid;
-      grid-template-columns: 290px 1fr auto;
-      align-items: center;
+      grid-template-columns: 350px 1fr auto;
+      align-items: start;
       gap: 28px;
-      max-width: 1360px;
+      max-width: 1460px;
       margin: 0 auto;
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
+    .brand-mark {
+      width: min(342px, 42vw);
+      color: var(--navy);
     }
 
-    .brand img {
-      width: min(260px, 42vw);
-      height: auto;
-      object-fit: contain;
-      filter: drop-shadow(0 8px 18px rgba(17, 35, 59, 0.08));
+    .brand-icon {
+      width: 210px;
+      height: 112px;
+      position: relative;
+      margin-left: 2px;
+      margin-bottom: -5px;
+    }
+
+    .brand-sun {
+      position: absolute;
+      left: 68px;
+      top: 2px;
+      width: 128px;
+      height: 96px;
+      border-radius: 96px 96px 0 0;
+      background: linear-gradient(180deg, #f5c98e 0%, #ffe2b5 65%, transparent 66%);
+      border: 4px solid var(--gold);
+      border-bottom: 0;
+      box-shadow: inset 0 0 0 5px rgba(16,35,61,0.08);
+    }
+
+    .brand-sun::after {
+      content: "";
+      position: absolute;
+      left: 38px;
+      top: 48px;
+      width: 56px;
+      height: 28px;
+      border-radius: 50% 50% 0 0;
+      background: #fff7dd;
+      opacity: 0.9;
+    }
+
+    .palm-big,
+    .palm-small {
+      position: absolute;
+      background: var(--navy);
+      transform-origin: bottom center;
+    }
+
+    .palm-big {
+      left: 28px;
+      top: 22px;
+      width: 10px;
+      height: 86px;
+      transform: rotate(-10deg);
+      border-radius: 8px;
+    }
+
+    .palm-small {
+      left: 78px;
+      top: 54px;
+      width: 8px;
+      height: 55px;
+      transform: rotate(-7deg);
+      border-radius: 8px;
+    }
+
+    .palm-big::before,
+    .palm-big::after,
+    .palm-small::before,
+    .palm-small::after {
+      content: "";
+      position: absolute;
+      top: -14px;
+      left: -28px;
+      width: 66px;
+      height: 40px;
+      background: var(--navy);
+      clip-path: polygon(50% 100%, 0 0, 40% 18%, 50% 0, 60% 18%, 100% 0);
+      border-radius: 50%;
+    }
+
+    .palm-big::after { transform: rotate(65deg); left: -12px; top: -20px; }
+    .palm-small::before { width: 48px; height: 30px; left: -20px; top: -12px; }
+    .palm-small::after { width: 48px; height: 30px; left: -7px; top: -15px; transform: rotate(62deg); }
+
+    .roof {
+      position: absolute;
+      right: 0;
+      bottom: 11px;
+      width: 92px;
+      height: 54px;
+    }
+
+    .roof::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 14px;
+      width: 88px;
+      height: 47px;
+      border-left: 8px solid var(--navy);
+      border-top: 8px solid var(--navy);
+      transform: rotate(45deg);
+    }
+
+    .roof::after {
+      content: "";
+      position: absolute;
+      left: 38px;
+      bottom: 0;
+      width: 22px;
+      height: 22px;
+      border: 5px solid var(--navy);
+      background: rgba(255,255,255,0.6);
+    }
+
+    .brand-name {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(46px, 4.4vw, 70px);
+      line-height: 0.9;
+      letter-spacing: -0.045em;
+      font-weight: 900;
+      color: var(--navy);
+      white-space: nowrap;
+    }
+
+    .brand-sub {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 12px;
+      color: var(--navy);
+      font-weight: 900;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      font-size: 17px;
+      white-space: nowrap;
+    }
+
+    .brand-sub::before,
+    .brand-sub::after {
+      content: "";
+      width: 54px;
+      height: 3px;
+      background: var(--gold);
+      border-radius: 999px;
+      flex: 0 0 auto;
+    }
+
+    .brand-services {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 22px;
+      color: var(--green);
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    .brand-services span + span::before {
+      content: "|";
+      color: var(--gold);
+      margin-right: 12px;
     }
 
     .nav-links {
       list-style: none;
       display: flex;
       justify-content: center;
-      gap: clamp(14px, 2vw, 32px);
+      gap: clamp(14px, 2vw, 31px);
       align-items: center;
-      font-weight: 800;
+      font-weight: 900;
       color: var(--navy);
       font-size: 14px;
       letter-spacing: 0.01em;
+      padding-top: 22px;
     }
 
     .nav-links a {
-      padding: 8px 0;
       position: relative;
+      padding: 8px 0;
     }
 
     .nav-links a::after {
@@ -215,15 +344,14 @@
     }
 
     .nav-links a:hover::after,
-    .nav-links a.active::after {
-      transform: scaleX(1);
-    }
+    .nav-links a.active::after { transform: scaleX(1); }
 
     .header-actions {
       display: flex;
       align-items: center;
       gap: 18px;
       white-space: nowrap;
+      padding-top: 14px;
     }
 
     .phone-block {
@@ -231,28 +359,12 @@
       gap: 10px;
       align-items: center;
       color: var(--navy);
-      font-weight: 800;
+      font-weight: 900;
     }
 
-    .phone-icon {
-      color: var(--green);
-      font-size: 28px;
-      line-height: 1;
-    }
-
-    .phone-block small {
-      display: block;
-      font-weight: 600;
-      color: var(--ink);
-      line-height: 1.1;
-    }
-
-    .phone-block span {
-      display: block;
-      color: var(--green);
-      font-size: 18px;
-      line-height: 1.2;
-    }
+    .phone-icon { color: var(--green); font-size: 30px; line-height: 1; }
+    .phone-block small { display: block; font-weight: 600; color: var(--ink); line-height: 1.1; }
+    .phone-block span span { display: block; color: var(--green); font-size: 18px; line-height: 1.2; }
 
     .btn {
       display: inline-flex;
@@ -260,7 +372,7 @@
       justify-content: center;
       gap: 10px;
       border-radius: 8px;
-      font-weight: 800;
+      font-weight: 900;
       letter-spacing: 0.01em;
       border: 1px solid transparent;
       min-height: 52px;
@@ -272,21 +384,9 @@
       font-size: 15px;
     }
 
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 16px 38px rgba(17, 35, 59, 0.16);
-    }
-
-    .btn-green {
-      background: linear-gradient(180deg, #1f7a3d 0%, var(--green-dark) 100%);
-      color: white;
-    }
-
-    .btn-light {
-      background: rgba(255,255,255,0.86);
-      color: var(--navy);
-      border-color: rgba(17,35,59,0.16);
-    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 16px 38px rgba(17, 35, 59, 0.16); }
+    .btn-green { background: linear-gradient(180deg, #1f7a3d 0%, var(--green-dark) 100%); color: white; }
+    .btn-light { background: rgba(255,255,255,0.88); color: var(--navy); border-color: rgba(17,35,59,0.16); }
 
     .hero {
       position: relative;
@@ -294,26 +394,14 @@
       max-width: 1360px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(320px, 430px);
-      gap: clamp(36px, 6vw, 92px);
+      grid-template-columns: minmax(0, 1.12fr) minmax(330px, 430px);
+      gap: clamp(36px, 6vw, 90px);
       align-items: center;
-      padding: clamp(74px, 9vw, 150px) clamp(18px, 4vw, 56px) 54px;
-      min-height: 740px;
+      padding: 40px clamp(18px, 4vw, 56px) 54px;
     }
 
-    .hero-copy {
-      max-width: 680px;
-      margin-left: clamp(0px, 8vw, 120px);
-    }
-
-    .eyebrow {
-      color: var(--green);
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 16px;
-      font-size: 15px;
-    }
+    .hero-copy { max-width: 720px; margin-left: clamp(0px, 7vw, 92px); padding-top: 26px; }
+    .eyebrow { color: var(--green); font-weight: 900; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; font-size: 15px; }
 
     .hero h1 {
       font-family: "Playfair Display", Georgia, serif;
@@ -325,53 +413,15 @@
       margin-bottom: 22px;
     }
 
-    .gold-mark {
-      width: 68px;
-      height: 4px;
-      border-radius: 999px;
-      background: var(--gold);
-      margin: 0 0 22px;
-    }
+    .gold-mark { width: 68px; height: 4px; border-radius: 999px; background: var(--gold); margin: 0 0 22px; }
+    .hero p { color: var(--ink); font-size: clamp(17px, 1.35vw, 21px); line-height: 1.55; max-width: 610px; margin-bottom: 34px; }
+    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; }
 
-    .hero p {
-      color: var(--ink);
-      font-size: clamp(17px, 1.35vw, 21px);
-      line-height: 1.55;
-      max-width: 610px;
-      margin-bottom: 34px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-bottom: 32px;
-    }
-
-    .trust-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
-      align-items: center;
-      color: var(--navy);
-      font-weight: 700;
-      font-size: 14px;
-    }
-
-    .trust-item {
-      display: inline-flex;
-      gap: 8px;
-      align-items: center;
-    }
-
-    .trust-item svg {
-      width: 22px;
-      height: 22px;
-      stroke: var(--green);
-    }
+    .trust-row { display: flex; flex-wrap: wrap; gap: 24px; align-items: center; color: var(--navy); font-weight: 800; font-size: 14px; }
+    .trust-item { display: inline-flex; gap: 8px; align-items: center; }
 
     .booking-card {
-      background: rgba(255,255,255,0.94);
+      background: rgba(255,255,255,0.95);
       border: 1px solid rgba(17,35,59,0.12);
       border-radius: var(--radius);
       padding: clamp(24px, 3vw, 36px);
@@ -381,40 +431,12 @@
       z-index: 2;
     }
 
-    .booking-card h2 {
-      color: var(--green);
-      font-size: clamp(25px, 2.4vw, 32px);
-      line-height: 1.1;
-      text-transform: uppercase;
-      letter-spacing: 0.02em;
-      margin-bottom: 24px;
-    }
+    .booking-card h2 { color: var(--green); font-size: clamp(25px, 2.4vw, 32px); line-height: 1.1; text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 24px; text-align: left; }
+    .booking-card h2::after { content: ""; display: block; width: 50px; height: 3px; border-radius: 999px; background: var(--gold); margin-top: 10px; }
+    .form-step { margin-bottom: 18px; }
+    label { display: block; color: var(--navy); font-weight: 900; font-size: 14px; margin-bottom: 9px; }
 
-    .booking-card h2::after {
-      content: "";
-      display: block;
-      width: 50px;
-      height: 3px;
-      border-radius: 999px;
-      background: var(--gold);
-      margin-top: 10px;
-    }
-
-    .form-step {
-      margin-bottom: 18px;
-    }
-
-    label {
-      display: block;
-      color: var(--navy);
-      font-weight: 800;
-      font-size: 14px;
-      margin-bottom: 9px;
-    }
-
-    select,
-    input,
-    textarea {
+    select, input, textarea {
       width: 100%;
       min-height: 52px;
       border: 1px solid rgba(17,35,59,0.16);
@@ -427,423 +449,82 @@
       transition: border 0.15s ease, box-shadow 0.15s ease;
     }
 
-    select:focus,
-    input:focus,
-    textarea:focus {
-      border-color: var(--green);
-      box-shadow: 0 0 0 4px rgba(23,107,53,0.12);
-    }
+    select:focus, input:focus, textarea:focus { border-color: var(--green); box-shadow: 0 0 0 4px rgba(23,107,53,0.12); }
+    .hidden { display: none; }
 
-    .time-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-    }
+    .time-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .time-grid label { margin: 0; }
+    .time-grid input { position: absolute; opacity: 0; pointer-events: none; }
+    .time-grid span { display: flex; align-items: center; justify-content: center; min-height: 48px; border: 1px solid rgba(17,35,59,0.16); border-radius: 8px; background: white; font-weight: 800; font-size: 14px; cursor: pointer; }
+    .time-grid input:checked + span { background: rgba(23,107,53,0.11); border-color: var(--green); color: var(--green); }
 
-    .time-grid label {
-      margin: 0;
-    }
+    .service-strip { position: relative; z-index: 2; background: rgba(255,255,255,0.96); border-top: 1px solid rgba(17,35,59,0.08); border-bottom: 1px solid rgba(17,35,59,0.08); }
+    .service-strip-inner { max-width: 1360px; margin: 0 auto; display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; padding: 28px clamp(18px, 4vw, 56px); }
+    .mini-service { display: grid; grid-template-columns: 54px 1fr; gap: 14px; align-items: start; padding: 0 24px; border-right: 1px solid rgba(17,35,59,0.14); }
+    .mini-service:first-child { padding-left: 0; }
+    .mini-service:last-child { border-right: 0; padding-right: 0; }
+    .mini-icon { width: 50px; height: 50px; border-radius: 14px; display: grid; place-items: center; color: var(--green); font-size: 32px; background: rgba(23,107,53,0.06); }
+    .mini-service h3 { color: var(--green); font-size: 15px; line-height: 1.18; text-transform: uppercase; margin-bottom: 4px; }
+    .mini-service p { font-size: 14px; color: var(--ink); line-height: 1.45; }
 
-    .time-grid input {
-      position: absolute;
-      opacity: 0;
-      pointer-events: none;
-    }
+    section.content-section { padding: 78px clamp(18px, 4vw, 56px); background: #fffaf0; }
+    .section-inner { max-width: 1230px; margin: 0 auto; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 28px; margin-bottom: 34px; }
+    .section-label { color: var(--green); font-weight: 900; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; font-size: 13px; }
+    .section-title { color: var(--navy); font-family: "Playfair Display", Georgia, serif; font-size: clamp(34px, 3.5vw, 50px); line-height: 1.1; letter-spacing: -0.02em; }
+    .section-copy { color: var(--muted); max-width: 570px; font-size: 16px; }
 
-    .time-grid span {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      border: 1px solid rgba(17,35,59,0.16);
-      border-radius: 8px;
-      background: white;
-      font-weight: 700;
-      font-size: 14px;
-      cursor: pointer;
-    }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { background: rgba(255,255,255,0.86); border: 1px solid rgba(17,35,59,0.1); border-radius: 18px; padding: 28px; box-shadow: 0 12px 28px rgba(17,35,59,0.06); }
+    .card-icon { width: 54px; height: 54px; border-radius: 16px; display: grid; place-items: center; background: rgba(23,107,53,0.08); color: var(--green); font-size: 30px; margin-bottom: 18px; }
+    .card h3 { color: var(--navy); font-size: 20px; line-height: 1.22; margin-bottom: 10px; }
+    .card p { color: var(--muted); font-size: 15px; }
 
-    .time-grid input:checked + span {
-      background: rgba(23,107,53,0.11);
-      border-color: var(--green);
-      color: var(--green);
-    }
+    .about-grid { display: grid; grid-template-columns: minmax(260px, 360px) 1fr; gap: 36px; align-items: center; margin-top: 42px; }
+    .owner-card { border-radius: 20px; min-height: 260px; background: linear-gradient(180deg, rgba(17,35,59,0.08), rgba(255,255,255,0.74)), linear-gradient(135deg, #efd09a, #f8edda); border: 1px solid rgba(17,35,59,0.1); box-shadow: var(--soft-shadow); padding: 28px; display: flex; align-items: end; }
+    .owner-card strong { display: block; font-family: "Playfair Display", Georgia, serif; color: var(--navy); font-size: 34px; line-height: 1; }
+    .owner-card span { color: var(--green); font-weight: 900; text-transform: uppercase; letter-spacing: 0.05em; font-size: 13px; }
+    .value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 28px; }
+    .value-card { background: rgba(255,255,255,0.74); border: 1px solid rgba(17,35,59,0.09); border-radius: 16px; padding: 24px; text-align: center; }
+    .value-card div { font-size: 34px; color: var(--green); margin-bottom: 8px; }
+    .value-card h3 { color: var(--navy); font-size: 18px; line-height: 1.2; margin-bottom: 8px; }
 
-    .hidden {
-      display: none;
-    }
+    .bottom-bar { background: linear-gradient(180deg, #176b35, #0f5128); color: white; padding: 24px clamp(18px, 4vw, 56px); }
+    .bottom-inner { max-width: 1360px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 0.8fr 1.1fr 1fr; gap: 22px; align-items: center; }
+    .footer-chip { display: flex; align-items: center; gap: 14px; border-right: 1px solid rgba(255,255,255,0.22); min-height: 52px; padding-right: 20px; }
+    .footer-chip:last-child { border-right: 0; }
+    .chip-icon { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; background: rgba(255,255,255,0.14); font-size: 24px; flex: 0 0 auto; }
+    .footer-chip strong { display: block; line-height: 1.2; }
+    .footer-chip span, .footer-chip a { font-size: 14px; opacity: 0.9; }
 
-    .service-strip {
-      position: relative;
-      z-index: 2;
-      background: rgba(255,255,255,0.94);
-      border-top: 1px solid rgba(17,35,59,0.08);
-      border-bottom: 1px solid rgba(17,35,59,0.08);
-    }
-
-    .service-strip-inner {
-      max-width: 1360px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 0;
-      padding: 28px clamp(18px, 4vw, 56px);
-    }
-
-    .mini-service {
-      display: grid;
-      grid-template-columns: 54px 1fr;
-      gap: 14px;
-      align-items: start;
-      padding: 0 24px;
-      border-right: 1px solid rgba(17,35,59,0.14);
-    }
-
-    .mini-service:first-child {
-      padding-left: 0;
-    }
-
-    .mini-service:last-child {
-      border-right: 0;
-      padding-right: 0;
-    }
-
-    .mini-icon {
-      width: 50px;
-      height: 50px;
-      border-radius: 14px;
-      display: grid;
-      place-items: center;
-      color: var(--green);
-      font-size: 32px;
-      background: rgba(23,107,53,0.06);
-    }
-
-    .mini-service h3 {
-      color: var(--green);
-      font-size: 15px;
-      line-height: 1.18;
-      text-transform: uppercase;
-      margin-bottom: 4px;
-    }
-
-    .mini-service p {
-      font-size: 14px;
-      color: var(--ink);
-      line-height: 1.45;
-    }
-
-    section.content-section {
-      padding: 78px clamp(18px, 4vw, 56px);
-      background: #fffaf0;
-    }
-
-    .section-inner {
-      max-width: 1230px;
-      margin: 0 auto;
-    }
-
-    .section-head {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 28px;
-      margin-bottom: 34px;
-    }
-
-    .section-label {
-      color: var(--green);
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-bottom: 8px;
-      font-size: 13px;
-    }
-
-    .section-title {
-      color: var(--navy);
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(34px, 3.5vw, 50px);
-      line-height: 1.1;
-      letter-spacing: -0.02em;
-    }
-
-    .section-copy {
-      color: var(--muted);
-      max-width: 570px;
-      font-size: 16px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.86);
-      border: 1px solid rgba(17,35,59,0.1);
-      border-radius: 18px;
-      padding: 28px;
-      box-shadow: 0 12px 28px rgba(17,35,59,0.06);
-    }
-
-    .card-icon {
-      width: 54px;
-      height: 54px;
-      border-radius: 16px;
-      display: grid;
-      place-items: center;
-      background: rgba(23,107,53,0.08);
-      color: var(--green);
-      font-size: 30px;
-      margin-bottom: 18px;
-    }
-
-    .card h3 {
-      color: var(--navy);
-      font-size: 20px;
-      line-height: 1.22;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: minmax(260px, 360px) 1fr;
-      gap: 36px;
-      align-items: center;
-      margin-top: 42px;
-    }
-
-    .owner-card {
-      border-radius: 20px;
-      min-height: 260px;
-      background:
-        linear-gradient(180deg, rgba(17,35,59,0.08), rgba(255,255,255,0.74)),
-        linear-gradient(135deg, #efd09a, #f8edda);
-      border: 1px solid rgba(17,35,59,0.1);
-      box-shadow: var(--soft-shadow);
-      padding: 28px;
-      display: flex;
-      align-items: end;
-    }
-
-    .owner-card strong {
-      display: block;
-      font-family: "Playfair Display", Georgia, serif;
-      color: var(--navy);
-      font-size: 34px;
-      line-height: 1;
-    }
-
-    .owner-card span {
-      color: var(--green);
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-size: 13px;
-    }
-
-    .value-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-top: 28px;
-    }
-
-    .value-card {
-      background: rgba(255,255,255,0.74);
-      border: 1px solid rgba(17,35,59,0.09);
-      border-radius: 16px;
-      padding: 24px;
-      text-align: center;
-    }
-
-    .value-card div {
-      font-size: 34px;
-      color: var(--green);
-      margin-bottom: 8px;
-    }
-
-    .value-card h3 {
-      color: var(--navy);
-      font-size: 18px;
-      line-height: 1.2;
-      margin-bottom: 8px;
-    }
-
-    .bottom-bar {
-      background: linear-gradient(180deg, #176b35, #0f5128);
-      color: white;
-      padding: 24px clamp(18px, 4vw, 56px);
-    }
-
-    .bottom-inner {
-      max-width: 1360px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr 1.1fr 1fr;
-      gap: 22px;
-      align-items: center;
-    }
-
-    .footer-chip {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      border-right: 1px solid rgba(255,255,255,0.22);
-      min-height: 52px;
-      padding-right: 20px;
-    }
-
-    .footer-chip:last-child {
-      border-right: 0;
-    }
-
-    .footer-chip .chip-icon {
-      width: 44px;
-      height: 44px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.14);
-      font-size: 24px;
-      flex: 0 0 auto;
-    }
-
-    .footer-chip strong {
-      display: block;
-      line-height: 1.2;
-    }
-
-    .footer-chip span,
-    .footer-chip a {
-      font-size: 14px;
-      opacity: 0.9;
-    }
-
-    @media (max-width: 1120px) {
-      .nav {
-        grid-template-columns: 220px 1fr;
-      }
-
-      .header-actions {
-        grid-column: 1 / -1;
-        justify-content: flex-end;
-        margin-top: 10px;
-      }
-
-      .hero {
-        grid-template-columns: 1fr;
-        min-height: auto;
-        padding-top: 80px;
-      }
-
-      .hero-copy {
-        margin-left: 0;
-      }
-
-      .booking-card {
-        max-width: 560px;
-      }
-
-      .service-strip-inner {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 18px;
-      }
-
-      .mini-service {
-        border-right: 0;
-        padding: 0;
-      }
-
-      .cards,
-      .value-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .bottom-inner {
-        grid-template-columns: repeat(2, 1fr);
-      }
+    @media (max-width: 1180px) {
+      .nav { grid-template-columns: 1fr; }
+      .brand-mark { width: min(342px, 78vw); }
+      .nav-links { justify-content: flex-start; padding-top: 0; flex-wrap: wrap; }
+      .header-actions { padding-top: 0; justify-content: flex-start; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-copy { margin-left: 0; }
+      .booking-card { max-width: 560px; }
+      .service-strip-inner { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+      .mini-service { border-right: 0; padding: 0; }
+      .cards, .value-grid { grid-template-columns: repeat(2, 1fr); }
+      .bottom-inner { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 760px) {
-      .site-header {
-        padding-top: 18px;
-      }
-
-      .nav {
-        grid-template-columns: 1fr;
-        gap: 16px;
-      }
-
-      .brand img {
-        width: 240px;
-      }
-
-      .nav-links {
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        gap: 15px;
-        font-size: 13px;
-      }
-
-      .header-actions {
-        justify-content: flex-start;
-        flex-wrap: wrap;
-      }
-
-      .phone-block {
-        width: 100%;
-      }
-
-      .hero {
-        padding-top: 56px;
-      }
-
-      .hero h1 {
-        font-size: 42px;
-      }
-
-      .hero-buttons {
-        flex-direction: column;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .time-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .service-strip-inner,
-      .cards,
-      .about-grid,
-      .value-grid,
-      .bottom-inner {
-        grid-template-columns: 1fr;
-      }
-
-      .section-head {
-        display: block;
-      }
-
-      .footer-chip {
-        border-right: 0;
-        border-bottom: 1px solid rgba(255,255,255,0.18);
-        padding-bottom: 16px;
-      }
-
-      .footer-chip:last-child {
-        border-bottom: 0;
-        padding-bottom: 0;
-      }
+      .brand-name { font-size: 42px; }
+      .brand-sub { font-size: 12px; letter-spacing: 0.08em; gap: 8px; }
+      .brand-sub::before, .brand-sub::after { width: 24px; }
+      .brand-icon { transform: scale(0.78); transform-origin: left bottom; margin-bottom: -18px; }
+      .hero { padding-top: 32px; }
+      .hero h1 { font-size: 40px; }
+      .hero-buttons { flex-direction: column; }
+      .btn { width: 100%; }
+      .time-grid { grid-template-columns: repeat(2, 1fr); }
+      .service-strip-inner, .cards, .about-grid, .value-grid, .bottom-inner { grid-template-columns: 1fr; }
+      .section-head { display: block; }
+      .footer-chip { border-right: 0; border-bottom: 1px solid rgba(255,255,255,0.18); padding-bottom: 16px; }
+      .footer-chip:last-child { border-bottom: 0; padding-bottom: 0; }
     }
   </style>
 </head>
@@ -851,11 +532,20 @@
 <body>
   <div class="page-shell">
     <div class="sun-rays" aria-hidden="true"></div>
+    <div class="house-art" aria-hidden="true"></div>
 
     <header class="site-header">
       <nav class="nav" aria-label="Main navigation">
-        <a class="brand" href="/" aria-label="Sunshine State Home and Commercial Services homepage">
-          <img src="sunshine-state-logo-card.png" alt="Sunshine State Home & Commercial Services logo">
+        <a class="brand-mark" href="/" aria-label="Sunshine State Home and Commercial Services homepage">
+          <div class="brand-icon" aria-hidden="true">
+            <div class="brand-sun"></div>
+            <div class="palm-big"></div>
+            <div class="palm-small"></div>
+            <div class="roof"></div>
+          </div>
+          <div class="brand-name">SUNSHINE STATE</div>
+          <div class="brand-sub">Home &amp; Commercial Services</div>
+          <div class="brand-services"><span>Repairs</span><span>Plumbing</span><span>Electrical</span><span>Painting</span><span>Water Restoration</span></div>
         </a>
 
         <ul class="nav-links">
@@ -953,94 +643,28 @@
 
   <section class="service-strip" id="services">
     <div class="service-strip-inner">
-      <article class="mini-service">
-        <div class="mini-icon">⌂</div>
-        <div>
-          <h3>Home &amp; Commercial</h3>
-          <p>Solutions for every job, big or small.</p>
-        </div>
-      </article>
-
-      <article class="mini-service">
-        <div class="mini-icon">♒</div>
-        <div>
-          <h3>Water Damage Restoration</h3>
-          <p>Fast response when you need it most.</p>
-        </div>
-      </article>
-
-      <article class="mini-service">
-        <div class="mini-icon">✺</div>
-        <div>
-          <h3>Mold Remediation</h3>
-          <p>Safe, effective solutions for healthier spaces.</p>
-        </div>
-      </article>
-
-      <article class="mini-service">
-        <div class="mini-icon">▥</div>
-        <div>
-          <h3>Painting</h3>
-          <p>Interior, exterior, and finishing done right.</p>
-        </div>
-      </article>
-
-      <article class="mini-service">
-        <div class="mini-icon">🤝</div>
-        <div>
-          <h3>Owner-Led Service</h3>
-          <p>Personal service you can count on.</p>
-        </div>
-      </article>
+      <article class="mini-service"><div class="mini-icon">⌂</div><div><h3>Home &amp; Commercial</h3><p>Solutions for every job, big or small.</p></div></article>
+      <article class="mini-service"><div class="mini-icon">♒</div><div><h3>Water Damage Restoration</h3><p>Fast response when you need it most.</p></div></article>
+      <article class="mini-service"><div class="mini-icon">✺</div><div><h3>Mold Remediation</h3><p>Safe, effective solutions for healthier spaces.</p></div></article>
+      <article class="mini-service"><div class="mini-icon">▥</div><div><h3>Painting</h3><p>Interior, exterior, and finishing done right.</p></div></article>
+      <article class="mini-service"><div class="mini-icon">🤝</div><div><h3>Owner-Led Service</h3><p>Personal service you can count on.</p></div></article>
     </div>
   </section>
 
   <section class="content-section" aria-labelledby="services-title">
     <div class="section-inner">
       <div class="section-head">
-        <div>
-          <p class="section-label">What We Do</p>
-          <h2 class="section-title" id="services-title">Practical help, professional finish.</h2>
-        </div>
+        <div><p class="section-label">What We Do</p><h2 class="section-title" id="services-title">Practical help, professional finish.</h2></div>
         <p class="section-copy">Sunshine State Home &amp; Commercial Services handles everyday repairs, restoration needs, and property improvements for Jacksonville area homes and businesses.</p>
       </div>
 
       <div class="cards">
-        <article class="card">
-          <div class="card-icon">🔧</div>
-          <h3>Repairs &amp; Maintenance</h3>
-          <p>Fixtures, drywall, doors, punch lists, small repairs, and dependable maintenance support.</p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">🚿</div>
-          <h3>Plumbing</h3>
-          <p>Leaky faucets, minor plumbing fixes, water-related repairs, and practical troubleshooting.</p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">⚡</div>
-          <h3>Electrical</h3>
-          <p>Lighting, outlets, switches, basic electrical repairs, and safe property improvements.</p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">🎨</div>
-          <h3>Painting</h3>
-          <p>Interior and exterior painting with clean prep, careful lines, and a polished final look.</p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">💧</div>
-          <h3>Water Damage Restoration</h3>
-          <p>Fast response, drying support, repair coordination, and restoration-minded service.</p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">🧼</div>
-          <h3>Mold Remediation</h3>
-          <p>Safer, cleaner spaces with thoughtful remediation support and healthier indoor environments.</p>
-        </article>
+        <article class="card"><div class="card-icon">🔧</div><h3>Repairs &amp; Maintenance</h3><p>Fixtures, drywall, doors, punch lists, small repairs, and dependable maintenance support.</p></article>
+        <article class="card"><div class="card-icon">🚿</div><h3>Plumbing</h3><p>Leaky faucets, minor plumbing fixes, water-related repairs, and practical troubleshooting.</p></article>
+        <article class="card"><div class="card-icon">⚡</div><h3>Electrical</h3><p>Lighting, outlets, switches, basic electrical repairs, and safe property improvements.</p></article>
+        <article class="card"><div class="card-icon">🎨</div><h3>Painting</h3><p>Interior and exterior painting with clean prep, careful lines, and a polished final look.</p></article>
+        <article class="card"><div class="card-icon">💧</div><h3>Water Damage Restoration</h3><p>Fast response, drying support, repair coordination, and restoration-minded service.</p></article>
+        <article class="card"><div class="card-icon">🧼</div><h3>Mold Remediation</h3><p>Safer, cleaner spaces with thoughtful remediation support and healthier indoor environments.</p></article>
       </div>
     </div>
   </section>
@@ -1048,39 +672,18 @@
   <section class="content-section" id="about" style="background: var(--cream-2);" aria-labelledby="about-title">
     <div class="section-inner">
       <div class="section-head">
-        <div>
-          <p class="section-label">About the Owner</p>
-          <h2 class="section-title" id="about-title">Local, dependable, and committed to quality work.</h2>
-        </div>
+        <div><p class="section-label">About the Owner</p><h2 class="section-title" id="about-title">Local, dependable, and committed to quality work.</h2></div>
         <p class="section-copy">You get honest answers, fair prices, and results you can count on. Every project is handled with care, from the first message to the final walkthrough.</p>
       </div>
 
       <div class="about-grid">
-        <div class="owner-card">
-          <p><span>Owner-Led Service</span><strong>Kevin Schaeffer</strong></p>
-        </div>
-
+        <div class="owner-card"><p><span>Owner-Led Service</span><strong>Kevin Schaeffer</strong></p></div>
         <div>
           <p>Sunshine State Home &amp; Commercial Services is built around simple promises: show up, communicate clearly, do the work correctly, and leave people feeling confident about their property.</p>
-
           <div class="value-grid">
-            <article class="value-card">
-              <div>🛡️</div>
-              <h3>Quality Workmanship</h3>
-              <p>We take pride in every detail and stand by our work.</p>
-            </article>
-
-            <article class="value-card">
-              <div>⏱️</div>
-              <h3>On Time &amp; Reliable</h3>
-              <p>We show up when we say we will and finish the job right.</p>
-            </article>
-
-            <article class="value-card">
-              <div>💲</div>
-              <h3>Fair Pricing</h3>
-              <p>Honest estimates, no surprises, just fair competitive pricing.</p>
-            </article>
+            <article class="value-card"><div>🛡️</div><h3>Quality Workmanship</h3><p>We take pride in every detail and stand by our work.</p></article>
+            <article class="value-card"><div>⏱️</div><h3>On Time &amp; Reliable</h3><p>We show up when we say we will and finish the job right.</p></article>
+            <article class="value-card"><div>💲</div><h3>Fair Pricing</h3><p>Honest estimates, no surprises, just fair competitive pricing.</p></article>
           </div>
         </div>
       </div>
@@ -1090,10 +693,7 @@
   <section class="content-section" id="service-area" aria-labelledby="area-title">
     <div class="section-inner">
       <div class="section-head">
-        <div>
-          <p class="section-label">Service Area</p>
-          <h2 class="section-title" id="area-title">Proudly serving Jacksonville, FL and surrounding areas.</h2>
-        </div>
+        <div><p class="section-label">Service Area</p><h2 class="section-title" id="area-title">Proudly serving Jacksonville, FL and surrounding areas.</h2></div>
         <p class="section-copy">Need help outside Jacksonville? Reach out. If we can get there and do the job well, we will tell you straight.</p>
       </div>
     </div>
@@ -1102,68 +702,24 @@
   <section class="content-section" id="reviews" style="background: var(--cream-2);" aria-labelledby="reviews-title">
     <div class="section-inner">
       <div class="section-head">
-        <div>
-          <p class="section-label">Reviews</p>
-          <h2 class="section-title" id="reviews-title">Built on trust and word of mouth.</h2>
-        </div>
+        <div><p class="section-label">Reviews</p><h2 class="section-title" id="reviews-title">Built on trust and word of mouth.</h2></div>
         <p class="section-copy">Clear communication, fair pricing, and work done right are the heart of the brand.</p>
       </div>
 
       <div class="cards">
-        <article class="card">
-          <div class="card-icon">⭐</div>
-          <h3>Reliable</h3>
-          <p>Customers should feel safe calling, booking, and trusting the work from start to finish.</p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">⭐</div>
-          <h3>Fair</h3>
-          <p>No confusing upsells. Just clear estimates and respectful service.</p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">⭐</div>
-          <h3>Professional</h3>
-          <p>A polished experience that feels local, honest, and easy to recommend.</p>
-        </article>
+        <article class="card"><div class="card-icon">⭐</div><h3>Reliable</h3><p>Customers should feel safe calling, booking, and trusting the work from start to finish.</p></article>
+        <article class="card"><div class="card-icon">⭐</div><h3>Fair</h3><p>No confusing upsells. Just clear estimates and respectful service.</p></article>
+        <article class="card"><div class="card-icon">⭐</div><h3>Professional</h3><p>A polished experience that feels local, honest, and easy to recommend.</p></article>
       </div>
     </div>
   </section>
 
   <footer class="bottom-bar" id="contact">
     <div class="bottom-inner">
-      <div class="footer-chip">
-        <div class="chip-icon">📍</div>
-        <div>
-          <strong>Proudly Serving Jacksonville, FL</strong>
-          <span>and surrounding areas</span>
-        </div>
-      </div>
-
-      <div class="footer-chip">
-        <div class="chip-icon">☎</div>
-        <div>
-          <strong><a href="tel:+18033945120">(803) 394-5120</a></strong>
-          <span>Call or Text</span>
-        </div>
-      </div>
-
-      <div class="footer-chip">
-        <div class="chip-icon">✉</div>
-        <div>
-          <strong><a href="mailto:sunshinestatehcs@gmail.com">SunshineStateHCS@gmail.com</a></strong>
-          <span>Fast response</span>
-        </div>
-      </div>
-
-      <div class="footer-chip">
-        <div class="chip-icon">👍</div>
-        <div>
-          <strong>Find us on Thumbtack</strong>
-          <span>Quality. Reliability. Peace of mind.</span>
-        </div>
-      </div>
+      <div class="footer-chip"><div class="chip-icon">📍</div><div><strong>Proudly Serving Jacksonville, FL</strong><span>and surrounding areas</span></div></div>
+      <div class="footer-chip"><div class="chip-icon">☎</div><div><strong><a href="tel:+18033945120">(803) 394-5120</a></strong><span>Call or Text</span></div></div>
+      <div class="footer-chip"><div class="chip-icon">✉</div><div><strong><a href="mailto:sunshinestatehcs@gmail.com">SunshineStateHCS@gmail.com</a></strong><span>Fast response</span></div></div>
+      <div class="footer-chip"><div class="chip-icon">👍</div><div><strong>Find us on Thumbtack</strong><span>Quality. Reliability. Peace of mind.</span></div></div>
     </div>
   </footer>
 </body>
