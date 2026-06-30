@@ -79,8 +79,9 @@ nav a { color: white; text-decoration: none; font-size: 14px; transition: opacit
 nav a:hover { opacity: 0.8; }
 
 /* ── HERO ── */
-.hero-wrapper { background: linear-gradient(160deg, #001f4d 0%, #003d80 60%, #005cb8 100%); width: 100%; }
-.hero { max-width: 1200px; margin: 0 auto; padding: 60px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.hero-wrapper { background: linear-gradient(160deg, #001f4d 0%, #003d80 60%, #005cb8 100%); width: 100%; position: relative; overflow: hidden; }
+.hero-wrapper::before { content: ''; position: absolute; inset: 0; background: url('https://thesunshinestatehcs.com/sunshine-state-logo-card.png') center center / 55% auto no-repeat; opacity: 0.07; z-index: 0; pointer-events: none; }
+.hero { max-width: 1200px; margin: 0 auto; padding: 60px 40px; display: grid; grid-template-columns: 1fr; gap: 60px; align-items: center; position: relative; z-index: 1; max-width: 800px; }
 .hero-logo img { width: 100%; max-width: 460px; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.4); display: block; }
 .hero-content { color: white; }
 .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,107,53,0.2); border: 1px solid rgba(255,107,53,0.5); color: #ffaa80; font-size: 13px; font-weight: 600; padding: 6px 14px; border-radius: 20px; margin-bottom: 20px; letter-spacing: 0.5px; }
@@ -168,7 +169,6 @@ footer { background: #003366; color: white; padding: 40px 20px; text-align: cent
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
 .hero { grid-template-columns: 1fr; text-align: center; padding: 40px 20px; gap: 30px; }
-.hero-logo img { max-width: 320px; margin: 0 auto; }
 .hero-buttons { justify-content: center; }
 .trust-pills { justify-content: center; }
 .hero-content h1 { font-size: 32px; }
@@ -207,9 +207,7 @@ nav ul { flex-direction: column; gap: 15px; }
 <!-- ═══ HERO ═══ -->
 <div class="hero-wrapper" id="home">
 <div class="hero">
-<div class="hero-logo">
-<img src="https://thesunshinestatehcs.com/sunshine-state-logo-card.png" alt="Sunshine State Home & Commercial Services - Jacksonville FL" onerror="this.style.display='none'">
-</div>
+
 <div class="hero-content">
 <div class="hero-badge">&#9989; Jacksonville, FL &amp; Surrounding Areas</div>
 <h1>Home &amp; Commercial Services You Can <span>Trust</span></h1>
