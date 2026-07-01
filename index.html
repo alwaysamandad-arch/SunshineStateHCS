@@ -9,172 +9,161 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#10233d;--green:#176b35;--green2:#0f5128;--gold:#d89825;--cream:#fff8ed;--cream2:#f7ead6;--ink:#17243a;--muted:#5b6572}*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:1rem;line-height:1.5;color:var(--ink)}main{display:flex;flex-direction:column}.hero-stage{position:relative;width:100%;overflow:hidden;max-height:100vh}.hero-stage img{display:block;width:100%;height:auto;object-fit:cover}.hotspot{position:absolute;border:none;background:0;cursor:pointer;text-indent:-9999px;z-index:10;transition:.2s}.hotspot:hover{opacity:.7}.hero-form{position:absolute;background:white;border-radius:12px;padding:2rem;box-shadow:0 10px 40px rgba(0,0,0,.15);z-index:15;right:3%;top:15%;width:100%;max-width:300px}.hero-form label{display:block;margin-bottom:.75rem;font-weight:600;color:var(--navy);font-size:.95rem}.hero-form select,.hero-form input[type="date"]{width:100%;padding:.75rem;margin-bottom:1rem;border:1px solid #ddd;border-radius:6px;font-family:inherit;font-size:.95rem}.hero-form select:focus,.hero-form input[type="date"]:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(23,107,53,.1)}.time-labels{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1.5rem}.time-hit{display:block}.time-hit input{appearance:none;-webkit-appearance:none;width:100%;padding:.75rem;border:2px solid #ddd;border-radius:6px;background:white;cursor:pointer;font-size:.875rem;font-weight:600;transition:.2s;color:var(--ink)}.time-hit input:checked{background:var(--green);color:white;border-color:var(--green)}.hero-form button{width:100%;padding:.85rem;background:var(--green);color:white;border:none;border-radius:6px;font-size:1.05rem;font-weight:700;cursor:pointer;transition:.2s}.hero-form button:hover{background:var(--green2);transform:translateY(-2px);box-shadow:0 5px 15px rgba(0,0,0,.2)}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}@media (max-width:768px){.hero-form{position:static;width:auto;margin:2rem;max-width:none;right:auto;top:auto}}.section{padding:3rem 2rem;background:white}.section.alt{background:var(--cream2)}.inner{max-width:1200px;margin:0 auto}.section-head{margin-bottom:3rem;text-align:center}.label{color:var(--green);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.8rem}.title{font-family:"Playfair Display",serif;font-size:2.25rem;font-weight:900;color:var(--navy);margin-top:.75rem;line-height:1.1}@media (max-width:768px){.title{font-size:1.5rem}}.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;margin-top:2rem}.service-card{background:white;padding:2rem;border-radius:10px;border:2px solid #eee;text-align:center;transition:.3s}.service-card:hover{border-color:var(--green);box-shadow:0 5px 20px rgba(23,107,53,.1)}.service-card h3{color:var(--green);margin-bottom:1rem;font-size:1.25rem;font-weight:700}.service-card p{color:var(--muted);line-height:1.6}.about-content{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}@media (max-width:768px){.about-content{grid-template-columns:1fr}}.about-text h3{color:var(--green);font-size:1.1rem;margin-bottom:1rem;font-weight:700}.about-text p{color:var(--muted);margin-bottom:1rem;line-height:1.8}.about-text ul{margin-left:1.5rem;color:var(--muted);line-height:1.8}.about-text li{margin-bottom:.75rem}.service-area-text{color:var(--muted);margin-bottom:2rem;text-align:center}.service-area-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.5rem;margin-top:2rem}.area-item{padding:1.5rem;background:white;border-radius:8px;border-left:5px solid var(--green);text-align:center}.area-item strong{color:var(--navy);display:block;margin-bottom:.5rem;font-weight:700}.area-item span{color:var(--muted);font-size:.9rem}.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:2rem}.review-card{background:white;padding:2rem;border-radius:10px;border:2px solid #eee;transition:.3s}.review-card:hover{box-shadow:0 5px 20px rgba(0,0,0,.1)}.review-stars{color:var(--gold);margin-bottom:.75rem;font-size:1.1rem;letter-spacing:.1em}.review-text{color:var(--ink);margin-bottom:1rem;line-height:1.6;font-style:italic}.review-author{color:var(--green);font-weight:700}.footer{background:var(--navy);color:white;padding:3rem 2rem}.footer-inner{max-width:1200px;margin:0 auto}.chip{display:flex;justify-content:space-between;gap:2rem;margin-bottom:2rem;flex-wrap:wrap}.chip>div{flex:1;min-width:150px}.chip b{color:white;display:block;margin-bottom:.5rem;font-weight:700}.chip span{color:#aaa;font-size:.9rem;display:block}.footer-bottom{border-top:1px solid rgba(255,255,255,.2);padding-top:1.5rem;text-align:center;color:#aaa;font-size:.85rem}@media (max-width:768px){.chip{flex-direction:column}}
+:root{--navy:#10233d;--green:#176b35;--green2:#0f5128;--gold:#d89825;--cream:#fff8ed;--cream2:#f7ead6;--ink:#17243a;--muted:#5b6572;--line:rgba(16,35,61,.14)}*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Inter,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}a{text-decoration:none;color:inherit}.approved-hero{width:100%;overflow:hidden;background:#f0f0f0}.approved-hero img{display:block;width:100%;height:auto}.hero-fallback{display:none;background:linear-gradient(135deg,var(--navy) 0%,var(--green) 100%);color:white;text-align:center;padding:4rem 2rem;min-height:300px;justify-content:center;flex-direction:column}.hero-fallback h1{font-family:"Playfair Display",serif;font-size:3.5rem;margin-bottom:.5rem;font-weight:900}.hero-fallback p{font-size:1.5rem;margin-bottom:2rem}.btn{display:inline-block;padding:.75rem 1.5rem;border-radius:6px;font-weight:600;transition:.2s;border:2px solid transparent}.btn.green{background:var(--green);color:white}.btn.green:hover{background:var(--green2)}.btn.light{background:white;color:var(--green);border:2px solid var(--green)}.btn.light:hover{background:var(--cream2)}.quick-actions{position:sticky;top:0;z-index:20;background:rgba(255,248,237,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(16,35,61,.08);padding:12px clamp(18px,4vw,56px)}.quick-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}.quick-inner strong{color:var(--navy);font-size:.95rem}.quick-inner .btn{padding:.5rem 1rem;font-size:.85rem}.booking-wrap{background:var(--cream2);padding:3rem clamp(1rem,5vw,3rem)}.booking{max-width:800px;margin:0 auto;background:white;padding:2.5rem clamp(1.5rem,4vw,3rem);border-radius:10px;box-shadow:0 4px 20px rgba(0,0,0,.08)}.booking h2{font-family:"Playfair Display",serif;color:var(--navy);font-size:2rem;margin-bottom:1.5rem;text-align:center}.step{margin-bottom:1.5rem}.step label{display:block;font-weight:600;color:var(--navy);margin-bottom:.5rem;font-size:.95rem}.step input[type="text"],.step input[type="tel"],.step input[type="date"],.step select{width:100%;padding:.75rem;border:1px solid #ddd;border-radius:6px;font-family:inherit;font-size:1rem}.step input:focus,.step select:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(23,107,53,.1)}.times{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:.75rem}.times label{display:flex;align-items:center;margin-bottom:0;cursor:pointer;font-weight:normal}.times input[type="radio"]{margin-right:.5rem;cursor:pointer}.times span{font-weight:500}.booking button{width:100%;padding:1rem;font-size:1rem;min-height:50px;margin-top:1rem}.section{padding:3rem clamp(1rem,5vw,3rem);background:white}.section.alt{background:var(--cream2)}.inner{max-width:1200px;margin:0 auto}.section-head{margin-bottom:3rem;text-align:center}.label{color:var(--green);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.8rem}.title{font-family:"Playfair Display",serif;font-size:2.25rem;font-weight:900;color:var(--navy);margin-top:.75rem;line-height:1.1}.section-desc{color:var(--muted);font-size:1.05rem;margin-top:1rem}.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;margin-top:2rem}.service-card{background:white;padding:2rem;border-radius:10px;border:2px solid #eee;text-align:center;transition:.3s}.service-card:hover{border-color:var(--green);box-shadow:0 5px 20px rgba(23,107,53,.1)}.service-card h3{color:var(--green);margin-bottom:1rem;font-size:1.25rem;font-weight:700}.service-card p{color:var(--muted);line-height:1.6}.about-content{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}@media(max-width:768px){.about-content{grid-template-columns:1fr}}.about-text h3{color:var(--green);font-size:1.1rem;margin-bottom:1rem;font-weight:700}.about-text p{color:var(--muted);margin-bottom:1rem;line-height:1.8}.about-text ul{margin-left:1.5rem;color:var(--muted);line-height:1.8}.about-text li{margin-bottom:.75rem}.service-area-text{color:var(--muted);margin-bottom:2rem;text-align:center}.service-area-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.5rem;margin-top:2rem}.area-item{padding:1.5rem;background:white;border-radius:8px;border-left:5px solid var(--green);text-align:center}.area-item strong{color:var(--navy);display:block;margin-bottom:.5rem;font-weight:700}.area-item span{color:var(--muted);font-size:.9rem}.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:2rem}.review-card{background:white;padding:2rem;border-radius:10px;border:2px solid #eee;transition:.3s}.review-card:hover{box-shadow:0 5px 20px rgba(0,0,0,.1)}.review-stars{color:var(--gold);margin-bottom:.75rem;font-size:1.1rem;letter-spacing:.1em}.review-text{color:var(--ink);margin-bottom:1rem;line-height:1.6;font-style:italic}.review-author{color:var(--green);font-weight:700}.footer{background:var(--navy);color:white;padding:3rem clamp(1rem,5vw,3rem)}.footer-inner{max-width:1200px;margin:0 auto}.chip{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;margin-bottom:2rem}.chip>div{padding:1rem 0}.chip b{color:white;display:block;margin-bottom:.5rem;font-weight:700}.chip span{color:#aaa;font-size:.9rem;display:block}.footer-bottom{border-top:1px solid rgba(255,255,255,.2);padding-top:1.5rem;text-align:center;color:#aaa;font-size:.85rem}@media(max-width:768px){.quick-inner{flex-direction:column;text-align:center}.approved-hero{min-height:auto}.title{font-size:1.5rem}.section{padding:2rem 1rem}.booking{padding:2rem 1rem}}
 </style>
 </head>
 <body>
-<main>
-<section class="hero-stage" aria-label="Sunshine State Home and Commercial Services homepage">
-<img src="assets/sunshine-approved-hero.jpg.png" alt="Sunshine State Home and Commercial Services with sun, house, palm trees, and tropical background">
-<a class="hotspot" href="/" style="left:22.8%;top:4.3%;width:4.9%;height:4.2%">Home</a>
-<a class="hotspot" href="#services" style="left:29.1%;top:4.3%;width:6.5%;height:4.2%">Services</a>
-<a class="hotspot" href="#about" style="left:37.5%;top:4.3%;width:5.5%;height:4.2%">About</a>
-<a class="hotspot" href="#service-area" style="left:45.8%;top:4.3%;width:9.2%;height:4.2%">Service Area</a>
-<a class="hotspot" href="#reviews" style="left:56.4%;top:4.3%;width:6.2%;height:4.2%">Reviews</a>
-<a class="hotspot" href="#contact" style="left:64.1%;top:4.3%;width:6.2%;height:4.2%">Contact</a>
-<a class="hotspot" href="tel:+18033945120" style="left:72.7%;top:3.2%;width:13.2%;height:6.4%">Call or Text</a>
-<a class="hotspot" href="#booking" style="left:88.3%;top:3.7%;width:9.1%;height:5.6%">Book Now</a>
-<a class="hotspot" href="#booking" style="left:9.4%;top:70.1%;width:14.3%;height:6.1%">Book Online</a>
-<a class="hotspot" href="tel:+18033945120" style="left:25.1%;top:70.1%;width:13.2%;height:6.1%">Call or Text</a>
-<a class="hotspot" href="#reviews" style="left:39.2%;top:70.1%;width:16.5%;height:6.1%">View on Thumbtack</a>
-<form class="hero-form" id="booking" name="booking" method="POST" data-netlify="true" action="/success.html">
-<input type="hidden" name="form-name" value="booking">
-<label for="service">1. Choose a Service</label>
-<select id="service" name="service" required>
-<option value="">Select a service</option>
-<option value="General Repairs">General Repairs</option>
-<option value="Plumbing">Plumbing</option>
-<option value="Electrical">Electrical</option>
-<option value="Painting">Painting</option>
-<option value="Water Damage">Water Damage Restoration</option>
-<option value="Mold Remediation">Mold Remediation</option>
-</select>
-<label for="date">2. Pick Date</label>
-<input id="date" name="preferred_date" type="date" required>
-<label>3. Pick Time</label>
-<div class="time-labels">
-<label class="time-hit"><input type="radio" name="preferred_time" value="8:00 AM" required>8:00 AM</label>
-<label class="time-hit"><input type="radio" name="preferred_time" value="10:00 AM">10:00 AM</label>
-<label class="time-hit"><input type="radio" name="preferred_time" value="12:00 PM">12:00 PM</label>
-<label class="time-hit"><input type="radio" name="preferred_time" value="2:00 PM">2:00 PM</label>
-<label class="time-hit"><input type="radio" name="preferred_time" value="4:00 PM">4:00 PM</label>
-<label class="time-hit"><input type="radio" name="preferred_time" value="6:00 PM">6:00 PM</label>
-</div>
-<button type="submit">BOOK NOW</button>
-</form>
+<section class="approved-hero" aria-label="Sunshine State Home and Commercial Services homepage design">
+  <img src="assets/sunshine-approved-hero.jpg.png" alt="Sunshine State Home and Commercial Services with sun, house, palm trees, booking form, and tropical background" onerror="this.parentElement.style.display='none'">
+</section>
+<section class="hero-fallback">
+  <h1>SUNSHINE STATE</h1>
+  <p>Home &amp; Commercial Services</p>
+  <a class="btn green" href="#booking">BOOK NOW</a>
+</section>
+<nav class="quick-actions" aria-label="Quick actions">
+  <div class="quick-inner">
+    <strong>Sunshine State Home &amp; Commercial Services</strong>
+    <a class="btn green" href="#booking">BOOK NOW</a>
+    <a class="btn light" href="tel:+18033945120">CALL OR TEXT</a>
+    <a class="btn light" href="#services">SERVICES</a>
+    <a class="btn light" href="#contact">CONTACT</a>
+  </div>
+</nav>
+<section class="booking-wrap" id="booking">
+  <form class="booking" name="booking" method="POST" data-netlify="true" action="/success.html">
+    <input type="hidden" name="form-name" value="booking">
+    <h2>Book a Service</h2>
+    <div class="step"><label for="service">1. Choose a Service</label><select id="service" name="service" required><option value="">Select a service</option><option>General repairs</option><option>Plumbing</option><option>Electrical</option><option>Painting</option><option>Water damage restoration</option><option>Mold remediation</option></select></div>
+    <div class="step"><label for="date">2. Pick Date</label><input id="date" name="preferred_date" type="date" required></div>
+    <div class="step"><label>3. Pick Time</label><div class="times"><label><input type="radio" name="preferred_time" value="8:00 AM"><span>8:00 AM</span></label><label><input type="radio" name="preferred_time" value="10:00 AM"><span>10:00 AM</span></label><label><input type="radio" name="preferred_time" value="12:00 PM"><span>12:00 PM</span></label><label><input type="radio" name="preferred_time" value="2:00 PM"><span>2:00 PM</span></label><label><input type="radio" name="preferred_time" value="4:00 PM"><span>4:00 PM</span></label><label><input type="radio" name="preferred_time" value="6:00 PM"><span>6:00 PM</span></label></div></div>
+    <div class="step"><label for="name">Your Name</label><input id="name" name="name" type="text" required></div>
+    <div class="step"><label for="phone">Phone Number</label><input id="phone" name="phone" type="tel" required></div>
+    <button class="btn green" type="submit" style="width:100%;min-height:64px">BOOK NOW</button>
+  </form>
 </section>
 <section class="section" id="services">
-<div class="inner">
-<div class="section-head">
-<p class="label">What We Do</p>
-<h2 class="title">Practical help, professional finish.</h2>
-</div>
-<div class="services-grid">
-<div class="service-card">
-<h3>General Repairs</h3>
-<p>Handyman services for all your home needs, big or small.</p>
-</div>
-<div class="service-card">
-<h3>Plumbing</h3>
-<p>Expert plumbing repairs and installations done right the first time.</p>
-</div>
-<div class="service-card">
-<h3>Electrical</h3>
-<p>Safe, code-compliant electrical work for your peace of mind.</p>
-</div>
-<div class="service-card">
-<h3>Painting</h3>
-<p>Interior and exterior painting that transforms your space.</p>
-</div>
-<div class="service-card">
-<h3>Water Damage Restoration</h3>
-<p>Fast response and thorough restoration when you need it most.</p>
-</div>
-<div class="service-card">
-<h3>Mold Remediation</h3>
-<p>Safe, effective solutions for healthier spaces.</p>
-</div>
-</div>
-</div>
+  <div class="inner">
+    <div class="section-head">
+      <p class="label">What We Do</p>
+      <h2 class="title">Practical help, professional finish.</h2>
+      <p class="section-desc">From quick fixes to big projects, we handle it all with licensed expertise and fair pricing.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>General Repairs</h3>
+        <p>Handyman services for all your home needs, big or small.</p>
+      </div>
+      <div class="service-card">
+        <h3>Plumbing</h3>
+        <p>Expert plumbing repairs and installations done right the first time.</p>
+      </div>
+      <div class="service-card">
+        <h3>Electrical</h3>
+        <p>Safe, code-compliant electrical work for your peace of mind.</p>
+      </div>
+      <div class="service-card">
+        <h3>Painting</h3>
+        <p>Interior and exterior painting that transforms your space.</p>
+      </div>
+      <div class="service-card">
+        <h3>Water Damage Restoration</h3>
+        <p>Fast response and thorough restoration when you need it most.</p>
+      </div>
+      <div class="service-card">
+        <h3>Mold Remediation</h3>
+        <p>Safe, effective solutions for healthier spaces.</p>
+      </div>
+    </div>
+  </div>
 </section>
 <section class="section alt" id="about">
-<div class="inner">
-<div class="section-head">
-<p class="label">About the Owner</p>
-<h2 class="title">Local, dependable, and committed to quality work.</h2>
-</div>
-<div class="about-content">
-<div class="about-text">
-<h3>Licensed & Insured Professional</h3>
-<p>With years of hands-on expertise in the home services industry, our owner brings professional reliability to every job. We believe in honest work, fair prices, and treating your property like our own.</p>
-<p>Whether it's a quick fix or a major project, you'll get the same level of care and professionalism every time.</p>
-</div>
-<div class="about-text">
-<h3>Why Choose Sunshine State?</h3>
-<ul>
-<li>Licensed, insured, and bonded</li>
-<li>Trusted local professional</li>
-<li>Satisfaction guaranteed</li>
-<li>Transparent pricing</li>
-<li>Same-day appointments available</li>
-</ul>
-</div>
-</div>
-</div>
+  <div class="inner">
+    <div class="section-head">
+      <p class="label">About the Owner</p>
+      <h2 class="title">Local, dependable, and committed to quality work.</h2>
+    </div>
+    <div class="about-content">
+      <div class="about-text">
+        <h3>Licensed &amp; Insured Professional</h3>
+        <p>With years of hands-on expertise in the home services industry, our owner brings professional reliability to every job. We believe in honest work, fair prices, and treating your property like our own.</p>
+        <p>Whether it's a quick fix or a major project, you'll get the same level of care and professionalism every time.</p>
+      </div>
+      <div class="about-text">
+        <h3>Why Choose Sunshine State?</h3>
+        <ul>
+          <li>Licensed, insured, and bonded</li>
+          <li>Trusted local professional</li>
+          <li>Satisfaction guaranteed</li>
+          <li>Transparent pricing</li>
+          <li>Same-day appointments available</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
 <section class="section" id="service-area">
-<div class="inner">
-<div class="section-head">
-<p class="label">Service Area</p>
-<h2 class="title">Proudly serving Jacksonville, FL and surrounding areas</h2>
-</div>
-<p class="service-area-text">We serve the greater Jacksonville area including Arlington, Riverside, Avondale, and all surrounding communities. Ready to help whenever you need us.</p>
-<div class="service-area-list">
-<div class="area-item"><strong>Jacksonville</strong><span>Downtown, Riverside, Avondale</span></div>
-<div class="area-item"><strong>Arlington</strong><span>All neighborhoods</span></div>
-<div class="area-item"><strong>Southside</strong><span>All areas served</span></div>
-<div class="area-item"><strong>Northside</strong><span>All neighborhoods</span></div>
-<div class="area-item"><strong>Westside</strong><span>All areas served</span></div>
-<div class="area-item"><strong>Orange Park</strong><span>Surrounding communities</span></div>
-</div>
-</div>
+  <div class="inner">
+    <div class="section-head">
+      <p class="label">Service Area</p>
+      <h2 class="title">Proudly serving Jacksonville, FL and surrounding areas</h2>
+    </div>
+    <p class="service-area-text">We serve the greater Jacksonville area including Arlington, Riverside, Avondale, and all surrounding communities. Ready to help whenever you need us.</p>
+    <div class="service-area-list">
+      <div class="area-item"><strong>Jacksonville</strong><span>Downtown, Riverside, Avondale</span></div>
+      <div class="area-item"><strong>Arlington</strong><span>All neighborhoods</span></div>
+      <div class="area-item"><strong>Southside</strong><span>All areas served</span></div>
+      <div class="area-item"><strong>Northside</strong><span>All neighborhoods</span></div>
+      <div class="area-item"><strong>Westside</strong><span>All areas served</span></div>
+      <div class="area-item"><strong>Orange Park</strong><span>Surrounding communities</span></div>
+    </div>
+  </div>
 </section>
 <section class="section alt" id="reviews">
-<div class="inner">
-<div class="section-head">
-<p class="label">Reviews</p>
-<h2 class="title">Built on trust and word of mouth.</h2>
-</div>
-<div class="reviews-grid">
-<div class="review-card">
-<div class="review-stars">★★★★★</div>
-<p class="review-text">"Professional, on-time, and fair pricing. Highly recommend Sunshine State for all your home service needs!"</p>
-<p class="review-author">Sarah M. - Jacksonville</p>
-</div>
-<div class="review-card">
-<div class="review-stars">★★★★★</div>
-<p class="review-text">"The owner treated my home with respect and finished the job right. A+ service and customer care."</p>
-<p class="review-author">Michael T. - Arlington</p>
-</div>
-<div class="review-card">
-<div class="review-stars">★★★★★</div>
-<p class="review-text">"Quick response, professional work, and honest communication. This is the real deal for home services."</p>
-<p class="review-author">Jennifer L. - Southside</p>
-</div>
-</div>
-</div>
+  <div class="inner">
+    <div class="section-head">
+      <p class="label">Reviews</p>
+      <h2 class="title">Built on trust and word of mouth.</h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Professional, on-time, and fair pricing. Highly recommend Sunshine State for all your home service needs!"</p>
+        <p class="review-author">Sarah M. - Jacksonville</p>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"The owner treated my home with respect and finished the job right. A+ service and customer care."</p>
+        <p class="review-author">Michael T. - Arlington</p>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Quick response, professional work, and honest communication. This is the real deal for home services."</p>
+        <p class="review-author">Jennifer L. - Southside</p>
+      </div>
+    </div>
+  </div>
 </section>
-</main>
 <footer class="footer" id="contact">
-<div class="footer-inner">
-<div class="chip">
-<div>
-<b>Proudly Serving Jacksonville, FL</b>
-<span>and surrounding areas</span>
-</div>
-<div>
-<b>License & Insurance</b>
-<span>Licensed, Insured & Bonded</span>
-</div>
-<div>
-<b>Call or Text</b>
-<span>(803) 394-5120</span>
-</div>
-</div>
-<div class="footer-bottom">
-<p>&copy; 2026 Sunshine State Home & Commercial Services. All rights reserved.</p>
-</div>
-</div>
+  <div class="footer-inner">
+    <div class="chip">
+      <div>
+        <b>Proudly Serving Jacksonville, FL</b>
+        <span>and surrounding areas</span>
+      </div>
+      <div>
+        <b>License &amp; Insurance</b>
+        <span>Licensed, Insured &amp; Bonded</span>
+      </div>
+      <div>
+        <b>Call or Text</b>
+        <span>(803) 394-5120</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Sunshine State Home &amp; Commercial Services. All rights reserved.</p>
+    </div>
+  </div>
 </footer>
 </body>
 </html>
