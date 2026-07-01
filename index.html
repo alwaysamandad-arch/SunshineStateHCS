@@ -3,981 +3,1433 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home & Commercial Services Jacksonville, FL | Sunshine State</title>
-  <meta name="description" content="Licensed, insured handyman services in Jacksonville, FL. Plumbing, electrical, painting, repairs, water damage & mold remediation. Free estimates. (803) 394-5120">
-  <meta name="keywords" content="handyman Jacksonville, plumbing, electrical, painting, home repair, water damage, mold removal">
+  <title>Sunshine State Home & Commercial Services | Jacksonville Handyman, Water Damage & Mold Help</title>
+  <meta name="description" content="Sunshine State Home & Commercial Services provides owner-led home and commercial repairs in the Jacksonville, FL area. Book help for repairs, plumbing, electrical, painting, water damage restoration, and mold remediation. Call or text Kevin at (803) 394-5120.">
+  <meta name="keywords" content="Jacksonville handyman, Jacksonville home repair, water damage restoration Jacksonville FL, mold remediation Jacksonville FL, plumbing repairs Jacksonville, electrical repairs Jacksonville, painting contractor Jacksonville, Sunshine State HCS">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://thesunshinestatehcs.com/">
+  <meta property="og:title" content="Sunshine State Home & Commercial Services">
+  <meta property="og:description" content="Reliable owner-led home and commercial services for Jacksonville and surrounding North Florida communities.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thesunshinestatehcs.com/">
+  <meta name="theme-color" content="#176b35">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --green: #176b35;
+      --green-dark: #0f5128;
+      --navy: #0f213a;
+      --gold: #d99a2a;
+      --cream: #fff8ed;
+      --cream-2: #fff1dc;
+      --white: #ffffff;
+      --ink: #142033;
+      --muted: #566173;
+      --line: rgba(15, 33, 58, 0.16);
+      --shadow: 0 18px 55px rgba(15, 33, 58, 0.16);
+      --soft-shadow: 0 10px 30px rgba(15, 33, 58, 0.11);
+      --radius: 18px;
+    }
+
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
-    
-    :root {
-      --primary: #176b35;
-      --primary-dark: #0f5128;
-      --accent: #d89825;
-      --navy: #10233d;
-      --light-bg: #fff8ed;
-      --white: #ffffff;
-      --text-dark: #1a1a1a;
-      --text-muted: #666666;
-      --border: #e0e0e0;
-      --shadow: 0 2px 8px rgba(0,0,0,0.1);
-      --shadow-md: 0 4px 16px rgba(0,0,0,0.15);
-    }
-    
+
     html {
       scroll-behavior: smooth;
     }
-    
+
     body {
-      font-family: 'Poppins', sans-serif;
-      color: var(--text-dark);
-      background: var(--white);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--cream);
       line-height: 1.6;
     }
-    
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
+
+    a {
+      color: inherit;
     }
-    
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
     }
-    
-    /* TOP NAVIGATION HEADER */
-    .navbar {
-      background: var(--white);
-      box-shadow: var(--shadow);
-      position: sticky;
-      top: 0;
-      z-index: 200;
-    }
-    
-    .navbar-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 20px;
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-    
-    .logo-section {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      flex: 1;
-    }
-    
-    .logo-icon {
-      width: 60px;
-      height: 60px;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="30" r="20" fill="%23d89825"/><path d="M 30 60 L 50 40 L 70 60 Z" fill="%2310233d"/><rect x="45" y="55" width="10" height="15" fill="%23d89825"/><path d="M 20 50 Q 20 70 50 75 Q 80 70 80 50" fill="%23176b35" opacity="0.3"/></svg>') center/contain no-repeat;
-      flex-shrink: 0;
-    }
-    
-    .brand-text h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 24px;
-      color: var(--navy);
-      line-height: 1;
-      margin-bottom: 4px;
-      font-weight: 800;
-    }
-    
-    .brand-text p {
-      font-size: 11px;
-      color: var(--primary);
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-    
-    /* NAVIGATION MENU */
-    .nav-menu {
-      display: flex;
-      gap: 30px;
-      align-items: center;
-      flex: 1;
-      justify-content: center;
-    }
-    
-    .nav-menu a {
-      color: var(--text-dark);
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      transition: color 0.3s;
-      position: relative;
-    }
-    
-    .nav-menu a:hover,
-    .nav-menu a.active {
-      color: var(--primary);
-    }
-    
-    .nav-menu a:hover::after,
-    .nav-menu a.active::after {
-      content: '';
+
+    .skip-link {
       position: absolute;
-      bottom: -8px;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: var(--primary);
-      border-radius: 2px;
+      left: -999px;
+      top: 12px;
+      background: var(--navy);
+      color: white;
+      padding: 10px 14px;
+      z-index: 999;
+      border-radius: 8px;
     }
-    
-    /* RIGHT ACTIONS */
-    .navbar-actions {
-      display: flex;
-      gap: 15px;
-      align-items: center;
-      flex-shrink: 0;
+
+    .skip-link:focus {
+      left: 12px;
     }
-    
-    .phone-info {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
-      color: var(--text-dark);
-      cursor: pointer;
-    }
-    
-    .phone-icon {
-      font-size: 24px;
-    }
-    
-    .phone-text {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-      font-size: 12px;
-    }
-    
-    .phone-text .label {
-      color: var(--text-muted);
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
-    
-    .phone-text .number {
-      font-weight: 700;
-      color: var(--navy);
-      font-size: 14px;
-    }
-    
-    .phone-info:hover .number {
-      color: var(--primary);
-    }
-    
-    .book-btn {
-      background: var(--primary);
-      color: var(--white);
-      padding: 12px 28px;
-      border-radius: 6px;
-      font-weight: 700;
-      font-size: 13px;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      cursor: pointer;
-      transition: all 0.3s;
-      border: 2px solid var(--primary);
-    }
-    
-    .book-btn:hover {
-      background: var(--primary-dark);
-      border-color: var(--primary-dark);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-md);
-    }
-    
-    /* HERO SECTION */
+
     .hero {
       position: relative;
+      min-height: 885px;
       overflow: hidden;
-      min-height: 600px;
+      background:
+        linear-gradient(90deg, rgba(255, 248, 237, 0.94) 0%, rgba(255, 248, 237, 0.78) 38%, rgba(255, 248, 237, 0.18) 66%, rgba(255, 248, 237, 0.04) 100%),
+        linear-gradient(180deg, rgba(255, 248, 237, 0.25) 0%, rgba(255, 248, 237, 0) 58%, rgba(255, 248, 237, 0.65) 100%),
+        url("assets/sunshine-state-coastal-hero.svg") center / cover no-repeat;
     }
-    
-    .hero-bg {
+
+    .hero::after {
+      content: "";
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url('assets/sunshine-approved-hero.jpg.png');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      z-index: 1;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 49% 45%, rgba(255, 255, 255, 0.72) 0 5%, rgba(255, 240, 196, 0.25) 12%, transparent 35%),
+        linear-gradient(180deg, transparent 74%, rgba(255, 248, 237, 0.92) 100%);
     }
-    
-    .hero-overlay {
+
+    .hero-inner {
       position: relative;
-      z-index: 10;
+      z-index: 2;
+      width: min(1720px, calc(100% - 56px));
+      margin: 0 auto;
+      padding: 26px 0 0;
+    }
+
+    .site-header {
+      display: grid;
+      grid-template-columns: minmax(360px, 575px) 1fr auto;
+      align-items: start;
+      gap: 34px;
+    }
+
+    .brand {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 8px;
+      text-decoration: none;
+      max-width: 575px;
+    }
+
+    .brand-lockup {
+      display: grid;
+      grid-template-columns: 116px 1fr;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-mark {
+      width: 116px;
+      height: 96px;
+      display: block;
+      filter: drop-shadow(0 5px 7px rgba(15, 33, 58, 0.12));
+    }
+
+    .brand-words {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .brand-title {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--navy);
+      font-size: clamp(43px, 4.3vw, 78px);
+      line-height: 0.88;
+      letter-spacing: -0.045em;
+      font-weight: 900;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .brand-subtitle-wrap {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 12px;
+      margin-left: 6px;
+    }
+
+    .brand-line {
+      width: 42px;
+      height: 3px;
+      background: var(--gold);
+      border-radius: 999px;
+      flex: 0 0 auto;
+    }
+
+    .brand-subtitle {
+      color: var(--navy);
+      font-weight: 900;
+      letter-spacing: 0.18em;
+      font-size: clamp(13px, 1.15vw, 20px);
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .nav-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      padding-top: 28px;
+      min-width: 0;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: clamp(18px, 2vw, 40px);
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: var(--navy);
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      position: relative;
+      padding-bottom: 9px;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+      color: var(--green);
+    }
+
+    .nav-menu a.active::after,
+    .nav-menu a:hover::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 3px;
+      border-radius: 999px;
+      background: var(--green);
+    }
+
+    .service-pills {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      color: var(--green);
+      font-size: 15px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .service-pills span:not(:last-child)::after {
+      content: "";
+      display: inline-block;
+      width: 2px;
+      height: 20px;
+      background: var(--gold);
+      margin-left: 20px;
+      transform: translateY(4px);
+      opacity: 0.78;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding-top: 18px;
+    }
+
+    .phone-top {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      text-decoration: none;
+      color: var(--navy);
+      min-width: 184px;
+    }
+
+    .phone-top svg {
+      color: var(--green);
+      width: 34px;
+      height: 34px;
+      flex: 0 0 auto;
+    }
+
+    .phone-top small {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 5px;
+    }
+
+    .phone-top strong {
+      display: block;
+      color: var(--green);
+      font-size: 21px;
+      font-weight: 900;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 56px;
+      padding: 0 30px;
+      border-radius: 9px;
+      border: 2px solid transparent;
+      text-decoration: none;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: var(--soft-shadow);
+    }
+
+    .btn-green {
+      background: linear-gradient(135deg, var(--green), var(--green-dark));
+      color: white;
+    }
+
+    .btn-white {
+      background: rgba(255, 255, 255, 0.92);
+      color: var(--navy);
+      border-color: rgba(15, 33, 58, 0.11);
+      box-shadow: 0 10px 24px rgba(15, 33, 58, 0.08);
+    }
+
+    .btn-white:hover,
+    .btn-white:focus-visible {
+      border-color: rgba(23, 107, 53, 0.35);
+      color: var(--green);
+    }
+
+    .btn svg,
+    .btn-white svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .book-top {
+      min-width: 158px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(520px, 1fr) minmax(370px, 470px);
+      align-items: center;
+      gap: clamp(40px, 7vw, 135px);
+      padding: 104px 86px 0 128px;
+    }
+
+    .hero-copy {
+      max-width: 765px;
+      padding-top: 20px;
+    }
+
+    .eyebrow {
+      color: var(--green);
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: 16px;
+      letter-spacing: 0.03em;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--navy);
+      font-size: clamp(46px, 5vw, 86px);
+      line-height: 1.02;
+      letter-spacing: -0.045em;
+      font-weight: 900;
+      max-width: 760px;
+      text-wrap: balance;
+    }
+
+    .gold-rule {
+      width: 84px;
+      height: 5px;
+      margin: 28px 0 20px;
+      border-radius: 999px;
+      background: var(--gold);
+    }
+
+    .hero-copy p {
+      color: var(--ink);
+      font-size: clamp(18px, 1.4vw, 24px);
+      line-height: 1.55;
+      max-width: 650px;
+      margin-bottom: 38px;
+      font-weight: 500;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+
+    .hero-ctas .btn {
+      min-width: 212px;
+      min-height: 68px;
+      font-size: 16px;
+    }
+
+    .trust-badges {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+      flex-wrap: wrap;
+      color: var(--navy);
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .trust-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+    }
+
+    .trust-badge svg {
+      width: 30px;
+      height: 30px;
+      color: var(--green);
+      stroke-width: 1.8;
+    }
+
+    .booking-card {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid rgba(255, 255, 255, 0.78);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      padding: 40px 34px 34px;
+      backdrop-filter: blur(8px);
+    }
+
+    .booking-card h2 {
+      color: var(--green);
+      text-align: center;
+      font-size: 31px;
+      line-height: 1;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .booking-rule {
+      width: 50px;
+      height: 4px;
+      border-radius: 999px;
+      background: var(--gold);
+      margin: 0 auto 28px;
+    }
+
+    .form-step {
+      margin-bottom: 19px;
+    }
+
+    .form-step label,
+    .form-step legend {
+      display: block;
+      color: var(--navy);
+      font-size: 15px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    .form-step select,
+    .form-step input,
+    .form-step textarea {
+      width: 100%;
+      min-height: 58px;
+      border: 1.5px solid rgba(15, 33, 58, 0.16);
+      border-radius: 9px;
+      background: white;
+      color: var(--ink);
+      padding: 0 18px;
+      font-size: 16px;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85);
+    }
+
+    .form-step textarea {
+      padding-top: 14px;
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    .form-step select:focus,
+    .form-step input:focus,
+    .form-step textarea:focus {
+      outline: none;
+      border-color: rgba(23, 107, 53, 0.62);
+      box-shadow: 0 0 0 4px rgba(23, 107, 53, 0.1);
+    }
+
+    .time-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      border: 0;
+    }
+
+    .time-option input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .time-option span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 56px;
+      border: 1.5px solid rgba(15, 33, 58, 0.16);
+      border-radius: 9px;
+      background: white;
+      color: var(--navy);
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.16s ease;
+    }
+
+    .time-option input:checked + span,
+    .time-option span:hover {
+      background: rgba(23, 107, 53, 0.08);
+      border-color: var(--green);
+      color: var(--green);
+    }
+
+    .contact-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      align-items: center;
-      min-height: 600px;
-      padding: 60px 20px;
-      background: linear-gradient(90deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.95) 50%, rgba(255,255,255,0) 100%);
+      gap: 12px;
     }
-    
-    .hero-content {
-      max-width: 550px;
-      z-index: 11;
-    }
-    
-    .hero-content .tagline {
-      color: var(--primary);
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-    
-    .hero-content h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 56px;
-      color: var(--navy);
-      line-height: 1.1;
-      margin-bottom: 20px;
-      font-weight: 800;
-    }
-    
-    .hero-content .divider {
-      width: 60px;
-      height: 4px;
-      background: var(--accent);
-      margin-bottom: 25px;
-      border-radius: 2px;
-    }
-    
-    .hero-content p {
-      font-size: 16px;
-      color: var(--text-muted);
-      line-height: 1.8;
-      margin-bottom: 30px;
-    }
-    
-    .hero-badges {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-      margin-top: 25px;
-    }
-    
-    .badge {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--primary);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    
-    .badge::before {
-      content: '✓';
-      font-size: 16px;
-      font-weight: bold;
-      color: var(--accent);
-    }
-    
-    /* BOOKING FORM */
-    .booking-form {
-      background: var(--white);
-      border-radius: 12px;
-      padding: 40px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-      max-width: 420px;
-      margin-left: auto;
-      grid-column: 2;
-    }
-    
-    .form-title {
-      font-size: 24px;
-      color: var(--primary);
-      font-weight: 700;
-      margin-bottom: 8px;
-      text-transform: uppercase;
-    }
-    
-    .form-divider {
-      width: 40px;
-      height: 3px;
-      background: var(--accent);
-      margin-bottom: 28px;
-      border-radius: 2px;
-    }
-    
-    .form-group {
-      margin-bottom: 22px;
-    }
-    
-    .form-group label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 600;
-      font-size: 13px;
-      color: var(--navy);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
+
+    .booking-card button {
       width: 100%;
-      padding: 12px;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      font-family: 'Poppins', sans-serif;
-      font-size: 14px;
-      transition: border-color 0.3s;
-      background: var(--white);
+      min-height: 70px;
+      font-size: 22px;
+      margin-top: 2px;
     }
-    
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(23,107,53,0.1);
+
+    .form-note {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 11px;
     }
-    
-    .time-slots {
+
+    .service-strip {
+      position: relative;
+      z-index: 3;
+      background: rgba(255, 250, 242, 0.96);
+      border-top: 1px solid rgba(15, 33, 58, 0.08);
+      box-shadow: 0 -16px 50px rgba(255, 248, 237, 0.56);
+    }
+
+    .service-strip-inner {
+      width: min(1480px, calc(100% - 56px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      padding: 42px 0 43px;
+    }
+
+    .strip-item {
+      display: grid;
+      grid-template-columns: 82px 1fr;
+      gap: 18px;
+      align-items: center;
+      padding: 0 36px;
+      border-right: 1px solid rgba(15, 33, 58, 0.16);
+    }
+
+    .strip-item:first-child {
+      padding-left: 0;
+    }
+
+    .strip-item:last-child {
+      border-right: 0;
+      padding-right: 0;
+    }
+
+    .strip-item svg {
+      width: 74px;
+      height: 74px;
+      color: var(--green);
+      stroke-width: 1.7;
+    }
+
+    .strip-item h3 {
+      color: var(--green);
+      font-size: 18px;
+      line-height: 1.18;
+      text-transform: uppercase;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .strip-item p {
+      color: var(--navy);
+      font-weight: 500;
+      line-height: 1.45;
+      font-size: 16px;
+    }
+
+    .section {
+      padding: 86px 28px;
+      background: #ffffff;
+    }
+
+    .section.alt {
+      background: var(--cream-2);
+    }
+
+    .container {
+      width: min(1220px, 100%);
+      margin: 0 auto;
+    }
+
+    .section-head {
+      max-width: 790px;
+      margin-bottom: 42px;
+    }
+
+    .section-label {
+      color: var(--green);
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 13px;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+
+    .section-title {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--navy);
+      font-size: clamp(36px, 4vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+      font-weight: 900;
+      text-wrap: balance;
+    }
+
+    .section-desc {
+      color: var(--muted);
+      margin-top: 16px;
+      font-size: 18px;
+      max-width: 770px;
+    }
+
+    .cards-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 8px;
+      gap: 22px;
     }
-    
-    .time-slot {
-      position: relative;
+
+    .card {
+      background: white;
+      border: 1px solid rgba(15, 33, 58, 0.1);
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 10px 28px rgba(15, 33, 58, 0.06);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
     }
-    
-    .time-slot input {
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 42px rgba(15, 33, 58, 0.12);
+    }
+
+    .card-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: rgba(23, 107, 53, 0.08);
+      color: var(--green);
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    .card h3 {
+      color: var(--navy);
+      font-size: 21px;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 44px;
+      align-items: stretch;
+    }
+
+    .owner-panel {
+      background:
+        linear-gradient(135deg, rgba(23, 107, 53, 0.94), rgba(15, 81, 40, 0.96)),
+        radial-gradient(circle at 80% 0, rgba(217, 154, 42, 0.34), transparent 38%);
+      color: white;
+      border-radius: 24px;
+      padding: 42px;
+      box-shadow: var(--shadow);
+    }
+
+    .owner-panel h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(34px, 4vw, 52px);
+      line-height: 1.06;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+    }
+
+    .owner-panel p {
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 18px;
+      margin-bottom: 22px;
+    }
+
+    .owner-list {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .owner-list li {
+      display: flex;
+      gap: 11px;
+      align-items: flex-start;
+      font-weight: 700;
+    }
+
+    .owner-list li::before {
+      content: "✓";
+      color: #ffd98f;
+      font-weight: 900;
+    }
+
+    .area-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .area-pill {
+      background: white;
+      border: 1px solid rgba(15, 33, 58, 0.1);
+      border-radius: 14px;
+      padding: 18px 20px;
+      color: var(--navy);
+      font-weight: 900;
+      box-shadow: 0 8px 20px rgba(15, 33, 58, 0.05);
+    }
+
+    .reviews-panel {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .review-card {
+      background: white;
+      border: 1px solid rgba(15, 33, 58, 0.1);
+      border-left: 6px solid var(--gold);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 10px 28px rgba(15, 33, 58, 0.06);
+    }
+
+    .stars {
+      color: var(--gold);
+      letter-spacing: 3px;
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .review-card h3 {
+      color: var(--navy);
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .review-card p {
+      color: var(--muted);
+    }
+
+    .contact-band {
+      background: linear-gradient(135deg, var(--navy), #16365a);
+      color: white;
+      padding: 70px 28px;
+    }
+
+    .contact-inner {
+      width: min(1220px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .contact-band h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(34px, 4vw, 54px);
+      line-height: 1.06;
+      margin-bottom: 12px;
+    }
+
+    .contact-band p {
+      color: rgba(255, 255, 255, 0.83);
+      font-size: 18px;
+    }
+
+    .contact-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .footer {
+      background: #0b1626;
+      color: white;
+      padding: 44px 28px 34px;
+    }
+
+    .footer-grid {
+      width: min(1220px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr 1fr;
+      gap: 34px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .footer h3,
+    .footer h4 {
+      color: #ffd98f;
+      margin-bottom: 14px;
+    }
+
+    .footer p,
+    .footer a {
+      color: rgba(255, 255, 255, 0.78);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .footer a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      width: min(1220px, 100%);
+      margin: 0 auto;
+      padding-top: 22px;
+      color: rgba(255, 255, 255, 0.62);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .mobile-cta {
       display: none;
     }
-    
-    .time-slot label {
-      display: block;
-      padding: 10px;
-      text-align: center;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: 500;
-      font-size: 12px;
-      transition: all 0.3s;
-      margin: 0;
-      background: var(--white);
-    }
-    
-    .time-slot input:checked + label {
-      background: var(--primary);
-      color: var(--white);
-      border-color: var(--primary);
-    }
-    
-    .form-group button {
-      width: 100%;
-      padding: 14px;
-      background: var(--primary);
-      color: var(--white);
-      border: none;
-      border-radius: 6px;
-      font-weight: 700;
-      font-size: 14px;
-      cursor: pointer;
-      transition: all 0.3s;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    
-    .form-group button:hover {
-      background: var(--primary-dark);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-md);
-    }
-    
-    /* QUICK FACTS BAR */
-    .quick-facts {
-      background: var(--navy);
-      color: var(--white);
-      padding: 30px 20px;
-      text-align: center;
-    }
-    
-    .quick-facts-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    
-    .fact-item {
-      padding: 15px;
-    }
-    
-    .fact-number {
-      font-size: 32px;
-      font-weight: 800;
-      color: var(--accent);
-      display: block;
-    }
-    
-    .fact-label {
-      font-size: 13px;
-      margin-top: 5px;
-      opacity: 0.9;
-    }
-    
-    /* SERVICES SECTION */
-    .section {
-      padding: 60px 20px;
-    }
-    
-    .section.alt {
-      background: var(--light-bg);
-    }
-    
-    .section-header {
-      max-width: 600px;
-      margin-bottom: 40px;
-    }
-    
-    .section-label {
-      color: var(--primary);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-      display: block;
-    }
-    
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(28px, 6vw, 40px);
-      color: var(--navy);
-      margin-bottom: 15px;
-      line-height: 1.2;
-    }
-    
-    .section-desc {
-      color: var(--text-muted);
-      font-size: 15px;
-      line-height: 1.7;
-    }
-    
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
-    }
-    
-    .service-card {
-      background: var(--white);
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: var(--shadow);
-      transition: all 0.3s;
-      border-top: 4px solid var(--primary);
-    }
-    
-    .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-md);
-    }
-    
-    .service-card h3 {
-      font-size: 18px;
-      color: var(--navy);
-      margin-bottom: 12px;
-    }
-    
-    .service-card p {
-      color: var(--text-muted);
-      font-size: 14px;
-      line-height: 1.6;
-    }
-    
-    /* TESTIMONIALS */
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
-    }
-    
-    .testimonial {
-      background: var(--white);
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: var(--shadow);
-      border-left: 4px solid var(--accent);
-    }
-    
-    .testimonial-stars {
-      color: var(--accent);
-      font-size: 14px;
-      margin-bottom: 12px;
-      letter-spacing: 2px;
-    }
-    
-    .testimonial-text {
-      color: var(--text-muted);
-      font-size: 14px;
-      line-height: 1.7;
-      margin-bottom: 15px;
-      font-style: italic;
-    }
-    
-    .testimonial-author {
-      font-weight: 600;
-      color: var(--navy);
-      font-size: 13px;
-    }
-    
-    /* THUMBTACK SECTION */
-    .thumbtack-section {
-      text-align: center;
-      padding: 40px 20px;
-      background: var(--white);
-    }
-    
-    .thumbtack-btn {
-      display: inline-block;
-      background: var(--primary);
-      color: var(--white);
-      padding: 14px 32px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      transition: all 0.3s;
-    }
-    
-    .thumbtack-btn:hover {
-      background: var(--primary-dark);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-md);
-    }
-    
-    /* FOOTER */
-    .footer {
-      background: var(--navy);
-      color: var(--white);
-      padding: 50px 20px 30px;
-    }
-    
-    .footer-content {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 40px;
-      margin-bottom: 30px;
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    .footer-section h4 {
-      font-size: 16px;
-      margin-bottom: 15px;
-      color: var(--accent);
-      font-weight: 700;
-    }
-    
-    .footer-section p,
-    .footer-section a {
-      color: rgba(255,255,255,0.8);
-      font-size: 13px;
-      line-height: 1.8;
-      text-decoration: none;
-      margin-bottom: 8px;
-      display: block;
-    }
-    
-    .footer-section a:hover {
-      color: var(--accent);
-    }
-    
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.1);
-      padding-top: 20px;
-      text-align: center;
-      font-size: 12px;
-      opacity: 0.7;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-    /* MOBILE */
-    @media (max-width: 1024px) {
-      .navbar-inner {
-        flex-wrap: wrap;
-        gap: 15px;
+
+    @media (max-width: 1320px) {
+      .hero-inner {
+        width: min(100% - 36px, 1220px);
       }
-      
-      .nav-menu {
-        order: 3;
-        width: 100%;
-        justify-content: flex-start;
-        gap: 15px;
-        font-size: 12px;
-      }
-      
-      .navbar-actions {
-        gap: 10px;
-      }
-      
-      .phone-info {
-        gap: 6px;
-      }
-      
-      .phone-text .number {
-        font-size: 13px;
-      }
-      
-      .book-btn {
-        padding: 10px 20px;
-        font-size: 12px;
-      }
-      
-      .hero-overlay {
+
+      .site-header {
         grid-template-columns: 1fr;
-        min-height: auto;
-        padding: 40px 20px;
-        background: linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.95) 100%);
+        gap: 14px;
       }
-      
-      .booking-form {
-        grid-column: 1;
-        margin-left: 0;
-        margin-top: 30px;
+
+      .nav-wrap {
+        padding-top: 0;
+        gap: 18px;
       }
-      
-      .hero-content h1 {
-        font-size: 40px;
+
+      .header-actions {
+        position: absolute;
+        right: 0;
+        top: 22px;
+      }
+
+      .brand {
+        padding-right: 430px;
+      }
+
+      .hero-grid {
+        padding: 70px 20px 0;
+        gap: 40px;
       }
     }
-    
-    @media (max-width: 768px) {
-      .logo-section {
-        gap: 12px;
-      }
-      
-      .logo-icon {
-        width: 50px;
-        height: 50px;
-      }
-      
-      .brand-text h1 {
-        font-size: 18px;
-      }
-      
-      .nav-menu {
-        display: none;
-      }
-      
-      .phone-info .phone-text .label {
-        display: none;
-      }
-      
-      .phone-info .phone-text .number {
-        font-size: 16px;
-      }
-      
-      .hero-content h1 {
-        font-size: 32px;
-      }
-      
-      .hero-content p {
-        font-size: 14px;
-      }
-      
-      .time-slots {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .quick-facts-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-      }
-      
+
+    @media (max-width: 1100px) {
       .hero {
         min-height: auto;
       }
-      
-      .hero-overlay {
-        min-height: auto;
+
+      .brand {
+        padding-right: 0;
+      }
+
+      .header-actions {
+        position: static;
+        padding-top: 6px;
+      }
+
+      .site-header {
+        align-items: stretch;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        padding: 58px 0 36px;
+      }
+
+      .booking-card {
+        max-width: 560px;
+      }
+
+      .service-strip-inner,
+      .cards-grid,
+      .reviews-panel,
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .strip-item:nth-child(2) {
+        border-right: 0;
+      }
+
+      .strip-item:nth-child(3),
+      .strip-item:nth-child(4) {
+        margin-top: 30px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      body {
+        padding-bottom: 78px;
+      }
+
+      .hero-inner {
+        width: calc(100% - 28px);
+        padding-top: 18px;
+      }
+
+      .brand-lockup {
+        grid-template-columns: 78px 1fr;
+        gap: 9px;
+      }
+
+      .brand-mark {
+        width: 78px;
+        height: 68px;
+      }
+
+      .brand-title {
+        font-size: clamp(31px, 11vw, 48px);
+        white-space: normal;
+      }
+
+      .brand-subtitle-wrap {
+        gap: 8px;
+        margin-top: 7px;
+        margin-left: 0;
+      }
+
+      .brand-line {
+        width: 22px;
+      }
+
+      .brand-subtitle {
+        font-size: 10px;
+        letter-spacing: 0.13em;
+      }
+
+      .nav-menu {
+        gap: 14px;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 8px;
+      }
+
+      .nav-menu a {
+        flex: 0 0 auto;
+        font-size: 12px;
+      }
+
+      .service-pills {
+        gap: 12px;
+        font-size: 12px;
+      }
+
+      .service-pills span:not(:last-child)::after {
+        margin-left: 12px;
+        height: 15px;
+      }
+
+      .header-actions {
+        display: none;
+      }
+
+      .hero-grid {
+        padding: 36px 0 28px;
+      }
+
+      .hero-copy {
+        padding-top: 0;
+      }
+
+      .eyebrow {
+        font-size: 13px;
+        margin-bottom: 12px;
+      }
+
+      h1 {
+        font-size: clamp(40px, 13vw, 58px);
+      }
+
+      .hero-copy p {
+        font-size: 17px;
+      }
+
+      .hero-ctas .btn {
+        width: 100%;
+      }
+
+      .trust-badges {
+        gap: 16px;
+      }
+
+      .booking-card {
+        padding: 28px 18px 22px;
+        border-radius: 18px;
+      }
+
+      .booking-card h2 {
+        font-size: 25px;
+      }
+
+      .time-grid,
+      .contact-row,
+      .service-strip-inner,
+      .cards-grid,
+      .split,
+      .area-list,
+      .reviews-panel,
+      .contact-inner,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-strip-inner {
+        width: calc(100% - 28px);
+        padding: 28px 0;
+      }
+
+      .strip-item,
+      .strip-item:first-child,
+      .strip-item:last-child {
+        border-right: 0;
+        border-bottom: 1px solid rgba(15, 33, 58, 0.13);
+        padding: 20px 0;
+      }
+
+      .strip-item:nth-child(3),
+      .strip-item:nth-child(4) {
+        margin-top: 0;
+      }
+
+      .strip-item:last-child {
+        border-bottom: 0;
+      }
+
+      .section {
+        padding: 58px 20px;
+      }
+
+      .owner-panel {
+        padding: 30px 24px;
+      }
+
+      .contact-actions {
+        justify-content: flex-start;
+      }
+
+      .mobile-cta {
+        position: fixed;
+        z-index: 900;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding: 10px;
+        background: rgba(255, 248, 237, 0.96);
+        box-shadow: 0 -10px 30px rgba(15, 33, 58, 0.16);
+        backdrop-filter: blur(8px);
+      }
+
+      .mobile-cta .btn {
+        min-height: 56px;
+        padding: 0 12px;
+        font-size: 14px;
       }
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Sunshine State Home & Commercial Services",
+    "url": "https://thesunshinestatehcs.com/",
+    "telephone": "+18033945120",
+    "email": "SunshineStateHCS@gmail.com",
+    "areaServed": ["Jacksonville FL", "North Florida", "Orange Park FL", "Yulee FL", "Fernandina Beach FL", "St. Johns FL"],
+    "description": "Owner-led home and commercial repair services including general repairs, plumbing, electrical, painting, water damage restoration, and mold remediation.",
+    "sameAs": ["https://www.thumbtack.com/fl/jacksonville/water-damage/sunshine-state-hcs/service/517953413396611087"]
+  }
+  </script>
 </head>
 <body>
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="navbar-inner">
-      <div class="logo-section">
-        <div class="logo-icon"></div>
-        <div class="brand-text">
-          <h1>SUNSHINE STATE</h1>
-          <p>Home & Commercial Services</p>
-        </div>
-      </div>
-      
-      <div class="nav-menu">
-        <a href="#home" class="active">HOME</a>
-        <a href="#services">SERVICES</a>
-        <a href="#about">ABOUT</a>
-        <a href="#service-area">SERVICE AREA</a>
-        <a href="#reviews">REVIEWS</a>
-        <a href="#contact">CONTACT</a>
-      </div>
-      
-      <div class="navbar-actions">
-        <a href="tel:+18033945120" class="phone-info">
-          <span class="phone-icon">☎️</span>
-          <div class="phone-text">
-            <span class="label">Call or Text</span>
-            <span class="number">(803) 394-5120</span>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <section class="hero" id="home" aria-label="Sunshine State Home and Commercial Services homepage hero">
+    <div class="hero-inner">
+      <header class="site-header" aria-label="Primary navigation">
+        <a href="#home" class="brand" aria-label="Sunshine State Home and Commercial Services home">
+          <div class="brand-lockup">
+            <svg class="brand-mark" viewBox="0 0 168 128" role="img" aria-label="Sunset, palm trees, and roof icon">
+              <path d="M17 101 C44 94 74 96 104 104 C124 109 142 108 154 104" fill="none" stroke="#0f213a" stroke-width="5" stroke-linecap="round"/>
+              <path d="M55 94 L89 62 L123 94" fill="none" stroke="#0f213a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M96 75 H116 V96 H96 Z" fill="#fff8ed" stroke="#0f213a" stroke-width="4"/>
+              <line x1="106" y1="75" x2="106" y2="96" stroke="#0f213a" stroke-width="3"/>
+              <line x1="96" y1="86" x2="116" y2="86" stroke="#0f213a" stroke-width="3"/>
+              <path d="M34 96 C40 66 45 37 56 18" stroke="#0f213a" stroke-width="6" stroke-linecap="round" fill="none"/>
+              <path d="M56 18 C35 24 20 33 8 50 C29 44 44 35 60 22 Z" fill="#0f213a"/>
+              <path d="M56 18 C51 5 42 -3 30 -9 C50 -4 63 6 67 23 Z" fill="#0f213a"/>
+              <path d="M56 18 C74 5 92 0 112 2 C92 16 77 24 59 25 Z" fill="#0f213a"/>
+              <path d="M56 18 C75 25 90 35 104 51 C82 47 67 38 58 25 Z" fill="#0f213a"/>
+              <path d="M50 91 C48 71 49 52 55 35" stroke="#0f213a" stroke-width="4" stroke-linecap="round" fill="none"/>
+              <path d="M55 35 C38 40 25 48 17 60 C35 56 47 49 58 38 Z" fill="#0f213a"/>
+              <path d="M55 35 C72 27 86 25 101 27 C83 38 70 43 56 41 Z" fill="#0f213a"/>
+              <path d="M55 35 C68 44 78 54 88 68 C71 62 61 52 55 41 Z" fill="#0f213a"/>
+              <path d="M76 72 A42 42 0 0 1 142 49" fill="none" stroke="#d99a2a" stroke-width="4"/>
+              <path d="M73 77 C82 54 105 43 127 52 C138 56 145 64 149 75" fill="#ffd99b" opacity="0.9"/>
+              <path d="M78 78 H151" stroke="#d99a2a" stroke-width="3" stroke-linecap="round"/>
+              <path d="M120 31 C123 29 126 29 129 31 C132 29 135 29 138 31" fill="none" stroke="#0f213a" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <div class="brand-words">
+              <div class="brand-title">Sunshine State</div>
+              <div class="brand-subtitle-wrap">
+                <span class="brand-line"></span>
+                <span class="brand-subtitle">Home &amp; Commercial Services</span>
+                <span class="brand-line"></span>
+              </div>
+            </div>
           </div>
         </a>
-        <a href="#booking" class="book-btn">BOOK NOW</a>
-      </div>
-    </div>
-  </nav>
 
-  <!-- HERO SECTION -->
-  <section class="hero" id="home">
-    <div class="hero-bg"></div>
-    <div class="hero-overlay">
-      <div class="hero-content">
-        <div class="tagline">Honest Work. Fair Prices.</div>
-        <h1>Reliable Home & Commercial Services You Can Trust</h1>
-        <div class="divider"></div>
-        <p>From quick fixes to big projects, we show up on time, do the job right, and treat your property like our own.</p>
-        <div class="hero-badges">
-          <div class="badge">Licensed & Insured</div>
-          <div class="badge">15+ Years Experience</div>
-          <div class="badge">Same-Day Available</div>
-        </div>
-      </div>
-      
-      <form class="booking-form" name="booking" method="POST" data-netlify="true" id="booking">
-        <input type="hidden" name="form-name" value="booking">
-        <div class="form-title">BOOK A SERVICE</div>
-        <div class="form-divider"></div>
-        
-        <div class="form-group">
-          <label for="service">1. Choose a Service</label>
-          <select id="service" name="service" required>
-            <option value="">Select a service</option>
-            <option>General Repairs</option>
-            <option>Plumbing</option>
-            <option>Electrical</option>
-            <option>Painting</option>
-            <option>Water Damage Restoration</option>
-            <option>Mold Remediation</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>2. Pick Date</label>
-          <input type="date" name="preferred_date" required>
-        </div>
-
-        <div class="form-group">
-          <label>3. Pick Time</label>
-          <div class="time-slots">
-            <div class="time-slot">
-              <input type="radio" id="time1" name="preferred_time" value="8:00 AM">
-              <label for="time1">8:00 AM</label>
-            </div>
-            <div class="time-slot">
-              <input type="radio" id="time2" name="preferred_time" value="10:00 AM">
-              <label for="time2">10:00 AM</label>
-            </div>
-            <div class="time-slot">
-              <input type="radio" id="time3" name="preferred_time" value="12:00 PM">
-              <label for="time3">12:00 PM</label>
-            </div>
+        <div class="nav-wrap">
+          <nav class="nav-menu" aria-label="Site navigation">
+            <a class="active" href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#service-area">Service Area</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          <div class="service-pills" aria-label="Popular services">
+            <span>Repairs</span>
+            <span>Plumbing</span>
+            <span>Electrical</span>
+            <span>Painting</span>
+            <span>Water Restoration</span>
           </div>
         </div>
 
-        <div class="form-group">
-          <button type="submit">GET FREE ESTIMATE</button>
+        <div class="header-actions">
+          <a class="phone-top" href="tel:+18033945120" aria-label="Call or text Kevin at 803 394 5120">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.77 19.77 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.77 19.77 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.32 1.78.59 2.63a2 2 0 0 1-.45 2.11L8 9.71a16 16 0 0 0 6.29 6.29l1.25-1.25a2 2 0 0 1 2.11-.45c.85.27 1.73.47 2.63.59A2 2 0 0 1 22 16.92Z"/></svg>
+            <span><small>Call or Text</small><strong>(803) 394-5120</strong></span>
+          </a>
+          <a class="btn btn-green book-top" href="#booking">Book Now</a>
         </div>
-      </form>
+      </header>
+
+      <main class="hero-grid" id="main">
+        <div class="hero-copy">
+          <div class="eyebrow">Honest work. Fair prices.</div>
+          <h1>Reliable Home &amp; Commercial Services You Can Trust</h1>
+          <div class="gold-rule" aria-hidden="true"></div>
+          <p>From quick fixes to bigger projects, we show up on time, do the job right, and treat your property like our own.</p>
+          <div class="hero-ctas" aria-label="Primary actions">
+            <a class="btn btn-green" href="#booking">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
+              Book Online
+            </a>
+            <a class="btn btn-white" href="tel:+18033945120">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.77 19.77 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.77 19.77 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.32 1.78.59 2.63a2 2 0 0 1-.45 2.11L8 9.71a16 16 0 0 0 6.29 6.29l1.25-1.25a2 2 0 0 1 2.11-.45c.85.27 1.73.47 2.63.59A2 2 0 0 1 22 16.92Z"/></svg>
+              Call or Text
+            </a>
+            <a class="btn btn-white" href="https://www.thumbtack.com/fl/jacksonville/water-damage/sunshine-state-hcs/service/517953413396611087" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 11v10H4a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2h3Z"/><path d="M7 11l4-8a3 3 0 0 1 3 3v3h4.7a2 2 0 0 1 2 2.3l-1.2 7a3 3 0 0 1-3 2.7H7"/></svg>
+              View on Thumbtack
+            </a>
+          </div>
+          <div class="trust-badges" aria-label="Trust signals">
+            <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-5"/></svg>Licensed &amp; Insured</span>
+            <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.86 1.18 6.87L12 17.77 5.82 21 7 14.13 2 9.27l6.91-1.01L12 2Z"/></svg>Trusted Local Pro</span>
+            <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="m8 12 2.5 2.5L16 9"/></svg>Satisfaction Focused</span>
+          </div>
+        </div>
+
+        <form class="booking-card" name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="booking" aria-label="Book a service form">
+          <input type="hidden" name="form-name" value="booking">
+          <p style="display:none;"><label>Do not fill this out: <input name="bot-field"></label></p>
+          <h2>Book a Service</h2>
+          <div class="booking-rule" aria-hidden="true"></div>
+
+          <div class="form-step">
+            <label for="service">1. Choose a Service</label>
+            <select id="service" name="service" required>
+              <option value="">Select a service</option>
+              <option>General Repairs</option>
+              <option>Plumbing</option>
+              <option>Electrical</option>
+              <option>Painting</option>
+              <option>Water Damage Restoration</option>
+              <option>Mold Remediation</option>
+              <option>Commercial Maintenance</option>
+              <option>Not Sure Yet</option>
+            </select>
+          </div>
+
+          <div class="form-step">
+            <label for="preferred_date">2. Pick Date</label>
+            <input id="preferred_date" type="date" name="preferred_date" required>
+          </div>
+
+          <fieldset class="form-step time-grid">
+            <legend>3. Pick Time</legend>
+            <label class="time-option"><input type="radio" name="preferred_time" value="8:00 AM" required><span>8:00 AM</span></label>
+            <label class="time-option"><input type="radio" name="preferred_time" value="10:00 AM"><span>10:00 AM</span></label>
+            <label class="time-option"><input type="radio" name="preferred_time" value="12:00 PM"><span>12:00 PM</span></label>
+            <label class="time-option"><input type="radio" name="preferred_time" value="2:00 PM"><span>2:00 PM</span></label>
+            <label class="time-option"><input type="radio" name="preferred_time" value="4:00 PM"><span>4:00 PM</span></label>
+            <label class="time-option"><input type="radio" name="preferred_time" value="6:00 PM"><span>6:00 PM</span></label>
+          </fieldset>
+
+          <div class="form-step contact-row">
+            <label><span class="sr-only">Your name</span><input type="text" name="name" placeholder="Your name" autocomplete="name" required></label>
+            <label><span class="sr-only">Phone number</span><input type="tel" name="phone" placeholder="Phone number" autocomplete="tel" required></label>
+          </div>
+
+          <div class="form-step">
+            <label for="project_details">Tell Kevin what you need</label>
+            <textarea id="project_details" name="project_details" placeholder="Example: leaking sink, water damage, painting, repairs..."></textarea>
+          </div>
+
+          <button class="btn btn-green" type="submit">Book Now</button>
+          <p class="form-note">Kevin will confirm the appointment by call or text.</p>
+        </form>
+      </main>
     </div>
   </section>
 
-  <!-- QUICK FACTS -->
-  <div class="quick-facts">
-    <div class="quick-facts-grid">
-      <div class="fact-item">
-        <span class="fact-number">15+</span>
-        <span class="fact-label">Years Experience</span>
+  <div class="service-strip" aria-label="Service highlights">
+    <div class="service-strip-inner">
+      <div class="strip-item">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" aria-hidden="true"><path d="M8 34 32 12l24 22"/><path d="M14 30v24h36V30"/><path d="M26 54V39h12v15"/></svg>
+        <div><h3>Home &amp; Commercial</h3><p>Solutions for every job, big or small.</p></div>
       </div>
-      <div class="fact-item">
-        <span class="fact-number">500+</span>
-        <span class="fact-label">Happy Customers</span>
+      <div class="strip-item">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" aria-hidden="true"><path d="M32 5S14 26 14 41a18 18 0 0 0 36 0C50 26 32 5 32 5Z"/></svg>
+        <div><h3>Water Damage Restoration</h3><p>Fast response when you need it most.</p></div>
       </div>
-      <div class="fact-item">
-        <span class="fact-number">100%</span>
-        <span class="fact-label">Licensed & Insured</span>
+      <div class="strip-item">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" aria-hidden="true"><circle cx="32" cy="32" r="14"/><circle cx="32" cy="32" r="4"/><path d="M32 6v8M32 50v8M6 32h8M50 32h8M13.6 13.6l5.7 5.7M44.7 44.7l5.7 5.7M50.4 13.6l-5.7 5.7M19.3 44.7l-5.7 5.7"/></svg>
+        <div><h3>Mold Remediation</h3><p>Safer, effective solutions for healthier spaces.</p></div>
       </div>
-      <div class="fact-item">
-        <span class="fact-number">24hrs</span>
-        <span class="fact-label">Emergency Response</span>
+      <div class="strip-item">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" aria-hidden="true"><path d="M24 36 10 22l8-8 14 14"/><path d="M40 36 54 22l-8-8-14 14"/><path d="M24 36l8 8 8-8"/><path d="M18 30l14 14M46 30 32 44"/></svg>
+        <div><h3>Owner-Led Service</h3><p>Personal service you can count on.</p></div>
       </div>
     </div>
   </div>
 
-  <!-- SERVICES -->
   <section class="section" id="services">
     <div class="container">
-      <div class="section-header">
+      <div class="section-head">
         <span class="section-label">What We Do</span>
-        <h2 class="section-title">Quality Services for Every Home & Business Need</h2>
+        <h2 class="section-title">One reliable pro for the fixes, repairs, and restoration work that keeps life moving.</h2>
+        <p class="section-desc">Clear communication, careful workmanship, and practical solutions for homes, rentals, offices, and small commercial spaces.</p>
       </div>
+      <div class="cards-grid">
+        <article class="card"><div class="card-icon">🔧</div><h3>General Repairs</h3><p>Door fixes, punch lists, hardware, maintenance, odd jobs, and the small repairs that pile up fast.</p></article>
+        <article class="card"><div class="card-icon">💧</div><h3>Plumbing Help</h3><p>Leaky fixtures, minor plumbing repairs, water-related troubleshooting, and honest guidance on next steps.</p></article>
+        <article class="card"><div class="card-icon">⚡</div><h3>Electrical Basics</h3><p>Lighting, outlets, switches, ceiling fans, and practical electrical updates handled with care.</p></article>
+        <article class="card"><div class="card-icon">🎨</div><h3>Painting</h3><p>Interior and exterior painting with neat prep, crisp lines, and a polished finish that feels finished.</p></article>
+        <article class="card"><div class="card-icon">🌊</div><h3>Water Damage Restoration</h3><p>Fast help after leaks, moisture concerns, cleanup needs, and repair planning after water damage.</p></article>
+        <article class="card"><div class="card-icon">🛡️</div><h3>Mold Remediation</h3><p>Thoughtful remediation support and cleaner indoor spaces with a focus on safety and prevention.</p></article>
+      </div>
+    </div>
+  </section>
 
-      <div class="services-grid">
-        <div class="service-card">
-          <h3>🔧 General Repairs</h3>
-          <p>Quick fixes, handyman work, and reliable maintenance support for all your home needs.</p>
+  <section class="section alt" id="about">
+    <div class="container split">
+      <div class="owner-panel">
+        <span class="section-label" style="color:#ffd98f;">About the Owner</span>
+        <h2>Work led by Kevin Schaeffer, not a faceless service van.</h2>
+        <p>Sunshine State Home &amp; Commercial Services is built around owner-led communication, practical problem solving, and treating every property with respect.</p>
+        <ul class="owner-list">
+          <li>Fair, clear pricing before the work starts</li>
+          <li>Responsive call or text communication</li>
+          <li>Respectful service for homes and businesses</li>
+          <li>Thumbtack profile available for added confidence</li>
+        </ul>
+      </div>
+      <div>
+        <div class="section-head">
+          <span class="section-label">Why People Book</span>
+          <h2 class="section-title">The website should make visitors feel safe before they ever click.</h2>
+          <p class="section-desc">That means the important things are easy to find: who is coming, how to book, what services are offered, and how to call or text right away.</p>
         </div>
-        <div class="service-card">
-          <h3>💧 Plumbing</h3>
-          <p>Leaky faucets, minor plumbing fixes, water-related repairs, and practical troubleshooting.</p>
-        </div>
-        <div class="service-card">
-          <h3>⚡ Electrical</h3>
-          <p>Lighting, outlets, switches, basic electrical repairs, and safe property improvements.</p>
-        </div>
-        <div class="service-card">
-          <h3>🎨 Painting</h3>
-          <p>Interior and exterior painting with clean prep, careful lines, and a polished finish.</p>
-        </div>
-        <div class="service-card">
-          <h3>💦 Water Damage</h3>
-          <p>Fast response, drying support, repair coordination, and restoration-minded service.</p>
-        </div>
-        <div class="service-card">
-          <h3>🧹 Mold Remediation</h3>
-          <p>Safer, cleaner spaces with thoughtful remediation and healthier indoor environments.</p>
+        <div class="cards-grid" style="grid-template-columns:1fr 1fr;">
+          <article class="card"><div class="card-icon">📞</div><h3>Easy Contact</h3><p>Kevin's phone number stays visible so customers can call, text, or book online quickly.</p></article>
+          <article class="card"><div class="card-icon">✅</div><h3>Trust First</h3><p>Owner-led service, service area, Thumbtack access, and clear job categories reduce hesitation.</p></article>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TESTIMONIALS / REVIEWS -->
+  <section class="section" id="service-area">
+    <div class="container split">
+      <div class="section-head">
+        <span class="section-label">Service Area</span>
+        <h2 class="section-title">Serving Jacksonville and nearby North Florida communities.</h2>
+        <p class="section-desc">Need help outside the listed towns? Call or text Kevin and ask. The fastest answer is usually a quick message with your location and what needs fixing.</p>
+      </div>
+      <div class="area-list">
+        <div class="area-pill">Jacksonville</div>
+        <div class="area-pill">Orange Park</div>
+        <div class="area-pill">St. Johns</div>
+        <div class="area-pill">Yulee</div>
+        <div class="area-pill">Fernandina Beach</div>
+        <div class="area-pill">Nearby North Florida</div>
+      </div>
+    </div>
+  </section>
+
   <section class="section alt" id="reviews">
     <div class="container">
-      <div class="section-header">
-        <span class="section-label">What Customers Say</span>
-        <h2 class="section-title">Built on Trust & Word of Mouth</h2>
+      <div class="section-head">
+        <span class="section-label">Reviews &amp; Proof</span>
+        <h2 class="section-title">Built to send visitors toward trust, then toward booking.</h2>
+        <p class="section-desc">The homepage now points people to Thumbtack for profile proof while keeping the booking path simple on the site.</p>
       </div>
-
-      <div class="testimonials-grid">
-        <div class="testimonial">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"Professional, on-time, and fair pricing. Kevin is the real deal—highly recommend for all home service needs!"</p>
-          <p class="testimonial-author">Sarah M., Jacksonville</p>
-        </div>
-        <div class="testimonial">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"The owner treated my home with respect and finished the job right. A+ service and genuine customer care."</p>
-          <p class="testimonial-author">Michael T., Arlington</p>
-        </div>
-        <div class="testimonial">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"Quick response, professional work, honest communication. This is the real deal for home services."</p>
-          <p class="testimonial-author">Jennifer L., Southside</p>
-        </div>
+      <div class="reviews-panel">
+        <article class="review-card">
+          <div class="stars" aria-label="Five stars">★★★★★</div>
+          <h3>Check verified platform details</h3>
+          <p>Visitors can view Kevin's Thumbtack profile before booking, which helps reduce doubt for new customers.</p>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Five stars">★★★★★</div>
+          <h3>Book from the page or call directly</h3>
+          <p>The page keeps the phone number, booking form, and Thumbtack button visible so leads do not have to hunt.</p>
+        </article>
       </div>
+      <p style="margin-top:28px;"><a class="btn btn-green" href="https://www.thumbtack.com/fl/jacksonville/water-damage/sunshine-state-hcs/service/517953413396611087" target="_blank" rel="noopener">View on Thumbtack</a></p>
+    </div>
+  </section>
 
-      <div class="thumbtack-section">
-        <p style="margin-bottom: 15px; color: var(--text-muted); font-size: 14px;">Read more reviews and book directly on Thumbtack</p>
-        <a href="https://www.thumbtack.com/fl/jacksonville/water-damage/sunshine-state-hcs/service/517953413396611087" target="_blank" class="thumbtack-btn">View on Thumbtack</a>
+  <section class="contact-band" id="contact">
+    <div class="contact-inner">
+      <div>
+        <h2>Ready to get the job handled?</h2>
+        <p>Call or text Kevin Schaeffer at <strong>(803) 394-5120</strong>, or send a booking request and he will confirm by phone.</p>
+      </div>
+      <div class="contact-actions">
+        <a class="btn btn-green" href="tel:+18033945120">Call or Text</a>
+        <a class="btn btn-white" href="#booking">Book Online</a>
       </div>
     </div>
   </section>
 
-  <!-- SERVICE AREA -->
-  <section class="section" id="service-area">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Service Area</span>
-        <h2 class="section-title">Proudly Serving Greater Jacksonville</h2>
-        <p class="section-desc">We provide professional home and commercial services throughout Jacksonville and surrounding communities. Available for emergency repairs 24/7.</p>
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3>Sunshine State Home &amp; Commercial Services</h3>
+        <p>Owner-led repairs, restoration support, and home or commercial services in the Jacksonville area.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer" id="contact">
-    <div class="footer-content">
-      <div class="footer-section">
-        <h4>Contact Us</h4>
-        <p><strong>Phone:</strong></p>
+      <div>
+        <h4>Contact</h4>
         <a href="tel:+18033945120">(803) 394-5120</a>
-        <p style="margin-top: 15px;"><strong>Email:</strong></p>
         <a href="mailto:SunshineStateHCS@gmail.com">SunshineStateHCS@gmail.com</a>
       </div>
-
-      <div class="footer-section">
-        <h4>Service Area</h4>
-        <p>Jacksonville, FL & Surrounding Communities</p>
-        <p style="margin-top: 12px; font-size: 12px;">Available for emergency repairs 24/7</p>
+      <div>
+        <h4>Services</h4>
+        <a href="#services">General Repairs</a>
+        <a href="#services">Water Damage Restoration</a>
+        <a href="#services">Mold Remediation</a>
+        <a href="#services">Painting, Plumbing &amp; Electrical</a>
       </div>
-
-      <div class="footer-section">
-        <h4>Why Us</h4>
-        <p>✓ Licensed & Insured</p>
-        <p>✓ 15+ Years Experience</p>
-        <p>✓ Same-Day Service</p>
-        <p>✓ Free Estimates</p>
-      </div>
-
-      <div class="footer-section">
+      <div>
         <h4>Quick Links</h4>
-        <a href="#services">Services</a>
-        <a href="#reviews">Reviews</a>
         <a href="#booking">Book Service</a>
         <a href="#service-area">Service Area</a>
-        <a href="https://www.thumbtack.com/fl/jacksonville/water-damage/sunshine-state-hcs/service/517953413396611087" target="_blank">Thumbtack</a>
+        <a href="https://www.thumbtack.com/fl/jacksonville/water-damage/sunshine-state-hcs/service/517953413396611087" target="_blank" rel="noopener">Thumbtack</a>
       </div>
     </div>
-
-    <div class="footer-bottom">
-      <p>&copy; 2026 Sunshine State Home & Commercial Services. All rights reserved. Licensed & Insured | Jacksonville, FL</p>
-    </div>
+    <div class="footer-bottom">© 2026 Sunshine State Home &amp; Commercial Services. Jacksonville, FL and surrounding communities.</div>
   </footer>
+
+  <div class="mobile-cta" aria-label="Mobile quick actions">
+    <a class="btn btn-white" href="tel:+18033945120">Call/Text</a>
+    <a class="btn btn-green" href="#booking">Book Now</a>
+  </div>
 </body>
 </html>
