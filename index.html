@@ -6,10 +6,6 @@
   <title>Home & Commercial Services Jacksonville, FL | Sunshine State</title>
   <meta name="description" content="Licensed, insured handyman services in Jacksonville, FL. Plumbing, electrical, painting, repairs, water damage & mold remediation. Free estimates. (803) 394-5120">
   <meta name="keywords" content="handyman Jacksonville, plumbing, electrical, painting, home repair, water damage, mold removal">
-  <meta property="og:title" content="Sunshine State Home & Commercial Services - Jacksonville, FL">
-  <meta property="og:description" content="Professional home & commercial services. Licensed, insured, reliable. Same-day appointments available.">
-  <meta property="og:type" content="business.business">
-  <link rel="canonical" href="https://suuuuuunshine.netlify.app/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
@@ -57,189 +53,281 @@
       padding: 0 20px;
     }
     
-    /* HERO SECTION */
-    .hero {
-      position: relative;
-      background: var(--light-bg);
-      overflow: hidden;
-    }
-    
-    .hero-image {
-      width: 100%;
-      max-height: 600px;
-      object-fit: cover;
-      display: block;
-    }
-    
-    .hero-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(135deg, rgba(16,35,61,0.3) 0%, rgba(23,107,53,0.2) 100%);
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    
-    .hero-content h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(28px, 8vw, 56px);
-      color: var(--white);
-      margin-bottom: 10px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    }
-    
-    .hero-content p {
-      font-size: clamp(16px, 4vw, 20px);
-      color: var(--light-bg);
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    }
-    
-    /* STICKY HEADER / CTA BAR */
-    .cta-bar {
+    /* TOP NAVIGATION HEADER */
+    .navbar {
+      background: var(--white);
+      box-shadow: var(--shadow);
       position: sticky;
       top: 0;
-      z-index: 100;
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-      box-shadow: var(--shadow);
+      z-index: 200;
     }
     
-    .cta-bar-inner {
+    .navbar-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 12px 20px;
+      padding: 15px 20px;
+      max-width: 1400px;
+      margin: 0 auto;
     }
     
-    .cta-bar-logo {
-      font-weight: 700;
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex: 1;
+    }
+    
+    .logo-icon {
+      width: 60px;
+      height: 60px;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="30" r="20" fill="%23d89825"/><path d="M 30 60 L 50 40 L 70 60 Z" fill="%2310233d"/><rect x="45" y="55" width="10" height="15" fill="%23d89825"/><path d="M 20 50 Q 20 70 50 75 Q 80 70 80 50" fill="%23176b35" opacity="0.3"/></svg>') center/contain no-repeat;
+      flex-shrink: 0;
+    }
+    
+    .brand-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      color: var(--navy);
+      line-height: 1;
+      margin-bottom: 4px;
+      font-weight: 800;
+    }
+    
+    .brand-text p {
+      font-size: 11px;
       color: var(--primary);
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    
+    /* NAVIGATION MENU */
+    .nav-menu {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      flex: 1;
+      justify-content: center;
+    }
+    
+    .nav-menu a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: color 0.3s;
+      position: relative;
+    }
+    
+    .nav-menu a:hover,
+    .nav-menu a.active {
+      color: var(--primary);
+    }
+    
+    .nav-menu a:hover::after,
+    .nav-menu a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+    
+    /* RIGHT ACTIONS */
+    .navbar-actions {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    
+    .phone-info {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--text-dark);
+      cursor: pointer;
+    }
+    
+    .phone-icon {
+      font-size: 24px;
+    }
+    
+    .phone-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      font-size: 12px;
+    }
+    
+    .phone-text .label {
+      color: var(--text-muted);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    
+    .phone-text .number {
+      font-weight: 700;
+      color: var(--navy);
       font-size: 14px;
     }
     
-    .cta-bar-actions {
-      display: flex;
-      gap: 10px;
+    .phone-info:hover .number {
+      color: var(--primary);
     }
     
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 13px;
-      border: none;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-align: center;
-    }
-    
-    .btn-primary {
+    .book-btn {
       background: var(--primary);
       color: var(--white);
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 13px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      transition: all 0.3s;
+      border: 2px solid var(--primary);
     }
     
-    .btn-primary:hover {
+    .book-btn:hover {
       background: var(--primary-dark);
+      border-color: var(--primary-dark);
       transform: translateY(-2px);
       box-shadow: var(--shadow-md);
     }
     
-    .btn-secondary {
-      background: var(--white);
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 600px;
+    }
+    
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('assets/sunshine-approved-hero.jpg.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      z-index: 1;
+    }
+    
+    .hero-overlay {
+      position: relative;
+      z-index: 10;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      min-height: 600px;
+      padding: 60px 20px;
+      background: linear-gradient(90deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.95) 50%, rgba(255,255,255,0) 100%);
+    }
+    
+    .hero-content {
+      max-width: 550px;
+      z-index: 11;
+    }
+    
+    .hero-content .tagline {
       color: var(--primary);
-      border: 2px solid var(--primary);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
     }
     
-    .btn-secondary:hover {
-      background: var(--light-bg);
+    .hero-content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 56px;
+      color: var(--navy);
+      line-height: 1.1;
+      margin-bottom: 20px;
+      font-weight: 800;
     }
     
-    .phone-btn {
+    .hero-content .divider {
+      width: 60px;
+      height: 4px;
+      background: var(--accent);
+      margin-bottom: 25px;
+      border-radius: 2px;
+    }
+    
+    .hero-content p {
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+    
+    .hero-badges {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+    
+    .badge {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--primary);
       display: flex;
       align-items: center;
-      gap: 6px;
-      background: var(--accent);
-      color: var(--white);
-      text-decoration: none;
-      padding: 10px 14px;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 13px;
+      gap: 8px;
     }
     
-    .phone-btn:hover {
-      background: #c97e1c;
-      transform: translateY(-2px);
-    }
-    
-    /* QUICK FACTS */
-    .quick-facts {
-      background: var(--navy);
-      color: var(--white);
-      padding: 30px 20px;
-      text-align: center;
-    }
-    
-    .quick-facts-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    
-    .fact-item {
-      padding: 15px;
-    }
-    
-    .fact-number {
-      font-size: 32px;
-      font-weight: 800;
+    .badge::before {
+      content: '✓';
+      font-size: 16px;
+      font-weight: bold;
       color: var(--accent);
-      display: block;
     }
     
-    .fact-label {
-      font-size: 13px;
-      margin-top: 5px;
-      opacity: 0.9;
+    /* BOOKING FORM */
+    .booking-form {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      max-width: 420px;
+      margin-left: auto;
+      grid-column: 2;
     }
     
-    /* LEAD FORM SECTION */
-    .booking-section {
-      background: var(--light-bg);
-      padding: 50px 20px;
+    .form-title {
+      font-size: 24px;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 8px;
+      text-transform: uppercase;
     }
     
-    .booking-container {
-      max-width: 500px;
-      margin: 0 auto;
-    }
-    
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 32px;
-      color: var(--navy);
-      margin-bottom: 10px;
-      text-align: center;
-    }
-    
-    .section-subtitle {
-      text-align: center;
-      color: var(--text-muted);
-      margin-bottom: 30px;
-      font-size: 14px;
+    .form-divider {
+      width: 40px;
+      height: 3px;
+      background: var(--accent);
+      margin-bottom: 28px;
+      border-radius: 2px;
     }
     
     .form-group {
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
     
     .form-group label {
@@ -248,6 +336,8 @@
       font-weight: 600;
       font-size: 13px;
       color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
     
     .form-group input,
@@ -260,6 +350,7 @@
       font-family: 'Poppins', sans-serif;
       font-size: 14px;
       transition: border-color 0.3s;
+      background: var(--white);
     }
     
     .form-group input:focus,
@@ -292,8 +383,10 @@
       border-radius: 6px;
       cursor: pointer;
       font-weight: 500;
+      font-size: 12px;
       transition: all 0.3s;
       margin: 0;
+      background: var(--white);
     }
     
     .time-slot input:checked + label {
@@ -310,15 +403,50 @@
       border: none;
       border-radius: 6px;
       font-weight: 700;
-      font-size: 15px;
+      font-size: 14px;
       cursor: pointer;
       transition: all 0.3s;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
     
     .form-group button:hover {
       background: var(--primary-dark);
       transform: translateY(-2px);
       box-shadow: var(--shadow-md);
+    }
+    
+    /* QUICK FACTS BAR */
+    .quick-facts {
+      background: var(--navy);
+      color: var(--white);
+      padding: 30px 20px;
+      text-align: center;
+    }
+    
+    .quick-facts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .fact-item {
+      padding: 15px;
+    }
+    
+    .fact-number {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--accent);
+      display: block;
+    }
+    
+    .fact-label {
+      font-size: 13px;
+      margin-top: 5px;
+      opacity: 0.9;
     }
     
     /* SERVICES SECTION */
@@ -392,107 +520,6 @@
       line-height: 1.6;
     }
     
-    /* ABOUT SECTION */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      align-items: center;
-      margin-top: 40px;
-    }
-    
-    .about-text h3 {
-      font-size: 22px;
-      color: var(--navy);
-      margin-bottom: 15px;
-    }
-    
-    .about-text p {
-      color: var(--text-muted);
-      margin-bottom: 15px;
-      line-height: 1.7;
-    }
-    
-    .about-text ul {
-      list-style: none;
-      margin: 20px 0;
-    }
-    
-    .about-text li {
-      padding: 10px 0;
-      padding-left: 30px;
-      position: relative;
-      color: var(--text-muted);
-      font-size: 14px;
-    }
-    
-    .about-text li:before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: var(--primary);
-      font-weight: bold;
-      font-size: 18px;
-    }
-    
-    .owner-card {
-      background: var(--white);
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: var(--shadow);
-      text-align: center;
-    }
-    
-    .owner-label {
-      color: var(--primary);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 15px;
-      display: block;
-    }
-    
-    .owner-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 36px;
-      color: var(--navy);
-      margin-bottom: 10px;
-    }
-    
-    /* VALUES */
-    .values-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
-    }
-    
-    .value-card {
-      background: var(--white);
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: var(--shadow);
-      text-align: center;
-    }
-    
-    .value-icon {
-      font-size: 48px;
-      margin-bottom: 15px;
-    }
-    
-    .value-card h4 {
-      font-size: 18px;
-      color: var(--navy);
-      margin-bottom: 12px;
-    }
-    
-    .value-card p {
-      color: var(--text-muted);
-      font-size: 14px;
-      line-height: 1.6;
-    }
-    
     /* TESTIMONIALS */
     .testimonials-grid {
       display: grid;
@@ -530,22 +557,31 @@
       font-size: 13px;
     }
     
-    /* SERVICE AREA */
-    .areas-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-      margin-top: 30px;
+    /* THUMBTACK SECTION */
+    .thumbtack-section {
+      text-align: center;
+      padding: 40px 20px;
+      background: var(--white);
     }
     
-    .area-badge {
+    .thumbtack-btn {
+      display: inline-block;
       background: var(--primary);
       color: var(--white);
-      padding: 15px;
-      border-radius: 8px;
-      text-align: center;
-      font-weight: 600;
+      padding: 14px 32px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
       font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: all 0.3s;
+    }
+    
+    .thumbtack-btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
     }
     
     /* FOOTER */
@@ -596,48 +632,88 @@
       margin: 0 auto;
     }
     
-    .social-links {
-      display: flex;
-      gap: 12px;
-      margin-top: 12px;
-    }
-    
-    .social-links a {
-      width: 36px;
-      height: 36px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      margin: 0;
-      transition: all 0.3s;
-    }
-    
-    .social-links a:hover {
-      background: var(--accent);
-    }
-    
     /* MOBILE */
-    @media (max-width: 768px) {
-      .cta-bar-actions {
+    @media (max-width: 1024px) {
+      .navbar-inner {
         flex-wrap: wrap;
-        gap: 8px;
+        gap: 15px;
       }
       
-      .btn {
-        padding: 8px 14px;
+      .nav-menu {
+        order: 3;
+        width: 100%;
+        justify-content: flex-start;
+        gap: 15px;
         font-size: 12px;
       }
       
-      .about-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+      .navbar-actions {
+        gap: 10px;
       }
       
-      .section {
+      .phone-info {
+        gap: 6px;
+      }
+      
+      .phone-text .number {
+        font-size: 13px;
+      }
+      
+      .book-btn {
+        padding: 10px 20px;
+        font-size: 12px;
+      }
+      
+      .hero-overlay {
+        grid-template-columns: 1fr;
+        min-height: auto;
         padding: 40px 20px;
+        background: linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.95) 100%);
+      }
+      
+      .booking-form {
+        grid-column: 1;
+        margin-left: 0;
+        margin-top: 30px;
+      }
+      
+      .hero-content h1 {
+        font-size: 40px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .logo-section {
+        gap: 12px;
+      }
+      
+      .logo-icon {
+        width: 50px;
+        height: 50px;
+      }
+      
+      .brand-text h1 {
+        font-size: 18px;
+      }
+      
+      .nav-menu {
+        display: none;
+      }
+      
+      .phone-info .phone-text .label {
+        display: none;
+      }
+      
+      .phone-info .phone-text .number {
+        font-size: 16px;
+      }
+      
+      .hero-content h1 {
+        font-size: 32px;
+      }
+      
+      .hero-content p {
+        font-size: 14px;
       }
       
       .time-slots {
@@ -653,25 +729,115 @@
         gap: 15px;
       }
       
-      .fact-item {
-        padding: 12px;
+      .hero {
+        min-height: auto;
+      }
+      
+      .hero-overlay {
+        min-height: auto;
       }
     }
   </style>
 </head>
 <body>
-  <!-- HERO -->
-  <section class="hero">
-    <img src="assets/sunshine-approved-hero.jpg.png" alt="Professional home and commercial services in Jacksonville, Florida" class="hero-image">
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <div class="logo-section">
+        <div class="logo-icon"></div>
+        <div class="brand-text">
+          <h1>SUNSHINE STATE</h1>
+          <p>Home & Commercial Services</p>
+        </div>
+      </div>
+      
+      <div class="nav-menu">
+        <a href="#home" class="active">HOME</a>
+        <a href="#services">SERVICES</a>
+        <a href="#about">ABOUT</a>
+        <a href="#service-area">SERVICE AREA</a>
+        <a href="#reviews">REVIEWS</a>
+        <a href="#contact">CONTACT</a>
+      </div>
+      
+      <div class="navbar-actions">
+        <a href="tel:+18033945120" class="phone-info">
+          <span class="phone-icon">☎️</span>
+          <div class="phone-text">
+            <span class="label">Call or Text</span>
+            <span class="number">(803) 394-5120</span>
+          </div>
+        </a>
+        <a href="#booking" class="book-btn">BOOK NOW</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
     <div class="hero-overlay">
       <div class="hero-content">
-        <h1>Your Trusted Jacksonville Handyman</h1>
-        <p>Professional repairs, maintenance & restoration</p>
+        <div class="tagline">Honest Work. Fair Prices.</div>
+        <h1>Reliable Home & Commercial Services You Can Trust</h1>
+        <div class="divider"></div>
+        <p>From quick fixes to big projects, we show up on time, do the job right, and treat your property like our own.</p>
+        <div class="hero-badges">
+          <div class="badge">Licensed & Insured</div>
+          <div class="badge">15+ Years Experience</div>
+          <div class="badge">Same-Day Available</div>
+        </div>
       </div>
+      
+      <form class="booking-form" name="booking" method="POST" data-netlify="true" id="booking">
+        <input type="hidden" name="form-name" value="booking">
+        <div class="form-title">BOOK A SERVICE</div>
+        <div class="form-divider"></div>
+        
+        <div class="form-group">
+          <label for="service">1. Choose a Service</label>
+          <select id="service" name="service" required>
+            <option value="">Select a service</option>
+            <option>General Repairs</option>
+            <option>Plumbing</option>
+            <option>Electrical</option>
+            <option>Painting</option>
+            <option>Water Damage Restoration</option>
+            <option>Mold Remediation</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>2. Pick Date</label>
+          <input type="date" name="preferred_date" required>
+        </div>
+
+        <div class="form-group">
+          <label>3. Pick Time</label>
+          <div class="time-slots">
+            <div class="time-slot">
+              <input type="radio" id="time1" name="preferred_time" value="8:00 AM">
+              <label for="time1">8:00 AM</label>
+            </div>
+            <div class="time-slot">
+              <input type="radio" id="time2" name="preferred_time" value="10:00 AM">
+              <label for="time2">10:00 AM</label>
+            </div>
+            <div class="time-slot">
+              <input type="radio" id="time3" name="preferred_time" value="12:00 PM">
+              <label for="time3">12:00 PM</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <button type="submit">GET FREE ESTIMATE</button>
+        </div>
+      </form>
     </div>
   </section>
 
-  <!-- QUICK FACTS BAR -->
+  <!-- QUICK FACTS -->
   <div class="quick-facts">
     <div class="quick-facts-grid">
       <div class="fact-item">
@@ -693,116 +859,18 @@
     </div>
   </div>
 
-  <!-- STICKY CTA BAR -->
-  <div class="cta-bar">
-    <div class="container">
-      <div class="cta-bar-inner">
-        <span class="cta-bar-logo">☀️ SUNSHINE STATE</span>
-        <div class="cta-bar-actions">
-          <a href="#booking" class="btn btn-primary">BOOK SERVICE</a>
-          <a href="tel:+18033945120" class="phone-btn">📞 (803) 394-5120</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- BOOKING FORM -->
-  <section class="booking-section" id="booking">
-    <div class="booking-container">
-      <h2 class="section-title">Book Your Service</h2>
-      <p class="section-subtitle">Fill out the form below & we'll confirm your appointment</p>
-      
-      <form name="booking" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="booking">
-        
-        <div class="form-group">
-          <label for="service">Service Needed *</label>
-          <select id="service" name="service" required>
-            <option value="">-- Select a Service --</option>
-            <option>General Repairs</option>
-            <option>Plumbing</option>
-            <option>Electrical</option>
-            <option>Painting</option>
-            <option>Water Damage Restoration</option>
-            <option>Mold Remediation</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>Preferred Date *</label>
-          <input type="date" name="preferred_date" required>
-        </div>
-
-        <div class="form-group">
-          <label>Preferred Time *</label>
-          <div class="time-slots">
-            <div class="time-slot">
-              <input type="radio" id="time1" name="preferred_time" value="8:00 AM">
-              <label for="time1">8:00 AM</label>
-            </div>
-            <div class="time-slot">
-              <input type="radio" id="time2" name="preferred_time" value="10:00 AM">
-              <label for="time2">10:00 AM</label>
-            </div>
-            <div class="time-slot">
-              <input type="radio" id="time3" name="preferred_time" value="12:00 PM">
-              <label for="time3">12:00 PM</label>
-            </div>
-            <div class="time-slot">
-              <input type="radio" id="time4" name="preferred_time" value="2:00 PM">
-              <label for="time4">2:00 PM</label>
-            </div>
-            <div class="time-slot">
-              <input type="radio" id="time5" name="preferred_time" value="4:00 PM">
-              <label for="time5">4:00 PM</label>
-            </div>
-            <div class="time-slot">
-              <input type="radio" id="time6" name="preferred_time" value="6:00 PM">
-              <label for="time6">6:00 PM</label>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="name">Your Name *</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-
-        <div class="form-group">
-          <label for="phone">Phone Number *</label>
-          <input type="tel" id="phone" name="phone" required>
-        </div>
-
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email">
-        </div>
-
-        <div class="form-group">
-          <label for="message">Brief Description</label>
-          <textarea id="message" name="message" rows="3" placeholder="Tell us about your project..."></textarea>
-        </div>
-
-        <div class="form-group">
-          <button type="submit">GET MY FREE ESTIMATE</button>
-        </div>
-      </form>
-    </div>
-  </section>
-
   <!-- SERVICES -->
   <section class="section" id="services">
     <div class="container">
       <div class="section-header">
         <span class="section-label">What We Do</span>
-        <h2 class="section-title">Practical Help, Professional Finish</h2>
-        <p class="section-desc">From quick fixes to complete restorations, we handle every home service with expertise and care. Licensed, insured, and committed to your satisfaction.</p>
+        <h2 class="section-title">Quality Services for Every Home & Business Need</h2>
       </div>
 
       <div class="services-grid">
         <div class="service-card">
-          <h3>🔧 Repairs & Maintenance</h3>
-          <p>Fixtures, drywall, doors, punch lists, and dependable maintenance support for all your home needs.</p>
+          <h3>🔧 General Repairs</h3>
+          <p>Quick fixes, handyman work, and reliable maintenance support for all your home needs.</p>
         </div>
         <div class="service-card">
           <h3>💧 Plumbing</h3>
@@ -817,7 +885,7 @@
           <p>Interior and exterior painting with clean prep, careful lines, and a polished finish.</p>
         </div>
         <div class="service-card">
-          <h3>💦 Water Damage Restoration</h3>
+          <h3>💦 Water Damage</h3>
           <p>Fast response, drying support, repair coordination, and restoration-minded service.</p>
         </div>
         <div class="service-card">
@@ -828,102 +896,46 @@
     </div>
   </section>
 
-  <!-- ABOUT SECTION -->
-  <section class="section alt" id="about">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">About the Owner</span>
-        <h2 class="section-title">Local, Dependable, Professional</h2>
-      </div>
-
-      <div class="about-grid">
-        <div class="owner-card">
-          <span class="owner-label">Owner-Led Service</span>
-          <p class="owner-name">Kevin Schaeffer</p>
-          <p style="color: var(--text-muted); font-size: 14px; margin-top: 10px;">Licensed & Insured Professional</p>
-        </div>
-
-        <div>
-          <h3>Why Choose Sunshine State?</h3>
-          <p>With years of hands-on expertise, I bring professional reliability to every job. Honest work, fair prices, treating your property like my own.</p>
-          <ul>
-            <li>Licensed, Insured & Bonded</li>
-            <li>15+ Years Experience</li>
-            <li>Same-Day Appointments Available</li>
-            <li>Transparent, Fair Pricing</li>
-            <li>Satisfaction Guaranteed</li>
-            <li>Free Estimates on all jobs</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="values-grid">
-        <div class="value-card">
-          <div class="value-icon">🛡️</div>
-          <h4>Quality Workmanship</h4>
-          <p>We take pride in every detail and stand by our work with confidence.</p>
-        </div>
-        <div class="value-card">
-          <div class="value-icon">⏱️</div>
-          <h4>On Time & Reliable</h4>
-          <p>We show up when promised and finish the job right, every time.</p>
-        </div>
-        <div class="value-card">
-          <div class="value-icon">💰</div>
-          <h4>Fair Pricing</h4>
-          <p>Honest estimates with no surprises—just fair, competitive pricing.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="section" id="testimonials">
+  <!-- TESTIMONIALS / REVIEWS -->
+  <section class="section alt" id="reviews">
     <div class="container">
       <div class="section-header">
         <span class="section-label">What Customers Say</span>
         <h2 class="section-title">Built on Trust & Word of Mouth</h2>
-        <p class="section-desc">Our reputation is built on clear communication, fair pricing, and work done right the first time.</p>
       </div>
 
       <div class="testimonials-grid">
         <div class="testimonial">
           <div class="testimonial-stars">★★★★★</div>
           <p class="testimonial-text">"Professional, on-time, and fair pricing. Kevin is the real deal—highly recommend for all home service needs!"</p>
-          <p class="testimonial-author">— Sarah M., Jacksonville</p>
+          <p class="testimonial-author">Sarah M., Jacksonville</p>
         </div>
         <div class="testimonial">
           <div class="testimonial-stars">★★★★★</div>
           <p class="testimonial-text">"The owner treated my home with respect and finished the job right. A+ service and genuine customer care."</p>
-          <p class="testimonial-author">— Michael T., Arlington</p>
+          <p class="testimonial-author">Michael T., Arlington</p>
         </div>
         <div class="testimonial">
           <div class="testimonial-stars">★★★★★</div>
           <p class="testimonial-text">"Quick response, professional work, honest communication. This is the real deal for home services."</p>
-          <p class="testimonial-author">— Jennifer L., Southside</p>
+          <p class="testimonial-author">Jennifer L., Southside</p>
         </div>
+      </div>
+
+      <div class="thumbtack-section">
+        <p style="margin-bottom: 15px; color: var(--text-muted); font-size: 14px;">Read more reviews and book directly on Thumbtack</p>
+        <a href="https://www.thumbtack.com/fl/jacksonville/water-damage/sunshine-state-hcs/service/517953413396611087" target="_blank" class="thumbtack-btn">View on Thumbtack</a>
       </div>
     </div>
   </section>
 
   <!-- SERVICE AREA -->
-  <section class="section alt" id="service-area">
+  <section class="section" id="service-area">
     <div class="container">
       <div class="section-header">
         <span class="section-label">Service Area</span>
         <h2 class="section-title">Proudly Serving Greater Jacksonville</h2>
-        <p class="section-desc">We serve the greater Jacksonville area including surrounding communities. Need help outside our main service area? Reach out—if we can get there and do the job well, we'll tell you straight.</p>
-      </div>
-
-      <div class="areas-grid">
-        <div class="area-badge">Jacksonville</div>
-        <div class="area-badge">Arlington</div>
-        <div class="area-badge">Riverside</div>
-        <div class="area-badge">Avondale</div>
-        <div class="area-badge">Southside</div>
-        <div class="area-badge">Northside</div>
-        <div class="area-badge">Westside</div>
-        <div class="area-badge">Orange Park</div>
+        <p class="section-desc">We provide professional home and commercial services throughout Jacksonville and surrounding communities. Available for emergency repairs 24/7.</p>
       </div>
     </div>
   </section>
@@ -951,17 +963,15 @@
         <p>✓ 15+ Years Experience</p>
         <p>✓ Same-Day Service</p>
         <p>✓ Free Estimates</p>
-        <p style="margin-top: 15px;"><strong>Find us on:</strong></p>
-        <a href="#" style="display: inline;">Thumbtack</a>
       </div>
 
       <div class="footer-section">
         <h4>Quick Links</h4>
         <a href="#services">Services</a>
-        <a href="#about">About Us</a>
+        <a href="#reviews">Reviews</a>
         <a href="#booking">Book Service</a>
-        <a href="#testimonials">Reviews</a>
         <a href="#service-area">Service Area</a>
+        <a href="https://www.thumbtack.com/fl/jacksonville/water-damage/sunshine-state-hcs/service/517953413396611087" target="_blank">Thumbtack</a>
       </div>
     </div>
 
@@ -969,13 +979,5 @@
       <p>&copy; 2026 Sunshine State Home & Commercial Services. All rights reserved. Licensed & Insured | Jacksonville, FL</p>
     </div>
   </footer>
-
-  <script>
-    // Smooth form submission feedback
-    document.querySelector('form').addEventListener('submit', function() {
-      this.style.opacity = '0.5';
-      this.style.pointerEvents = 'none';
-    });
-  </script>
 </body>
 </html>
