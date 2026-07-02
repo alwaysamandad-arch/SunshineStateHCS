@@ -15,28 +15,28 @@
 
 /* HEADER */
 .site-header{background:var(--cream);padding:0 clamp(16px,3vw,48px)}
-.header-top{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:20px;padding-top:10px}
+.header-top{display:grid;grid-template-columns:260px 1fr auto;align-items:start;gap:20px;padding-top:10px}
 
-/* Logo: emblem image + brand name + subtitle */
+/* Logo block */
 .logo-block{display:flex;flex-direction:column;align-items:flex-start}
-.logo-emblem{width:130px;height:130px;background:url('/sunshine-state-logo-full.png') no-repeat;background-size:322px auto;background-position:-49px -6px;flex-shrink:0}
-.brand-name{font-family:"Playfair Display",Georgia,serif;font-size:clamp(28px,3.5vw,44px);font-weight:900;color:var(--navy);line-height:1;letter-spacing:-.01em;margin-top:4px}
-.brand-sub-wrap{display:flex;align-items:center;gap:7px;margin-top:3px}
-.brand-sub-line{flex:1 1 28px;height:1.5px;background:var(--gold)}
-.brand-sub{font-size:11px;font-weight:800;color:var(--navy);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+.logo-emblem{width:130px;height:130px;background:url('/sunshine-state-logo-full.png') no-repeat;background-size:322px auto;background-position:-49px -6px;flex-shrink:0;display:block}
+.brand-name{font-family:"Playfair Display",Georgia,serif;font-size:36px;font-weight:900;color:var(--navy);line-height:1;letter-spacing:-.01em;margin-top:4px;white-space:nowrap}
+.brand-sub-wrap{display:flex;align-items:center;gap:7px;margin-top:4px;width:100%}
+.brand-sub-line{flex:1;height:1.5px;background:var(--gold);min-width:16px}
+.brand-sub{font-size:10px;font-weight:800;color:var(--navy);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
 
-/* Nav */
-.header-nav{display:flex;align-items:center;justify-content:center;gap:clamp(14px,2vw,32px);list-style:none}
+/* Nav - aligned to top, padded to sit nicely */
+.header-nav{display:flex;align-items:center;justify-content:center;gap:clamp(14px,2vw,30px);list-style:none;padding-top:16px}
 .header-nav a{font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--navy);padding:4px 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
 .header-nav a:hover,.header-nav a.active{color:var(--green);border-bottom-color:var(--green)}
 
 /* Right */
-.header-right{display:flex;align-items:center;gap:14px;flex-shrink:0}
+.header-right{display:flex;align-items:center;gap:12px;padding-top:16px;flex-shrink:0}
 .nav-phone{display:flex;align-items:center;gap:8px}
-.phone-icon{font-size:24px;color:var(--green)}
+.phone-icon{font-size:22px;color:var(--green)}
 .phone-text small{display:block;font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;line-height:1}
-.phone-text strong{display:block;font-size:16px;font-weight:900;color:var(--navy);line-height:1.3}
-.btn-book-nav{display:inline-flex;align-items:center;justify-content:center;padding:0 22px;height:48px;border-radius:8px;background:var(--green-dark);color:white;font-weight:900;font-size:14px;text-transform:uppercase;letter-spacing:.06em}
+.phone-text strong{display:block;font-size:15px;font-weight:900;color:var(--navy);line-height:1.3}
+.btn-book-nav{display:inline-flex;align-items:center;justify-content:center;padding:0 20px;height:46px;border-radius:8px;background:var(--green-dark);color:white;font-weight:900;font-size:13px;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
 
 /* Service tags */
 .service-tags{display:flex;align-items:center;padding:8px 0;border-top:1px solid var(--line);margin-top:8px}
@@ -59,8 +59,6 @@
 .btn-thumbtack{display:inline-flex;align-items:center;justify-content:center;padding:0 22px;height:46px;border-radius:50px;background:transparent;border:2px solid var(--green);color:var(--green);font-weight:900;font-size:13px;text-transform:uppercase;letter-spacing:.06em}
 .trust-badges{display:flex;flex-wrap:wrap;gap:18px;align-items:center}
 .trust-badge{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--navy)}
-
-/* Booking card */
 .booking-card{background:rgba(255,255,255,.96);border-radius:18px;padding:28px 26px;box-shadow:0 20px 60px rgba(16,35,61,.2)}
 .booking-card h2{font-family:"Playfair Display",Georgia,serif;font-size:22px;color:var(--navy);text-align:center;margin-bottom:18px;font-weight:900}
 .bc-field{display:block;width:100%;min-height:46px;border:1.5px solid rgba(16,35,61,.18);border-radius:8px;padding:0 14px;font:inherit;font-size:14px;color:var(--ink);background:white;margin-bottom:10px;-webkit-appearance:none;appearance:none}
@@ -69,15 +67,11 @@ select.bc-field{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://ww
 textarea.bc-field{min-height:80px;padding-top:12px;resize:vertical}
 .bc-submit{display:block;width:100%;min-height:52px;border:0;border-radius:10px;background:var(--green);color:white;font-family:inherit;font-weight:900;font-size:15px;text-transform:uppercase;letter-spacing:.08em;cursor:pointer;margin-top:2px}
 .bc-submit:hover{background:var(--green-dark)}
-
-/* Below hero strip */
 .below-hero-strip{background:var(--green-dark);padding:42px clamp(16px,3vw,48px)}
 .below-hero-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
 .bh-tile{color:white}.bh-icon{font-size:36px;margin-bottom:12px;display:block;opacity:.9}
 .bh-title{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.1em;color:white;margin-bottom:7px}
 .bh-desc{font-size:13px;color:rgba(255,255,255,.78);line-height:1.5}
-
-/* Rest of site */
 .section{padding:78px clamp(22px,4vw,58px);background:white}.section.alt{background:var(--cream2)}
 .inner{max-width:1230px;margin:0 auto}
 .section-label{color:var(--green);font-weight:900;text-transform:uppercase;letter-spacing:.1em;font-size:13px;margin-bottom:8px}
@@ -103,17 +97,17 @@ textarea.bc-field{min-height:80px;padding-top:12px;resize:vertical}
 .footer-inner{max-width:1230px;margin:0 auto;display:grid;grid-template-columns:1.1fr .8fr 1.1fr 1fr;gap:22px}
 .footer a{color:white}.chip{display:flex;gap:12px;align-items:center}
 .chip-icon{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.14);font-size:22px}
-
+@media(max-width:1100px){.header-top{grid-template-columns:220px 1fr auto}.brand-name{font-size:30px}}
 @media(max-width:1024px){.hero-inner{grid-template-columns:1fr 340px;gap:28px}}
-@media(max-width:900px){.header-nav{display:none}.header-top{grid-template-columns:1fr auto}.service-tags{flex-wrap:wrap;gap:4px}.hero-inner{grid-template-columns:1fr;padding-top:36px}.below-hero-grid{grid-template-columns:repeat(2,1fr)}.cards,.reviews-grid,.footer-inner{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.section{padding:58px 20px}}
-@media(max-width:600px){.below-hero-grid{grid-template-columns:1fr}.hero-actions{flex-direction:column}.btn-emergency,.btn-book-online,.btn-thumbtack{width:100%;justify-content:center}.logo-emblem{width:90px;height:90px;background-size:224px auto;background-position:-34px -4px}.brand-name{font-size:26px}}
+@media(max-width:900px){.header-nav{display:none}.header-top{grid-template-columns:auto 1fr}.service-tags{flex-wrap:wrap;gap:4px}.hero-inner{grid-template-columns:1fr;padding-top:36px}.below-hero-grid{grid-template-columns:repeat(2,1fr)}.cards,.reviews-grid,.footer-inner{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.section{padding:58px 20px}}
+@media(max-width:600px){.below-hero-grid{grid-template-columns:1fr}.hero-actions{flex-direction:column}.btn-emergency,.btn-book-online,.btn-thumbtack{width:100%;justify-content:center}.logo-emblem{width:90px;height:90px;background-size:224px auto;background-position:-34px -4px}.brand-name{font-size:24px}}
 </style>
 </head>
 <body>
 <header class="site-header">
   <div class="header-top">
     <div class="logo-block">
-      <div class="logo-emblem" role="img" aria-label="Sunshine State logo emblem"></div>
+      <div class="logo-emblem" role="img" aria-label="Sunshine State emblem"></div>
       <div class="brand-name">SUNSHINE STATE</div>
       <div class="brand-sub-wrap">
         <span class="brand-sub-line"></span>
