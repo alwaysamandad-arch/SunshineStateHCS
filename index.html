@@ -8,58 +8,82 @@
 <link rel="canonical" href="https://thesunshinestatehcs.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
 <style>
-:root{--green:#176b35;--green-dark:#0f5128;--navy:#10233d;--gold:#d89a28;--cream:#fff8ed;--cream2:#f7ead6;--ink:#142033;--muted:#5b6572;--line:rgba(16,35,61,.12);--shadow:0 18px 55px rgba(16,35,61,.14)}*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Inter,system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55}a{color:inherit;text-decoration:none}
-.site-nav{display:flex;align-items:center;justify-content:space-between;padding:0 clamp(16px,3vw,48px);height:80px;background:rgba(255,248,237,.98);border-bottom:1px solid var(--line);position:relative;z-index:50}
-.nav-logo-wrap{display:flex;align-items:center;gap:10px}
-.nav-logo-mark{width:72px;height:72px;overflow:hidden;flex:0 0 72px;position:relative}
-.nav-logo-mark img{position:absolute;width:420%;height:280%;top:-7%;left:-24%}
-.nav-logo-text{line-height:1.1}
-.nav-logo-text .brand-name{display:block;font-family:"Playfair Display",Georgia,serif;font-size:20px;font-weight:900;color:var(--navy);letter-spacing:.01em}
-.nav-logo-text .brand-sub{display:block;font-size:9.5px;font-weight:800;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-top:2px}
-.nav-logo-text .brand-line{display:block;width:100%;height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin:3px 0}
-.nav-links{display:flex;align-items:center;gap:clamp(14px,2vw,28px);list-style:none}
-.nav-links a{font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--navy);padding:4px 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
-.nav-links a:hover,.nav-links a.active{color:var(--green);border-bottom-color:var(--green)}
-.nav-right{display:flex;align-items:center;gap:14px}
-.nav-phone{display:flex;align-items:center;gap:8px;color:var(--navy)}
-.nav-phone-icon{font-size:20px;color:var(--green)}
-.nav-phone small{display:block;font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
-.nav-phone strong{display:block;font-size:15px;color:var(--navy);font-weight:900}
-.btn-book-nav{display:inline-flex;align-items:center;justify-content:center;padding:0 20px;height:44px;border-radius:8px;background:var(--green-dark);color:white;font-weight:900;font-size:13px;text-transform:uppercase;letter-spacing:.06em}
-.service-tags{display:flex;align-items:center;padding:7px clamp(16px,3vw,48px);background:rgba(255,248,237,.98);border-bottom:1px solid var(--line)}
-.service-tag{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.1em;color:var(--green);padding:0 16px;border-right:1.5px solid rgba(16,35,61,.15)}
+:root{--green:#176b35;--green-dark:#0f5128;--navy:#10233d;--gold:#d89a28;--cream:#fff8ed;--cream2:#f7ead6;--ink:#142033;--muted:#5b6572;--line:rgba(16,35,61,.12);--shadow:0 18px 55px rgba(16,35,61,.14)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55}
+a{color:inherit;text-decoration:none}
+
+/* ===== HEADER ===== */
+.site-header{background:var(--cream);padding:0 clamp(16px,3vw,48px)}
+
+/* Top row: logo left, nav center, phone+book right */
+.header-top{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:24px;padding-top:12px}
+
+/* Logo block - large emblem + brand name stacked */
+.logo-block{display:flex;flex-direction:column;align-items:flex-start;gap:0}
+.logo-emblem{width:auto;height:130px;display:block}
+.brand-name{font-family:"Playfair Display",Georgia,serif;font-size:clamp(32px,4vw,48px);font-weight:900;color:var(--navy);line-height:1;letter-spacing:-.01em;margin-top:2px}
+.brand-sub-wrap{display:flex;align-items:center;gap:8px;margin-top:2px}
+.brand-sub-line{flex:1;height:1.5px;background:var(--gold)}
+.brand-sub{font-size:11px;font-weight:800;color:var(--navy);letter-spacing:.15em;text-transform:uppercase;white-space:nowrap}
+
+/* Nav links */
+.header-nav{display:flex;align-items:center;justify-content:center;gap:clamp(16px,2.5vw,36px);list-style:none;padding-bottom:0}
+.header-nav a{font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--navy);padding:4px 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+.header-nav a:hover,.header-nav a.active{color:var(--green);border-bottom-color:var(--green)}
+
+/* Right: phone + book now */
+.header-right{display:flex;align-items:center;gap:14px;flex-shrink:0}
+.nav-phone{display:flex;align-items:center;gap:8px}
+.phone-icon{font-size:26px;color:var(--green)}
+.phone-text small{display:block;font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;line-height:1}
+.phone-text strong{display:block;font-size:16px;font-weight:900;color:var(--navy);line-height:1.2}
+.btn-book-nav{display:inline-flex;align-items:center;justify-content:center;padding:0 22px;height:48px;border-radius:8px;background:var(--green-dark);color:white;font-weight:900;font-size:14px;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+
+/* Service tags strip */
+.service-tags{display:flex;align-items:center;padding:8px 0;border-top:1px solid var(--line);margin-top:8px}
+.service-tag{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--green);padding:0 16px;border-right:1.5px solid rgba(16,35,61,.15)}
 .service-tag:first-child{padding-left:0}
 .service-tag:last-child{border-right:none}
-.hero{position:relative;min-height:530px;overflow:hidden;display:flex;align-items:center}
+
+/* ===== HERO ===== */
+.hero{position:relative;min-height:520px;overflow:hidden;display:flex;align-items:center}
 .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;z-index:0}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(255,248,230,.93) 0%,rgba(255,246,220,.80) 38%,rgba(255,244,210,.50) 60%,rgba(255,242,200,.15) 100%);z-index:1}
-.hero-inner{position:relative;z-index:2;width:100%;max-width:1280px;margin:0 auto;padding:52px clamp(16px,3vw,48px);display:grid;grid-template-columns:1fr 370px;gap:48px;align-items:center}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(100deg,rgba(255,248,230,.88) 0%,rgba(255,246,220,.70) 38%,rgba(255,244,210,.38) 60%,rgba(255,242,200,.08) 100%);z-index:1}
+.hero-inner{position:relative;z-index:2;width:100%;max-width:1280px;margin:0 auto;padding:52px clamp(16px,3vw,48px);display:grid;grid-template-columns:1fr 380px;gap:48px;align-items:center}
 .hero-tagline{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.14em;color:var(--navy);margin-bottom:14px}
 .hero-heading{font-family:"Playfair Display",Georgia,serif;font-size:clamp(34px,4.2vw,54px);font-weight:900;color:var(--navy);line-height:1.06;margin-bottom:12px}
 .hero-divider{width:56px;height:3px;background:var(--gold);border-radius:2px;margin-bottom:20px}
 .hero-desc{color:#3a4855;font-size:16px;line-height:1.65;max-width:470px;margin-bottom:28px}
 .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:26px}
-.btn-emergency{display:inline-flex;align-items:center;justify-content:center;padding:0 22px;height:46px;border-radius:50px;background:#c0392b;color:white;font-weight:900;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
-.btn-book-online{display:inline-flex;align-items:center;justify-content:center;padding:0 22px;height:46px;border-radius:50px;background:var(--green-dark);color:white;font-weight:900;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
-.btn-thumbtack{display:inline-flex;align-items:center;justify-content:center;padding:0 22px;height:46px;border-radius:50px;background:transparent;border:2px solid var(--green);color:var(--green);font-weight:900;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.btn-emergency{display:inline-flex;align-items:center;justify-content:center;padding:0 22px;height:46px;border-radius:50px;background:#c0392b;color:white;font-weight:900;font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+.btn-book-online{display:inline-flex;align-items:center;justify-content:center;padding:0 22px;height:46px;border-radius:50px;background:var(--green-dark);color:white;font-weight:900;font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+.btn-thumbtack{display:inline-flex;align-items:center;justify-content:center;padding:0 22px;height:46px;border-radius:50px;background:transparent;border:2px solid var(--green);color:var(--green);font-weight:900;font-size:13px;text-transform:uppercase;letter-spacing:.06em}
 .trust-badges{display:flex;flex-wrap:wrap;gap:18px;align-items:center}
-.trust-badge{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--navy)}
-.booking-card{background:rgba(255,255,255,.96);border-radius:18px;padding:26px 24px;box-shadow:0 20px 60px rgba(16,35,61,.2)}
-.booking-card h2{font-family:"Playfair Display",Georgia,serif;font-size:20px;color:var(--navy);text-align:center;margin-bottom:16px;font-weight:900}
-.bc-field{display:block;width:100%;min-height:44px;border:1.5px solid rgba(16,35,61,.18);border-radius:8px;padding:0 14px;font:inherit;font-size:14px;color:var(--ink);background:white;margin-bottom:10px;-webkit-appearance:none;appearance:none}
+.trust-badge{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--navy)}
+
+/* Booking card */
+.booking-card{background:rgba(255,255,255,.96);border-radius:18px;padding:28px 26px;box-shadow:0 20px 60px rgba(16,35,61,.2)}
+.booking-card h2{font-family:"Playfair Display",Georgia,serif;font-size:22px;color:var(--navy);text-align:center;margin-bottom:18px;font-weight:900}
+.bc-field{display:block;width:100%;min-height:46px;border:1.5px solid rgba(16,35,61,.18);border-radius:8px;padding:0 14px;font:inherit;font-size:14px;color:var(--ink);background:white;margin-bottom:10px;-webkit-appearance:none;appearance:none}
 .bc-field::placeholder{color:#a0aab4}
 select.bc-field{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2310233d' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-color:white;padding-right:36px}
-textarea.bc-field{min-height:78px;padding-top:12px;resize:vertical}
-.bc-submit{display:block;width:100%;min-height:50px;border:0;border-radius:10px;background:var(--green);color:white;font-family:inherit;font-weight:900;font-size:14px;text-transform:uppercase;letter-spacing:.08em;cursor:pointer;margin-top:2px}
+textarea.bc-field{min-height:80px;padding-top:12px;resize:vertical}
+.bc-submit{display:block;width:100%;min-height:52px;border:0;border-radius:10px;background:var(--green);color:white;font-family:inherit;font-weight:900;font-size:15px;text-transform:uppercase;letter-spacing:.08em;cursor:pointer;margin-top:2px}
 .bc-submit:hover{background:var(--green-dark)}
-.below-hero-strip{background:var(--green-dark);padding:40px clamp(16px,3vw,48px)}
-.below-hero-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+
+/* ===== BELOW HERO STRIP ===== */
+.below-hero-strip{background:var(--green-dark);padding:42px clamp(16px,3vw,48px)}
+.below-hero-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
 .bh-tile{color:white}
-.bh-icon{font-size:34px;margin-bottom:10px;opacity:.9;display:block}
-.bh-title{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.1em;color:white;margin-bottom:6px}
+.bh-icon{font-size:36px;margin-bottom:12px;display:block;opacity:.9}
+.bh-title{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.1em;color:white;margin-bottom:7px}
 .bh-desc{font-size:13px;color:rgba(255,255,255,.78);line-height:1.5}
+
+/* ===== REST OF SITE ===== */
 .section{padding:78px clamp(22px,4vw,58px);background:white}
 .section.alt{background:var(--cream2)}
 .inner{max-width:1230px;margin:0 auto}
@@ -89,35 +113,78 @@ textarea.bc-field{min-height:78px;padding-top:12px;resize:vertical}
 .footer a{color:white}
 .chip{display:flex;gap:12px;align-items:center}
 .chip-icon{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.14);font-size:22px}
-@media(max-width:1024px){.hero-inner{grid-template-columns:1fr 340px;gap:28px}}
-@media(max-width:900px){.nav-links{display:none}.service-tags{flex-wrap:wrap;gap:4px}.hero-inner{grid-template-columns:1fr;padding-top:36px}.below-hero-grid{grid-template-columns:repeat(2,1fr)}.cards,.reviews-grid,.footer-inner{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.section{padding:58px 20px}}
-@media(max-width:600px){.below-hero-grid{grid-template-columns:1fr}.hero-actions{flex-direction:column}.btn-emergency,.btn-book-online,.btn-thumbtack{width:100%;justify-content:center}}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:1024px){
+  .header-top{grid-template-columns:auto 1fr auto}
+  .hero-inner{grid-template-columns:1fr 340px;gap:28px}
+}
+@media(max-width:900px){
+  .header-nav{display:none}
+  .header-top{grid-template-columns:1fr auto}
+  .service-tags{flex-wrap:wrap;gap:4px}
+  .hero-inner{grid-template-columns:1fr;padding-top:36px}
+  .below-hero-grid{grid-template-columns:repeat(2,1fr)}
+  .cards,.reviews-grid,.footer-inner{grid-template-columns:1fr}
+  .form-grid{grid-template-columns:1fr}
+  .section{padding:58px 20px}
+}
+@media(max-width:600px){
+  .below-hero-grid{grid-template-columns:1fr}
+  .hero-actions{flex-direction:column}
+  .btn-emergency,.btn-book-online,.btn-thumbtack{width:100%;justify-content:center}
+  .logo-emblem{height:90px}
+  .brand-name{font-size:28px}
+}
 </style>
 </head>
 <body>
-<nav class="site-nav" aria-label="Main navigation">
-  <div class="nav-logo-wrap">
-    <div class="nav-logo-mark"><img src="/sunshine-state-logo-full.png" alt="Sunshine State logo emblem"></div>
-    <div class="nav-logo-text">
-      <span class="brand-name">SUNSHINE STATE</span>
-      <span class="brand-line"></span>
-      <span class="brand-sub">Home &amp; Commercial Services</span>
+
+<!-- HEADER: logo top-left, nav center, phone+book right -->
+<header class="site-header">
+  <div class="header-top">
+    <!-- Logo block: emblem + SUNSHINE STATE + subtitle -->
+    <div class="logo-block">
+      <img class="logo-emblem" src="/sunshine-state-logo-full.png" alt="Sunshine State Home and Commercial Services logo" style="object-fit:none;object-position:-8% -2%;width:160px;height:130px;">
+      <div class="brand-name">SUNSHINE STATE</div>
+      <div class="brand-sub-wrap">
+        <span class="brand-sub-line"></span>
+        <span class="brand-sub">Home &amp; Commercial Services</span>
+        <span class="brand-sub-line"></span>
+      </div>
+    </div>
+
+    <!-- Nav links centered -->
+    <ul class="header-nav" role="list">
+      <li><a href="/" class="active">HOME</a></li>
+      <li><a href="#services">SERVICES</a></li>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#service-area">SERVICE AREA</a></li>
+      <li><a href="#reviews">REVIEWS</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+
+    <!-- Phone + Book Now -->
+    <div class="header-right">
+      <a class="nav-phone" href="tel:+18033945120">
+        <span class="phone-icon">&#128222;</span>
+        <div class="phone-text"><small>Call or Text</small><strong>803-394-5120</strong></div>
+      </a>
+      <a class="btn-book-nav" href="#request">BOOK NOW</a>
     </div>
   </div>
-  <ul class="nav-links" role="list">
-    <li><a href="/" class="active">HOME</a></li>
-    <li><a href="#services">SERVICES</a></li>
-    <li><a href="#about">ABOUT</a></li>
-    <li><a href="#service-area">SERVICE AREA</a></li>
-    <li><a href="#reviews">REVIEWS</a></li>
-    <li><a href="#contact">CONTACT</a></li>
-  </ul>
-  <div class="nav-right">
-    <a class="nav-phone" href="tel:+18033945120"><span class="nav-phone-icon">&#128222;</span><span><small>Call or Text</small><strong>803-394-5120</strong></span></a>
-    <a class="btn-book-nav" href="#request">BOOK NOW</a>
+
+  <!-- Service tags strip -->
+  <div class="service-tags" aria-label="Services offered">
+    <span class="service-tag">REPAIRS</span>
+    <span class="service-tag">PLUMBING</span>
+    <span class="service-tag">ELECTRICAL</span>
+    <span class="service-tag">PAINTING</span>
+    <span class="service-tag">WATER RESTORATION</span>
   </div>
-</nav>
-<div class="service-tags" aria-label="Services offered"><span class="service-tag">REPAIRS</span><span class="service-tag">PLUMBING</span><span class="service-tag">ELECTRICAL</span><span class="service-tag">PAINTING</span><span class="service-tag">WATER RESTORATION</span></div>
+</header>
+
+<!-- HERO -->
 <section class="hero" aria-label="Hero">
   <img class="hero-bg" src="/assets/sunshine-state-coastal-hero.svg" alt="Florida coastal sunset scene with palm trees and home">
   <div class="hero-overlay" aria-hidden="true"></div>
@@ -152,12 +219,34 @@ textarea.bc-field{min-height:78px;padding-top:12px;resize:vertical}
     </div>
   </div>
 </section>
-<div class="below-hero-strip"><div class="below-hero-grid"><div class="bh-tile"><span class="bh-icon">&#127968;</span><div class="bh-title">HOME &amp; COMMERCIAL</div><div class="bh-desc">Solutions for every job, big or small.</div></div><div class="bh-tile"><span class="bh-icon">&#128167;</span><div class="bh-title">WATER DAMAGE RESTORATION</div><div class="bh-desc">Fast response when you need it most.</div></div><div class="bh-tile"><span class="bh-icon">&#128737;</span><div class="bh-title">MOLD REMEDIATION</div><div class="bh-desc">Safe, effective solutions for healthier spaces.</div></div><div class="bh-tile"><span class="bh-icon">&#128100;</span><div class="bh-title">OWNER-LED SERVICE</div><div class="bh-desc">Personal service you can count on.</div></div></div></div>
+
+<!-- BELOW HERO STRIP -->
+<div class="below-hero-strip">
+  <div class="below-hero-grid">
+    <div class="bh-tile"><span class="bh-icon">&#127968;</span><div class="bh-title">HOME &amp; COMMERCIAL</div><div class="bh-desc">Solutions for every job, big or small.</div></div>
+    <div class="bh-tile"><span class="bh-icon">&#128167;</span><div class="bh-title">WATER DAMAGE RESTORATION</div><div class="bh-desc">Fast response when you need it most.</div></div>
+    <div class="bh-tile"><span class="bh-icon">&#128737;</span><div class="bh-title">MOLD REMEDIATION</div><div class="bh-desc">Safe, effective solutions for healthier spaces.</div></div>
+    <div class="bh-tile"><span class="bh-icon">&#128100;</span><div class="bh-title">OWNER-LED SERVICE</div><div class="bh-desc">Personal service you can count on.</div></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
 <section class="section" id="services"><div class="inner"><p class="section-label">What We Do</p><h2 class="section-title">Our Services in Jacksonville, FL</h2><p class="section-desc">Comprehensive home and commercial solutions done right the first time, including emergency service when urgent help is needed.</p><div class="cards"><article class="card"><div class="card-icon">&#9889;</div><h3>24/7 Emergency Services</h3><p>Urgent repair needs can call Kevin directly at (803) 394-5120.</p></article><article class="card"><div class="card-icon">&#128295;</div><h3>General Repairs</h3><p>Handyman support, punch lists, fixtures, drywall, doors, and dependable maintenance.</p></article><article class="card"><div class="card-icon">&#128703;</div><h3>Plumbing</h3><p>Leak support, fixture replacement, minor plumbing fixes, and practical troubleshooting.</p></article><article class="card"><div class="card-icon">&#9889;</div><h3>Electrical</h3><p>Outlets, lighting, ceiling fans, switches, and practical upgrades done safely.</p></article><article class="card"><div class="card-icon">&#127912;</div><h3>Painting</h3><p>Interior, exterior, trim, prep, touch-ups, and clean professional finishing.</p></article><article class="card"><div class="card-icon">&#128167;</div><h3>Water Damage Restoration</h3><p>Fast response, drying support, repair coordination, and restoration-minded service.</p></article></div></div></section>
+
+<!-- BOOKING FORM -->
 <section class="section alt" id="request"><div class="inner"><form class="booking-box" name="booking" method="POST" data-netlify="true" action="/success.html"><input type="hidden" name="form-name" value="booking"><h2>Request a Service</h2><p>Prefer not to call? Send the details here. For urgent service, call Kevin directly at (803) 394-5120.</p><div class="form-grid"><label>Name<input name="name" required></label><label>Phone<input name="phone" type="tel" required></label><label>Email<input name="email" type="email"></label><label>Service<select name="service" required><option value="">Choose a service</option><option>24/7 emergency service</option><option>General repairs</option><option>Plumbing</option><option>Electrical</option><option>Painting</option><option>Water damage restoration</option><option>Mold remediation</option><option>Home and commercial maintenance</option></select></label><label class="span-2">Message<textarea name="message" placeholder="Briefly describe the project or issue."></textarea></label></div><button type="submit">Send Request</button></form></div></section>
+
+<!-- ABOUT -->
 <section class="section" id="about"><div class="inner"><p class="section-label">About the Owner</p><h2 class="section-title">A company that genuinely cares.</h2><p class="section-desc">Sunshine State Home &amp; Commercial Services was built on honest communication, fair pricing, and owner-led work that treats every property with respect.</p></div></section>
+
+<!-- SERVICE AREA -->
 <section class="section alt" id="service-area"><div class="inner"><p class="section-label">Service Area</p><h2 class="section-title">Proudly serving Jacksonville, FL and surrounding areas.</h2><p class="section-desc">Need help outside Jacksonville? Reach out. If we can get there and do the job well, we will tell you straight.</p></div></section>
+
+<!-- REVIEWS -->
 <section class="section" id="reviews"><div class="inner"><p class="section-label">Reviews</p><h2 class="section-title">Real reviews, real results.</h2><div class="reviews-grid"><article class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>When disaster struck we were distraught and did not know where to start. Kevin was a lifesaver, professional, calm, and got it done fast.</p><strong>Jackson F.</strong></article><article class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Rob did a beautiful job adding some love to my boring kitchen. Backsplash and chandeliers were handled with care and done better than expected.</p><strong>Rita</strong></article><article class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Rob did a fantastic job replacing light fixtures, receptacles, and a ceiling fan. He fixed drywall and did paint touch-ups too.</p><strong>Ashley Sieber</strong></article></div></div></section>
+
+<!-- FOOTER -->
 <footer class="footer" id="contact"><div class="footer-inner"><div class="chip"><div class="chip-icon">&#128205;</div><div><strong>Jacksonville, FL</strong><br><span>and surrounding areas</span></div></div><div class="chip"><div class="chip-icon">&#9742;</div><div><strong><a href="tel:+18033945120">(803) 394-5120</a></strong><br><span>Call or Text Kevin</span></div></div><div class="chip"><div class="chip-icon">&#9889;</div><div><strong><a href="tel:+18033945120">24/7 Emergency Services</a></strong><br><span>Tap to call Kevin</span></div></div><div class="chip"><div class="chip-icon">&#128077;</div><div><strong><a href="https://www.thumbtack.com/" target="_blank" rel="noopener">View on Thumbtack</a></strong><br><span>Quality. Reliability. Peace of mind.</span></div></div></div></footer>
+
 </body>
 </html>
