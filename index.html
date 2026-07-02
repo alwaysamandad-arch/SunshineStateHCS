@@ -13,11 +13,12 @@
 :root{--green:#176b35;--green-dark:#0f5128;--navy:#10233d;--gold:#d89a28;--cream:#fff8ed;--cream2:#f7ead6;--ink:#142033;--muted:#5b6572;--line:rgba(16,35,61,.12);--shadow:0 18px 55px rgba(16,35,61,.14)}*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Inter,system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55}a{color:inherit;text-decoration:none}
 .site-nav{display:flex;align-items:center;justify-content:space-between;padding:0 clamp(16px,3vw,48px);height:80px;background:rgba(255,248,237,.98);border-bottom:1px solid var(--line);position:relative;z-index:50}
 .nav-logo-wrap{display:flex;align-items:center;gap:10px}
-.nav-logo-emblem{width:64px;height:64px;border-radius:50%;overflow:hidden;flex:0 0 64px;background:transparent}
-.nav-logo-emblem img{width:200%;height:200%;object-fit:cover;object-position:-52% -2%;margin-left:-50%;margin-top:-1%}
+.nav-logo-mark{width:72px;height:72px;overflow:hidden;flex:0 0 72px;position:relative}
+.nav-logo-mark img{position:absolute;width:420%;height:280%;top:-7%;left:-24%}
 .nav-logo-text{line-height:1.1}
 .nav-logo-text .brand-name{display:block;font-family:"Playfair Display",Georgia,serif;font-size:20px;font-weight:900;color:var(--navy);letter-spacing:.01em}
-.nav-logo-text .brand-sub{display:block;font-size:9.5px;font-weight:800;color:var(--gold);letter-spacing:.12em;text-transform:uppercase}
+.nav-logo-text .brand-sub{display:block;font-size:9.5px;font-weight:800;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-top:2px}
+.nav-logo-text .brand-line{display:block;width:100%;height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin:3px 0}
 .nav-links{display:flex;align-items:center;gap:clamp(14px,2vw,28px);list-style:none}
 .nav-links a{font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--navy);padding:4px 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
 .nav-links a:hover,.nav-links a.active{color:var(--green);border-bottom-color:var(--green)}
@@ -96,9 +97,10 @@ textarea.bc-field{min-height:78px;padding-top:12px;resize:vertical}
 <body>
 <nav class="site-nav" aria-label="Main navigation">
   <div class="nav-logo-wrap">
-    <div class="nav-logo-emblem"><img src="/sunshine-state-logo-full.png" alt=""></div>
+    <div class="nav-logo-mark"><img src="/sunshine-state-logo-full.png" alt="Sunshine State logo emblem"></div>
     <div class="nav-logo-text">
       <span class="brand-name">SUNSHINE STATE</span>
+      <span class="brand-line"></span>
       <span class="brand-sub">Home &amp; Commercial Services</span>
     </div>
   </div>
