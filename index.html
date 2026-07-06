@@ -284,9 +284,6 @@ img{max-width:100%}
  .cta-actions{justify-content:center}
  .trust-strip__inner{grid-template-columns:1fr 1fr}
 }
-@media(min-width:901px){
- #booking{display:none}
-}
 @media(max-width:900px){
  .hero-image-wrap{min-height:auto}
  .hotspot,.hero-booking-overlay{display:none}
@@ -650,6 +647,25 @@ img{max-width:100%}
       timeInput.value = btn.dataset.time;
     });
   });
+})();
+(function(){
+  var overlay = document.querySelector('.hero-booking-overlay');
+  var bookCard = document.querySelector('.book-card');
+  if(!overlay || !bookCard) return;
+
+  function positionOverlay(){
+    var rect = bookCard.getBoundingClientRect();
+    overlay.style.position = 'fixed';
+    overlay.style.left = rect.left + 'px';
+    overlay.style.top = rect.top + 'px';
+    overlay.style.width = rect.width + 'px';
+    overlay.style.height = rect.height + 'px';
+    overlay.style.zIndex = '100';
+  }
+
+  positionOverlay();
+  window.addEventListener('resize', positionOverlay);
+  window.addEventListener('scroll', positionOverlay);
 })();
 (function(){
   var form = document.getElementById('bookingForm');
