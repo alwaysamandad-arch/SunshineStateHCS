@@ -318,6 +318,44 @@ img{max-width:100%}
 
 <header class="hero-image-wrap" aria-label="Sunshine State Home & Commercial Services homepage" id="home">
 <img class="hero-image" src="/assets/sunshine-approved-hero.jpg.png" alt="Sunshine State Home and Commercial Services — reliable home and commercial repairs in Jacksonville, FL" decoding="async" fetchpriority="high" width="1448" height="1086">
+<div class="hero-booking-overlay">
+<h2>Book a Service</h2>
+<form name="booking" method="POST" data-netlify="true" action="/success.html" netlify-honeypot="bot-field" style="width:100%">
+<input type="hidden" name="form-name" value="booking">
+<input type="hidden" id="heroSelectedTime" name="time">
+<p class="hp"><label>Do not fill this out: <input name="bot-field"></label></p>
+<div class="fg" style="margin-bottom:12px">
+<label for="heroServiceSelect" style="display:block;font-size:12px;font-weight:600;text-transform:uppercase;color:var(--muted);margin-bottom:6px">1. Choose a Service</label>
+<select id="heroServiceSelect" name="service" required style="width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;font-size:14px">
+<option value="" disabled selected>Select a service</option>
+<option value="General Repairs">General Repairs</option>
+<option value="Plumbing">Plumbing</option>
+<option value="Electrical">Electrical</option>
+<option value="Painting">Painting</option>
+<option value="Water Damage Restoration">Water Damage Restoration</option>
+<option value="Mold Remediation">Mold Remediation</option>
+<option value="Home & Commercial Maintenance">Home & Commercial Maintenance</option>
+<option value="24/7 Emergency Service">24/7 Emergency Service</option>
+</select>
+</div>
+<div class="fg" style="margin-bottom:12px">
+<label for="heroDatePicker" style="display:block;font-size:12px;font-weight:600;text-transform:uppercase;color:var(--muted);margin-bottom:6px">2. Pick Date</label>
+<input type="date" id="heroDatePicker" name="date" required style="width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;font-size:14px">
+</div>
+<div class="fg" style="margin-bottom:12px">
+<label style="display:block;font-size:12px;font-weight:600;text-transform:uppercase;color:var(--muted);margin-bottom:8px">3. Pick Time</label>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+<button type="button" class="time-btn" data-time="8:00 AM" style="padding:8px;border:1px solid var(--line);border-radius:6px;background:#fff;font-size:13px;font-weight:600;cursor:pointer">8:00 AM</button>
+<button type="button" class="time-btn" data-time="10:00 AM" style="padding:8px;border:1px solid var(--line);border-radius:6px;background:#fff;font-size:13px;font-weight:600;cursor:pointer">10:00 AM</button>
+<button type="button" class="time-btn" data-time="12:00 PM" style="padding:8px;border:1px solid var(--line);border-radius:6px;background:#fff;font-size:13px;font-weight:600;cursor:pointer">12:00 PM</button>
+<button type="button" class="time-btn" data-time="2:00 PM" style="padding:8px;border:1px solid var(--line);border-radius:6px;background:#fff;font-size:13px;font-weight:600;cursor:pointer">2:00 PM</button>
+<button type="button" class="time-btn" data-time="4:00 PM" style="padding:8px;border:1px solid var(--line);border-radius:6px;background:#fff;font-size:13px;font-weight:600;cursor:pointer">4:00 PM</button>
+<button type="button" class="time-btn" data-time="6:00 PM" style="padding:8px;border:1px solid var(--line);border-radius:6px;background:#fff;font-size:13px;font-weight:600;cursor:pointer">6:00 PM</button>
+</div>
+</div>
+<button type="submit" style="width:100%;padding:12px;background:var(--green);color:#fff;border:none;border-radius:8px;font-weight:700;font-size:14px;cursor:pointer;margin-top:8px;text-transform:uppercase">Book Now</button>
+</form>
+</div>
 <div class="hero-action-panel"><a class="top-phone-fix" href="tel:+18033945120" aria-label="Call or text Kevin at 803 394 5120"><span class="call-icon" aria-hidden="true">☎</span><span><small>Call or Text Kevin</small><strong>(803) 394-5120</strong></span></a><a class="emergency-call" href="tel:+18033945120" aria-label="24/7 emergency services. Call Kevin now."><span class="emergency-icon" aria-hidden="true">⚡</span><span>24/7 Emergency Services</span></a></div>
 <a class="hotspot home" href="#home">Home</a><a class="hotspot services" href="#services">Services</a><a class="hotspot about" href="#about">About</a><a class="hotspot area" href="#service-area">Service Area</a><a class="hotspot reviews" href="#reviews">Reviews</a><a class="hotspot contact" href="#contact">Contact</a><a class="hotspot calltop" href="tel:+18033945120">Call or Text</a>
 <a class="hotspot bookonline" href="#booking">Book Online</a><a class="hotspot calltext" href="tel:+18033945120">Call or Text</a><a class="hotspot thumbtack" href="https://www.thumbtack.com/fl/jacksonville/water-damage/sunshine-state-hcs/service/517953413396611087" target="_blank" rel="noopener">View on Thumbtack</a>
@@ -596,6 +634,19 @@ img{max-width:100%}
   document.getElementById('lightboxClose').addEventListener('click', close);
   lb.addEventListener('click', function(e){ if(e.target === lb) close(); });
   document.addEventListener('keydown', function(e){ if(e.key === 'Escape') close(); });
+})();
+(function(){
+  var timeInput = document.getElementById('heroSelectedTime');
+  var timeButtons = document.querySelectorAll('.hero-booking-overlay .time-btn');
+  timeButtons.forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      timeButtons.forEach(function(b){ b.style.background = '#fff'; b.style.color = 'inherit'; });
+      btn.style.background = 'var(--green)';
+      btn.style.color = '#fff';
+      timeInput.value = btn.dataset.time;
+    });
+  });
 })();
 (function(){
   var form = document.getElementById('bookingForm');
