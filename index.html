@@ -227,6 +227,18 @@ textarea.hbo-field{height:clamp(50px,5vw,72px);padding-top:8px;resize:none}
 .rev-card p{color:var(--muted);margin-bottom:12px;font-size:15px}
 .rev-card strong{color:var(--navy)}
 
+/* ===== Our Work gallery ===== */
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:38px}
+.work-item{position:relative;margin:0;border-radius:16px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 10px 28px rgba(16,35,61,.1);cursor:pointer;background:#e9e2d3;border:0;padding:0;width:100%;font:inherit}
+.work-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.work-item:hover img,.work-item:focus-visible img{transform:scale(1.06)}
+.work-item:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.work-item figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px 14px 11px;background:linear-gradient(transparent,rgba(16,35,61,.85));color:#fff;font-weight:800;font-size:14px;text-align:left}
+.lightbox{position:fixed;inset:0;background:rgba(10,18,30,.93);display:none;align-items:center;justify-content:center;z-index:1000;padding:24px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:min(1000px,92vw);max-height:88vh;border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.lightbox__close{position:absolute;top:16px;right:22px;color:#fff;font-size:38px;font-weight:700;cursor:pointer;line-height:1;background:none;border:0}
+
 /* ===== Service areas ===== */
 .area-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
 .area-chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-weight:700;font-size:14px;color:var(--navy)}
@@ -263,6 +275,7 @@ textarea.hbo-field{height:clamp(50px,5vw,72px);padding-top:8px;resize:none}
  .svc-grid{grid-template-columns:repeat(2,1fr)}
  .why-grid{grid-template-columns:repeat(2,1fr)}
  .rev-grid{grid-template-columns:1fr}
+ .work-grid{grid-template-columns:repeat(2,1fr)}
  .book-grid{grid-template-columns:1fr}
  .footer-grid{grid-template-columns:1fr 1fr}
  .cta-inner{grid-template-columns:1fr;text-align:center}
@@ -282,6 +295,7 @@ textarea.hbo-field{height:clamp(50px,5vw,72px);padding-top:8px;resize:none}
  .hero-action-panel{grid-template-columns:1fr}
  .svc-grid{grid-template-columns:1fr}
  .why-grid{grid-template-columns:1fr}
+ .work-grid{grid-template-columns:1fr}
  .footer-grid{grid-template-columns:1fr}
  .trust-strip__inner{grid-template-columns:1fr}
  .footer-bottom{justify-content:center;text-align:center}
@@ -376,8 +390,28 @@ textarea.hbo-field{height:clamp(50px,5vw,72px);padding-top:8px;resize:none}
 </div>
 </section>
 
+<!-- Our Work -->
+<section class="section white" id="work">
+<div class="inner">
+<p class="eyebrow">Our Work</p>
+<h2 class="section-title">Real projects, done right</h2>
+<p class="section-desc">A look at recent home and commercial jobs across Jacksonville — repairs, plumbing, water damage restoration, and clean, finished results. Tap any photo to view it larger.</p>
+<div class="work-grid">
+<button type="button" class="work-item" data-full="/assets/gallery/work-bathroom-remodel.jpg"><img src="/assets/gallery/work-bathroom-remodel.jpg" alt="Finished bathroom remodel by Sunshine State Home &amp; Commercial Services in Jacksonville, FL" loading="lazy" width="1200" height="900"><figcaption>Bathroom Remodel</figcaption></button>
+<button type="button" class="work-item" data-full="/assets/gallery/work-shower-install.jpg"><img src="/assets/gallery/work-shower-install.jpg" alt="New shower fixture and tile installation in a Jacksonville, FL bathroom" loading="lazy" width="1200" height="900"><figcaption>Shower &amp; Fixture Install</figcaption></button>
+<button type="button" class="work-item" data-full="/assets/gallery/work-water-damage-drying.jpg"><img src="/assets/gallery/work-water-damage-drying.jpg" alt="Water damage restoration drying equipment set up in a Jacksonville, FL home" loading="lazy" width="1200" height="900"><figcaption>Water Damage Drying</figcaption></button>
+<button type="button" class="work-item" data-full="/assets/gallery/work-bathroom-repair.jpg"><img src="/assets/gallery/work-bathroom-repair.jpg" alt="Bathroom wall and plumbing repair in progress in Jacksonville, FL" loading="lazy" width="1200" height="900"><figcaption>Bathroom Wall &amp; Plumbing Repair</figcaption></button>
+<button type="button" class="work-item" data-full="/assets/gallery/work-ceiling-hvac-repair.jpg"><img src="/assets/gallery/work-ceiling-hvac-repair.jpg" alt="Ceiling and HVAC duct repair by Sunshine State Home &amp; Commercial Services" loading="lazy" width="1200" height="900"><figcaption>Ceiling &amp; HVAC Repair</figcaption></button>
+<button type="button" class="work-item" data-full="/assets/gallery/work-plumbing-repair.jpg"><img src="/assets/gallery/work-plumbing-repair.jpg" alt="Plumbing pipe repair by a Jacksonville, FL handyman" loading="lazy" width="1200" height="900"><figcaption>Plumbing Repair</figcaption></button>
+<button type="button" class="work-item" data-full="/assets/gallery/work-restoration-equipment.jpg"><img src="/assets/gallery/work-restoration-equipment.jpg" alt="Air mover restoration equipment drying a bathroom after water damage in Jacksonville, FL" loading="lazy" width="1200" height="900"><figcaption>Restoration in Action</figcaption></button>
+<button type="button" class="work-item" data-full="/assets/gallery/work-carpet-cleaning.jpg"><img src="/assets/gallery/work-carpet-cleaning.jpg" alt="Carpet cleaning and drying after water damage in a Jacksonville, FL property" loading="lazy" width="1200" height="900"><figcaption>Carpet Cleaning &amp; Drying</figcaption></button>
+<button type="button" class="work-item" data-full="/assets/gallery/work-finished-room.jpg"><img src="/assets/gallery/work-finished-room.jpg" alt="Clean, finished room after restoration and repair work in Jacksonville, FL" loading="lazy" width="1200" height="900"><figcaption>Clean, Finished Result</figcaption></button>
+</div>
+</div>
+</section>
+
 <!-- Booking -->
-<section class="section white" id="booking">
+<section class="section cream2" id="booking">
 <div class="inner">
 <p class="eyebrow">Book Online</p>
 <h2 class="section-title">Request your service in under a minute</h2>
@@ -450,7 +484,7 @@ textarea.hbo-field{height:clamp(50px,5vw,72px);padding-top:8px;resize:none}
 </section>
 
 <!-- About -->
-<section class="section cream2" id="about">
+<section class="section white" id="about">
 <div class="inner">
 <p class="eyebrow">About Us</p>
 <h2 class="section-title">A local company that genuinely cares.</h2>
@@ -464,7 +498,7 @@ textarea.hbo-field{height:clamp(50px,5vw,72px);padding-top:8px;resize:none}
 </section>
 
 <!-- Service area -->
-<section class="section white" id="service-area">
+<section class="section cream2" id="service-area">
 <div class="inner">
 <p class="eyebrow">Service Area</p>
 <h2 class="section-title">Proudly serving Jacksonville, FL &amp; surrounding areas</h2>
@@ -485,7 +519,7 @@ textarea.hbo-field{height:clamp(50px,5vw,72px);padding-top:8px;resize:none}
 </section>
 
 <!-- Reviews -->
-<section class="section cream2" id="reviews">
+<section class="section white" id="reviews">
 <div class="inner">
 <p class="eyebrow">Reviews</p>
 <h2 class="section-title">Real reviews, real results.</h2>
@@ -526,6 +560,7 @@ textarea.hbo-field{height:clamp(50px,5vw,72px);padding-top:8px;resize:none}
 <div class="footer-links">
 <a href="#services">Services</a>
 <a href="#why">Why Choose Us</a>
+<a href="#work">Our Work</a>
 <a href="#about">About Us</a>
 <a href="#service-area">Service Area</a>
 <a href="#reviews">Reviews</a>
@@ -553,7 +588,27 @@ textarea.hbo-field{height:clamp(50px,5vw,72px);padding-top:8px;resize:none}
 </div>
 </footer>
 
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Project photo">
+<button type="button" class="lightbox__close" id="lightboxClose" aria-label="Close">&times;</button>
+<img id="lightboxImg" src="" alt="">
+</div>
+
 <script>
+(function(){
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lightboxImg');
+  function close(){ lb.classList.remove('open'); lbImg.src=''; }
+  document.querySelectorAll('.work-item').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      lbImg.src = btn.getAttribute('data-full');
+      lbImg.alt = btn.querySelector('img').alt;
+      lb.classList.add('open');
+    });
+  });
+  document.getElementById('lightboxClose').addEventListener('click', close);
+  lb.addEventListener('click', function(e){ if(e.target === lb) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') close(); });
+})();
 (function(){
   var form = document.getElementById('bookingForm');
   if(!form) return;
