@@ -165,11 +165,6 @@ img{max-width:100%}
 .hbo-cta.ghost{background:#fff;color:var(--navy);border:1.5px solid var(--line)}
 .hbo-rating{text-align:center;color:var(--gold);font-weight:800;font-size:clamp(10px,.95vw,13px);margin-top:6px}
 
-/* ===== Mobile CTA (shown on small screens) ===== */
-.mobile-cta{display:none;padding:26px 20px;background:#fff;border-bottom:1px solid var(--line)}
-.mobile-cta h1{font-family:"Playfair Display",Georgia,serif;color:var(--navy);font-size:34px;line-height:1.1;margin-bottom:10px}
-.mobile-cta p{color:var(--muted);margin-bottom:18px}
-.button-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .btn{display:flex;align-items:center;justify-content:center;min-height:52px;padding:0 22px;border-radius:9px;border:1px solid var(--line);background:#fff;color:var(--navy);font-weight:900;text-decoration:none;text-transform:uppercase;width:100%}
 .btn.green{background:linear-gradient(135deg,var(--green),var(--green-dark));color:#fff;border-color:transparent}
 
@@ -306,9 +301,7 @@ img{max-width:100%}
 @media(max-width:900px){
  .hero-image-wrap{min-height:auto}
  .hotspot,.hero-booking-overlay,.hero-action-panel{display:none}
- .button-row{grid-template-columns:1fr}
  .top-phone-fix,.emergency-call{justify-content:center;border-radius:12px;padding:10px 9px}
- .mobile-cta{display:block}
  .hero-image{min-width:900px;transform:translateX(-7%);width:112%}
  .section{padding:58px 20px}
 }
@@ -320,7 +313,6 @@ img{max-width:100%}
  .footer-grid{grid-template-columns:1fr}
  .trust-strip__inner{grid-template-columns:1fr}
  .footer-bottom{justify-content:center;text-align:center}
- .mobile-cta h1{font-size:30px}
  .hero-image{min-width:760px;transform:translateX(-12%);width:125%}
 }
 </style>
@@ -354,16 +346,6 @@ img{max-width:100%}
 <img class="hero-image" src="/assets/sunshine-approved-hero.jpg.png" alt="Sunshine State Home and Commercial Services — reliable home and commercial repairs in Jacksonville, FL" decoding="async" fetchpriority="high" width="1448" height="1086">
 <div class="hero-action-panel"><a class="top-phone-fix" href="tel:+18033945120" aria-label="Call or text Kevin at 803 394 5120"><span class="call-icon" aria-hidden="true">☎</span><span><small>Kevin</small><strong>(803) 394-5120</strong><small style="color:#9fb0c6;font-size:11px">Jacksonville & South GA</small></span></a><a class="top-phone-fix" href="tel:+19042636527" aria-label="Call or text Rob at 904 263 6527"><span class="call-icon" aria-hidden="true">☎</span><span><small>Rob</small><strong>(904) 263-6527</strong><small style="color:#9fb0c6;font-size:11px">Gainesville & Middleburg</small></span></a><a class="emergency-call" href="tel:+18033945120" aria-label="24/7 emergency services. Call or text now."><span class="emergency-icon" aria-hidden="true">⚡</span><span>24/7 EMERGENCY</span></a></div>
 </header>
-
-<div class="mobile-cta">
-<h1>Reliable Home &amp; Commercial Services You Can Trust</h1>
-<p>Owner-led repairs, plumbing, electrical, painting, water damage restoration, mold remediation, and 24/7 emergency service in Jacksonville, FL and surrounding areas.</p>
-<div class="button-row">
-<a class="btn green" href="#booking">Book Online</a>
-<a class="btn" href="tel:+18033945120">Call or Text (803) 394-5120</a>
-<a class="btn" href="https://www.thumbtack.com/fl/jacksonville/water-damage/sunshine-state-hcs/service/517953413396611087" target="_blank" rel="noopener">View on Thumbtack</a>
-</div>
-</div>
 
 <!-- Trust strip -->
 <div class="trust-strip">
