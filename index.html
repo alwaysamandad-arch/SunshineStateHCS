@@ -107,21 +107,6 @@
 </script>
 <style>
 :root{--green:#176b35;--green-dark:#0f5128;--navy:#10233d;--gold:#d89a28;--cream:#fff8ed;--cream2:#f7ead6;--ink:#142033;--muted:#5b6572;--line:rgba(16,35,61,.12);--shadow:0 18px 55px rgba(16,35,61,.14)}
-
-/* ===== Navigation Bar ===== */
-.navbar{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:99;box-shadow:0 2px 8px rgba(16,35,61,.08)}
-.navbar-container{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:60px}
-.navbar-brand{font-family:"Playfair Display",Georgia,serif;font-size:20px;font-weight:900;color:var(--navy);text-decoration:none}
-.navbar-menu{display:flex;list-style:none;gap:30px;align-items:center}
-.navbar-menu a{color:var(--navy);text-decoration:none;font-weight:600;font-size:14px;transition:color.2s}
-.navbar-menu a:hover{color:var(--green)}
-.navbar-cta{background:var(--green);color:#fff!important;padding:8px 16px;border-radius:6px;font-weight:700}
-.navbar-cta:hover{background:var(--green-dark)}
-@media(max-width:768px){
- .navbar-menu{display:none}
- .navbar-container{height:50px}
- .navbar-brand{font-size:16px}
-}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:Inter,system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55}
@@ -319,21 +304,6 @@ img{max-width:100%}
 </head>
 <body>
 <a class="skip-link" href="#services">Skip to content</a>
-
-<!-- Navigation Bar -->
-<nav class="navbar">
-<div class="navbar-container">
-<a class="navbar-brand" href="#home">Sunshine State</a>
-<ul class="navbar-menu">
-<li><a href="#home">Home</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#service-area">Service Area</a></li>
-<li><a href="#reviews">Reviews</a></li>
-<li><a href="#booking" class="navbar-cta">Book Online</a></li>
-</ul>
-</div>
-</nav>
 
 <!-- Netlify form detection (hidden static copy so the build registers the "booking" form) -->
 <form name="booking" data-netlify="true" netlify-honeypot="bot-field" hidden>
